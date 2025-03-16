@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future of Demand Generation in the USA | KoinetMedia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        /* Basic Reset */
+        
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+            /* Smooth scrolling */
+        }
+        /* Header Section */
+        
+        .header-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* Full viewport height */
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 43, 91, 0.7);
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeInDown 1.5s ease-in-out;
+            /* Animation */
+        }
+        
+        .header-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1.5s ease-in-out;
+            /* Animation */
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff8c00;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeIn 2s ease-in-out;
+            /* Animation */
+        }
+        
+        .cta-button:hover {
+            background: #e07c00;
+            transform: scale(1.05);
+            /* Hover effect */
+        }
+        /* Content Sections */
+        
+        .content-section {
+            padding: 80px 10%;
+            text-align: center;
+            background: #f9f9f9;
+            /* Light background */
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* Shadow effect */
+        }
+        
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0078d7;
+            margin-bottom: 20px;
+        }
+        
+        .content-section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .content-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content-list li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Shadow effect */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .content-list li:hover {
+            transform: translateY(-5px);
+            /* Hover effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .content-list li::before {
+            content: "✔";
+            color: #0078d7;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        /* CTA Section */
+        
+        .cta-section {
+            background: #002b5b;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin: 40px 10%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* Shadow effect */
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        /* Footer Section */
+        
+        .footer {
+            background: #002b5b;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-top {
+            padding: 20px 0;
+        }
+        
+        .footer-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ff8c00;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .footer-links li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ff8c00;
+            /* Hover effect */
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #ff8c00;
+            /* Hover effect */
+        }
+        /* Animations */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            .header-content p {
+                font-size: 1.2rem;
+            }
+            .content-section h2 {
+                font-size: 2rem;
+            }
+            .content-section p {
+                font-size: 1rem;
+            }
+            .cta-section {
+                margin: 20px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="../index.html">
+                <img src="../images/knmlogo.png" alt="Koinet Media" width="100">
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../whatwedo.html">What We Do</a></li>
+
+                    <!-- What We Provide Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
+                        What We Provide
+                    </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/contact_discovery.html">Contact Discovery</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/emailmarketing.html">Email Marketing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/demadgeneration.html">Demand Generation</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/socialmedia.html">Social Media Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Appointment Generation</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/accountprofiling.html">Account Profiling</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="../focus_sectors.html">Focus Audiences</a></li>
+
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="../infographics.html">Infographics</a></li>
+
+                            <li><a class="dropdown-item" href="../articals.html">Articles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
+                        About Us
+                    </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../aboutus/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../aboutus/ourstory.html">Our Story</a></li>
+                            <li><a class="dropdown-item" href="../aboutus/ourculture.html">Our Team & Culture</a></li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar-custom");
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-transparent");
+            } else {
+                navbar.classList.remove("navbar-transparent");
+            }
+        });
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Navbar Styling */
+        
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        /* Navbar Transparent on Scroll */
+        
+        .navbar-custom.navbar-transparent {
+            background: rgba(255, 255, 255, 0);
+            box-shadow: none;
+        }
+        /* Navbar Links */
+        
+        .navbar-custom .nav-link {
+            color: #000;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #e63946;
+        }
+        /* Dropdown Styling */
+        
+        .navbar-custom .dropdown-menu {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Dropdown Animation */
+        
+        .animate-dropdown {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Custom Toggler Button */
+        
+        .custom-toggler {
+            border: none;
+            background: none;
+        }
+        
+        .custom-toggler:focus {
+            box-shadow: none;
+        }
+        /* Responsive Navbar */
+        
+        @media (max-width: 991px) {
+            .navbar-custom {
+                background: rgba(255, 255, 255, 0.95);
+            }
+        }
+    </style>
+
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Header Section -->
+    <div class="header-section mt-5">
+        <div class="header-content">
+            <h1>Future of Demand Generation in the USA</h1>
+            <p>More Leads. More Conversions. More Growth.</p>
+            <a href="#cta" class="cta-button">Get Started</a>
+        </div>
+    </div>
+
+    <style>
+        /* Header Section */
+        
+        .header-section {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: url('../images/1.webp') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+        /* Add overlay for background */
+        
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 43, 91, 0.6);
+            /* Slightly opaque */
+            z-index: 1;
+        }
+        /* Header Content Styling */
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            /* Ensure it overlaps the overlay */
+            max-width: 800px;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            /* Adding shadow for better contrast */
+        }
+        
+        .header-content h1 {
+            font-size: 2.8rem;
+            /* Increased size */
+            font-weight: 700;
+            /* Slightly bolder */
+            color: #ffffff;
+            /* Text color */
+            margin-bottom: 10px;
+        }
+        
+        .header-content p {
+            font-size: 1.4rem;
+            /* Increased size */
+            color: #ffffff;
+            /* Text color */
+            margin-bottom: 20px;
+        }
+        /* Call to Action Button */
+        
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            /* Bright Button Color */
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            /* Rounded corners */
+            transition: background-color 0.3s ease;
+            /* Smooth hover effect */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            /* Add a shadow for depth */
+        }
+        
+        .cta-button:hover {
+            background-color: #ff3b3b;
+            /* Darker shade on hover */
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.2rem;
+                /* Decreased size on smaller screens */
+            }
+            .header-content p {
+                font-size: 1.1rem;
+                /* Decreased size on smaller screens */
+            }
+            .cta-button {
+                padding: 8px 15px;
+                /* Responsive button padding */
+                font-size: 1rem;
+                /* Responsive button font size */
+            }
+        }
+    </style>
+    <!-- Introduction Section -->
+    <div class="content-section ">
+        <div class="content-wrapper">
+            <h2>Demand Generation Isn’t Just About Marketing—It’s About Building <span class="highlight">Real Connections</span></h2>
+            <p>
+                In 2025, businesses that <span class="emphasis">innovate</span>, <span class="emphasis">personalize</span>, and leverage <span class="highlight">AI-driven insights</span> will dominate their market. At <span class="highlight">KoinetMedia</span>,
+                we help you attract, engage, and convert <strong>high-value prospects</strong> through cutting-edge strategies to fuel <span class="emphasis">long-term growth</span>.
+            </p>
+        </div>
+        <div class="sparkle-container"></div>
+        <!-- Sparkling Effect -->
+    </div>
+
+    <style>
+        /* Additional styles for enhanced text */
+        
+        .highlight {
+            color: #00A3E0;
+            /* Bright accent color */
+            font-weight: bold;
+            /* Make highlighted text bold */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for depth */
+        }
+        
+        .emphasis {
+            font-weight: bold;
+            /* Make emphasized text bold */
+            color: #FF6F61;
+            /* Different color for emphasis */
+            text-decoration: underline;
+            /* Underline for added emphasis */
+        }
+        /* Text animation on hover */
+        
+        .content-wrapper h2:hover {
+            transform: scale(1.05);
+            /* Slightly enlarge */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+        }
+        
+        .content-wrapper p {
+            transition: color 0.3s ease;
+            /* Smooth transition for color */
+        }
+        
+        .content-wrapper p:hover {
+            color: #333;
+            /* Darker shade on hover */
+        }
+        /* Sparkle styling */
+        
+        .sparkle-container {
+            position: relative;
+            width: 100%;
+            height: 20px;
+            overflow: hidden;
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: sparkle 2s infinite ease-in-out;
+        }
+        
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        // JavaScript to create sparkles
+        for (let i = 0; i < 20; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.left = `${Math.random() * 100}%`;
+            sparkle.style.animationDelay = `${Math.random() * 2}s`;
+            document.querySelector('.sparkle-container').appendChild(sparkle);
+        }
+    </script>
+
+    <!-- AI-Powered Demand Generation Section -->
+    <section class="content-section1 py-5 mx-4">
+        <div class="animated-bg"></div>
+        <!-- Background Animation -->
+        <h2 class="section-title animate-on-scroll">AI-Powered Demand Generation: Smarter. Faster. Better</h2>
+        <p class="section-subtext animate-on-scroll">
+            Want to reach the right audience with the right message at the right time? AI makes it possible.
+        </p>
+
+        <div class="features-container">
+            <!-- Feature Card 1 -->
+            <div class="feature-card animate-on-scroll">
+                <img src="predict-icon.png" alt="Predict Icon">
+                <h3>Predict Buying Behavior</h3>
+                <p>Target leads with laser accuracy using AI-driven predictions.</p>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="feature-card animate-on-scroll">
+                <img src="segment-icon.png" alt="Segment Icon">
+                <h3>Automatic Audience Segmentation</h3>
+                <p>Deliver ultra-personalized outreach with automated segmentation.</p>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="feature-card animate-on-scroll">
+                <img src="real-time-icon.png" alt="Real-Time Icon">
+                <h3>Real-Time Content Delivery</h3>
+                <p>Speak to each lead’s needs with dynamic, real-time content.</p>
+            </div>
+
+            <!-- Feature Card 4 -->
+            <div class="feature-card animate-on-scroll">
+                <img src="automate-icon.png" alt="Automate Icon">
+                <h3>Automated Lead Scoring</h3>
+                <p>Maximize results with AI-powered campaign optimization.</p>
+            </div>
+        </div>
+
+        <p class="closing-text animate-on-scroll">
+            AI doesn’t just save time—it drives higher engagement and more conversions so you can focus on growing your business.
+        </p>
+    </section>
+
+    <!-- CSS Styling -->
+    <style>
+        /* Section Styling */
+        
+        .content-section1 {
+            position: relative;
+            padding: 60px 10%;
+            text-align: center;
+            background: linear-gradient(to right, #001F3F, #004C8C);
+            color: white;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        /* Floating Background Animation */
+        
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('particles-bg.png');
+            opacity: 0.2;
+            animation: floatingBackground 8s linear infinite;
+        }
+        
+        @keyframes floatingBackground {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        /* Section Title */
+        
+        .section-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #00A6FF, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Subtext */
+        
+        .section-subtext {
+            font-size: 18px;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+        /* Features Container */
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 columns */
+            gap: 20px;
+            /* Spacing between cards */
+            justify-content: center;
+            margin-top: 30px;
+        }
+        /* Feature Cards */
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Hover Effect */
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 166, 255, 0.3);
+        }
+        /* Feature Icons */
+        
+        .feature-card img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+        /* Feature Title */
+        
+        .feature-card h3 {
+            font-size: 20px;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        /* Feature Text */
+        
+        .feature-card p {
+            font-size: 16px;
+            color: #fff;
+        }
+        /* Closing Text */
+        
+        .closing-text {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+            background: linear-gradient(90deg, #FFD700, #00A6FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Scroll Animations */
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 1200px) {
+            .features-container {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columns for smaller screens */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .features-container {
+                grid-template-columns: 1fr;
+                /* 1 column for mobile screens */
+            }
+        }
+    </style>
+
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".animate-on-scroll");
+
+            function revealOnScroll() {
+                elements.forEach((el) => {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                        el.style.opacity = 1;
+                        el.style.transform = "translateY(0px)";
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
+    <!-- ABM at Scale Section -->
+    <div class="pillars-section">
+        <div class="py-5 text-center my-5">
+            <h2 class="section-heading">ABM at Scale: Close Bigger Deals Faster</h2>
+            <p>ABM isn’t just for big businesses anymore. With the right tech, any business can target high-value clients and close deals faster.</p>
+        </div>
+
+        <div class="pillars-container">
+            <!-- Card 1 - Align Sales & Marketing -->
+            <div class="pillar-card" style="background-color: #EDFCFF;">
+                <img src="../images/ser1.png" alt="Align Sales & Marketing" class="pillar-img">
+                <h3 class="pillar-title">Align Sales & Marketing</h3>
+                <div class="pillar-line pillar-blue"></div>
+                <ul class="pillar-list">
+                    <li>Seamless collaboration between teams for high-impact campaigns.</li>
+                    <li>Unified strategies to target high-value accounts effectively.</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 - Personalized Messaging -->
+            <div class="pillar-card" style="background-color: #FDF6E9;">
+                <img src="../images/ser2.png" alt="Personalized Messaging" class="pillar-img">
+                <h3 class="pillar-title">Personalized Messaging</h3>
+                <div class="pillar-line pillar-orange"></div>
+                <ul class="pillar-list">
+                    <li>Tailored content that speaks directly to key accounts.</li>
+                    <li>Dynamic messaging to address specific pain points and goals.</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 - Buyer's Journey Touchpoints -->
+            <div class="pillar-card" style="background-color: #E6FFED;">
+                <img src="../images/ser3.png" alt="Buyer's Journey Touchpoints" class="pillar-img">
+                <h3 class="pillar-title">Buyer's Journey Touchpoints</h3>
+                <div class="pillar-line pillar-green"></div>
+                <ul class="pillar-list">
+                    <li>Stay top-of-mind at every stage of the buyer’s journey.</li>
+                    <li>Engage prospects with timely and relevant interactions.</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 - Hyper-Focused Strategies -->
+            <div class="pillar-card" style="background-color: #EDFCFF;">
+                <img src="../images/ser4-remove-bg-io.png" alt="Hyper-Focused Strategies" class="pillar-img">
+                <h3 class="pillar-title">Hyper-Focused Strategies</h3>
+                <div class="pillar-line pillar-purple"></div>
+                <ul class="pillar-list">
+                    <li>Increase conversion rates with targeted ABM campaigns.</li>
+                    <li>Build customer loyalty through personalized experiences.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Add this to your existing styles */
+        
+        .pillar-purple {
+            background: #6f42c1;
+            /* Purple color for the new pillar line */
+        }
+        /* Adjust the container for 4 cards */
+        
+        .pillars-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        /* Ensure cards are consistent in size */
+        
+        .pillar-card {
+            background: #f9f9f9;
+            border-radius: 25px;
+            width: 300px;
+            min-height: 420px;
+            padding: 80px 30px 30px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: visible;
+        }
+        
+        .pillar-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            position: absolute;
+            top: -60px;
+            left: 0;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+        
+        .pillar-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin-top: 20px;
+        }
+        
+        .pillar-line {
+            width: 60%;
+            height: 5px;
+            margin: 12px auto;
+            border-radius: 5px;
+        }
+        
+        .pillar-list {
+            text-align: left;
+            padding-left: 25px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .pillar-list li {
+            margin-bottom: 10px;
+            list-style: none;
+            position: relative;
+        }
+        
+        .pillar-list li::before {
+            content: "✅";
+            color: #007bff;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+    </style>
+
+    <!-- Intent Data Section -->
+    <div class="intent-data-section mt-5">
+        <h2 class="intent-heading">
+            <span>🎯 Intent Data:</span> Engage Buyers Before Your Competitors Do
+        </h2>
+        <p class="intent-subtext">
+            What if you could predict what your customers need before they do? Intent data makes it happen.
+        </p>
+
+        <ul class="intent-list">
+            <li class="intent-item">
+                <i class="fas fa-search"></i>
+                <span>Track online behavior to identify prospects instantly</span>
+            </li>
+            <li class="intent-item">
+                <i class="fas fa-chart-pie"></i>
+                <span>Analyze engagement patterns to target prospects at the right moment</span>
+            </li>
+            <li class="intent-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Engage leads before competitors even reach them</span>
+            </li>
+            <li class="intent-item">
+                <i class="fas fa-envelope"></i>
+                <span>Send hyper-relevant messaging based on real-time insights</span>
+            </li>
+        </ul>
+    </div>
+
+    <style>
+        /* Section Container */
+        
+        .intent-data-section {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            padding: 60px 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        /* Heading with Animated Gradient */
+        
+        .intent-heading {
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #00ff88, #00b8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        /* Subtext */
+        
+        .intent-subtext {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        /* Intent List */
+        
+        .intent-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+        /* Intent List Items */
+        
+        .intent-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+        /* List Item Hover Effect */
+        
+        .intent-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
+        }
+        /* Icons */
+        
+        .intent-item i {
+            font-size: 40px;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+        /* List Item Text */
+        
+        .intent-item span {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            display: block;
+        }
+        /* Keyframe Animations */
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <!-- Build a Demand Generation Machine Section -->
+    <section class="demand-gen-container">
+        <div class="demand-gen-content">
+            <h2 class="demand-gen-heading">🚀 Build a <span>Demand Generation Machine</span> That Drives Revenue</h2>
+            <p class="demand-gen-subtext">
+                At <b>KoinetMedia</b>, we merge <b>AI-powered personalization, ABM at scale, and intent-based targeting</b> to build a demand generation machine that drives real business growth.
+            </p>
+
+            <div class="demand-gen-list">
+                <div class="demand-gen-item">
+                    <span class="demand-icon">🔥</span>
+                    <div class="demand-text">
+                        <h3>Attracts and Nurtures High-Value Leads</h3>
+                        <p>Target and engage the right prospects with precision.</p>
+                    </div>
+                </div>
+
+                <div class="demand-gen-item">
+                    <span class="demand-icon">🤝</span>
+                    <div class="demand-text">
+                        <h3>Delivers Warm Leads to Your Sales Team</h3>
+                        <p>Ensure your sales team focuses on ready-to-convert leads.</p>
+                    </div>
+                </div>
+
+                <div class="demand-gen-item">
+                    <span class="demand-icon">📊</span>
+                    <div class="demand-text">
+                        <h3>Grows Revenue with Data-Driven Strategies</h3>
+                        <p>Leverage analytics to optimize your campaigns.</p>
+                    </div>
+                </div>
+
+                <div class="demand-gen-item">
+                    <span class="demand-icon">💡</span>
+                    <div class="demand-text">
+                        <h3>Strengthens Customer Relationships</h3>
+                        <p>Build long-term loyalty and repeat business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Demand Gen Section */
+        
+        .demand-gen-container {
+            background: linear-gradient(135deg, #ffffff, #f4f6fc);
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 50px auto;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-in-out forwards;
+        }
+        /* Heading */
+        
+        .demand-gen-heading {
+            font-size: 42px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #222;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-in-out forwards;
+        }
+        /* Gradient Effect for Highlighted Words */
+        
+        .demand-gen-heading span {
+            background: linear-gradient(90deg, #ff4d4d, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Subtext */
+        
+        .demand-gen-subtext {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        /* List Container */
+        
+        .demand-gen-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 1.8s ease-in-out forwards;
+        }
+        /* Individual List Item */
+        
+        .demand-gen-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        /* Hover Effect */
+        
+        .demand-gen-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        /* Icon */
+        
+        .demand-icon {
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ff9900;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            min-width: 50px;
+            min-height: 50px;
+        }
+        /* List Text */
+        
+        .demand-text h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .demand-text p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
+        }
+        /* Animations */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- CTA Section -->
+    <div class="cta-section" id="cta">
+        <h2>Make 2025 Your Best Year Ever!</h2>
+        <p>Ready to supercharge lead gen, maximize conversions, and scale like never before? We are too.</p>
+        <a href="contact.html" class="cta-button">📩 Get in Touch</a>
+    </div>
+
+    <!--  Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                                <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                                <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+                              </svg>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p>info@koinetmedia.com</p>
+                    </div>
+
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building-fill-check" viewBox="0 0 16 16">
+                                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514"/>
+                                <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7.256A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-3.59 1.787A.5.5 0 0 0 9 9.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .39-.187A4.5 4.5 0 0 0 8.027 12H6.5a.5.5 0 0 0-.5.5V16H3a1 1 0 0 1-1-1zm2 1.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m3 0v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                              </svg>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p>Kharadi, Pune, Maharashtra, India, 411014</p>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                              </svg>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p>+91 90215 68448</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <ul class="footer-links">
+                    <li><a href="../footerpages/Privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../footerpages/CaseStudies.html">Case Studies</a></li>
+                    <li><a href="../footerpages/GDPR.html">GDPR</a></li>
+                    <li><a href="../footerpages/CCPA.html">CCPA</a></li>
+                    <li><a href="../footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                </ul>
+
+                <!-- Copyright & Social Icons -->
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS -->
+    <style>
+        /* Footer Styling */
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        /* Top Section */
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-top p {
+            color: #555;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        /* Bottom Section */
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #dc3545;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+    </style>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

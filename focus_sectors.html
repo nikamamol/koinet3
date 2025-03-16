@@ -1,533 +1,764 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>B2B Profiles - KoinetMedia</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-    }
-    /* Hero Section */
-    .hero-section {
-  background: url('img/1s.jpeg') center center/cover no-repeat, rgba(0, 0, 0, 0.5); /* Darker overlay for contrast */
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-  animation: fadeIn 1s;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B2B Profiles - KoinetMedia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-.hero-section .container {
-  position: relative;
-  z-index: 2; /* Ensure text is above overlay */
-  max-width: 800px; /* Adjust max width for better layout */
-  margin: 0 auto; /* Center align */
-  padding: 20px; /* Add padding for the container */
-  background: rgba(255, 255, 255, 0.8); /* Light background for text contrast */
-  border-radius: 10px; /* Rounded corners for a softer look */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
-}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-.hero-section h1 {
-  font-size: 3.5rem; /* Increased size for prominence */
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #343a40; /* Main text color */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4); /* Soft shadow for better visibility */
-}
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-.hero-section p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 20px auto; /* Center align and adjust margin */
-  color: #555;
-}
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-.cta-btn {
-  background-color: #ff7f32;
-  color: #fff;
-  padding: 15px 30px; /* Increased padding */
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
-  display: inline-block;
-  transition: background 0.3s ease, transform 0.2s ease; /* Added transform effect */
-}
-
-.cta-btn:hover {
-  background-color: #e76b24;
-  transform: scale(1.05); /* Slight scale effect on hover */
-}
-.stats-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.stats-box {
-  background: linear-gradient(135deg, #62A2DB, #0096E4); /* Gradient background */
-  padding: 20px;
-  width: calc(30% - 20px); /* Adjust for 3 boxes per row */
-  border-radius: 15px; /* Increased border radius for softer look */
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
-  transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
-  color: white; /* Text color for contrast */
-}
-
-.stats-box:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Deepened shadow on hover */
-}
-
-.stats-box h2 {
-  font-size: 2.5rem; /* Size for prominence */
-  margin: 10px 0;
-}
-
-.stats-box p {
-  font-size: 1rem;
-  margin: 5px 0;
-}
-
-.stats-box a {
-  color: #ffeb3b; /* Bright link color for emphasis */
-  font-weight: bold;
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s;
-}
-
-.stats-box a:hover {
-  color: #fff; /* Change link color on hover for contrast */
-}
-
-/* Tooltip Styling */
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 150px;
-  background-color: #555; /* Tooltip background */
-  color: #fff; /* Tooltip text color */
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%; /* Position above the box */
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible; /* Show tooltip on hover */
-  opacity: 1; /* Fade in */
-}
-.industries-container {
-    background-color: #f0f4f8; /* Light background color for the section */
-    padding: 40px;             /* Padding for the section */
-    border-radius: 15px;       /* Rounded corners for softness */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px 0;            /* Margin from other sections */
-}
-
-.industry-title {
-    text-align: center;         /* Center the title */
-    font-size: 2.5rem;         /* Large title size */
-    color: #0E3A62;            /* Title color */
-    margin-bottom: 30px;       /* Space below the title */
-}
-
-.industry-card {
-    background-color: #ffffff; /* White background for cards */
-    border-radius: 10px;       /* Rounded corners for cards */
-    overflow: hidden;          /* Prevent overflow */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    transition: transform 0.3s; /* Smooth transition on hover */
-    text-align: center;         /* Center the text in the card */
-    padding: 20px;             /* Padding inside cards */
-    margin-bottom: 20px;       /* Space between cards */
-}
-
-.industry-card:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
-}
-
-.industry-icon {
-    font-size: 3rem;           /* Size of the icon */
-    color: #30BCE8;            /* Color for the icon */
-    margin-bottom: 15px;       /* Space below the icon */
-}
-
-.industry-name {
-    font-size: 1.5rem;         /* Size of the industry name */
-    color: #0E3A62;            /* Color for the industry names */
-    margin-bottom: 10px;       /* Space below the name */
-}
-
-.industry-description {
-    font-size: 1rem;           /* Size of the description text */
-    color: #555;               /* Darker gray for description */
-    margin-bottom: 15px;       /* Space below the description */
-}
-
-.learn-more {
-    background-color: #30BCE8; /* Background for "Learn More" button */
-    color: #ffffff;            /* Text color for button */
-    padding: 10px 15px;       /* Padding for button */
-    text-decoration: none;     /* No underline */
-    border-radius: 5px;       /* Rounded corners for the button */
-    transition: background-color 0.3s; /* Transition on hover */
-}
-
-.learn-more:hover {
-    background-color: #1C9CBD; /* Slightly darker blue on hover */
-}
-.audience-container {
-    background-color: #f8f9fa; /* Light background for the section */
-    padding: 40px;             /* Padding inside the section */
-    border-radius: 15px;       /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px 0;            /* Margin from other sections */
-}
-
-.audience-title {
-    text-align: center;         /* Center the title */
-    font-size: 2.5rem;         /* Large title size */
-    color: #0D2D5C;            /* Main color for the title */
-    margin-bottom: 30px;       /* Space below the title */
-}
-
-.progress-container {
-    margin-bottom: 30px;       /* Space between the progress bar and audience info */
-}
-
-.progress-bar {
-    background-color: #e0e0e0; /* Light background for the bar */
-    border-radius: 5px;        /* Rounded corners for the progress bar */
-    height: 30px;               /* Height of the progress bar */
-    overflow: hidden;           /* Prevent overflow */
-}
-
-.progress-step {
-    height: 100%;               /* Full height of the progress bar */
-    color: white;               /* Text color inside the bar */
-    display: flex;              /* Flexbox for aligning text */
-    align-items: center;        /* Center items vertically */
-    justify-content: center;     /* Center items horizontally */
-    font-weight: bold;          /* Bold text for visibility */
-    position: relative;         /* Positioning for the tooltip */
-    padding: 0 10px;           /* Padding for edges */
-}
-
-.audience-container {
-            background-color: #ffffff; /* White background */
-            padding: 40px; /* Inner padding */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-            margin: 20px 0; /* Margin from other sections */
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
         }
-
+        /* Hero Section */
+        
+        .hero-section {
+            background: url('img/1s.jpeg') center center/cover no-repeat, rgba(0, 0, 0, 0.5);
+            /* Darker overlay for contrast */
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1s;
+        }
+        
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+            /* Ensure text is above overlay */
+            max-width: 800px;
+            /* Adjust max width for better layout */
+            margin: 0 auto;
+            /* Center align */
+            padding: 20px;
+            /* Add padding for the container */
+            background: rgba(255, 255, 255, 0.8);
+            /* Light background for text contrast */
+            border-radius: 10px;
+            /* Rounded corners for a softer look */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            /* Box shadow for depth */
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            /* Increased size for prominence */
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #343a40;
+            /* Main text color */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            /* Soft shadow for better visibility */
+        }
+        
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 20px auto;
+            /* Center align and adjust margin */
+            color: #555;
+        }
+        
+        .cta-btn {
+            background-color: #ff7f32;
+            color: #fff;
+            padding: 15px 30px;
+            /* Increased padding */
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background 0.3s ease, transform 0.2s ease;
+            /* Added transform effect */
+        }
+        
+        .cta-btn:hover {
+            background-color: #e76b24;
+            transform: scale(1.05);
+            /* Slight scale effect on hover */
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stats-box {
+            background: linear-gradient(135deg, #62A2DB, #0096E4);
+            /* Gradient background */
+            padding: 20px;
+            width: calc(30% - 20px);
+            /* Adjust for 3 boxes per row */
+            border-radius: 15px;
+            /* Increased border radius for softer look */
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            /* Softer shadow */
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* Transition effects */
+            color: white;
+            /* Text color for contrast */
+        }
+        
+        .stats-box:hover {
+            transform: translateY(-5px);
+            /* Lift effect on hover */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            /* Deepened shadow on hover */
+        }
+        
+        .stats-box h2 {
+            font-size: 2.5rem;
+            /* Size for prominence */
+            margin: 10px 0;
+        }
+        
+        .stats-box p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        
+        .stats-box a {
+            color: #ffeb3b;
+            /* Bright link color for emphasis */
+            font-weight: bold;
+            text-decoration: none;
+            /* Remove underline */
+            transition: color 0.3s;
+        }
+        
+        .stats-box a:hover {
+            color: #fff;
+            /* Change link color on hover for contrast */
+        }
+        /* Tooltip Styling */
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 150px;
+            background-color: #555;
+            /* Tooltip background */
+            color: #fff;
+            /* Tooltip text color */
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            /* Position above the box */
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            /* Hidden by default */
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            /* Show tooltip on hover */
+            opacity: 1;
+            /* Fade in */
+        }
+        
+        .industries-container {
+            background-color: #f0f4f8;
+            /* Light background color for the section */
+            padding: 40px;
+            /* Padding for the section */
+            border-radius: 15px;
+            /* Rounded corners for softness */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+            margin: 20px 0;
+            /* Margin from other sections */
+        }
+        
+        .industry-title {
+            text-align: center;
+            /* Center the title */
+            font-size: 2.5rem;
+            /* Large title size */
+            color: #0E3A62;
+            /* Title color */
+            margin-bottom: 30px;
+            /* Space below the title */
+        }
+        
+        .industry-card {
+            background-color: #ffffff;
+            /* White background for cards */
+            border-radius: 10px;
+            /* Rounded corners for cards */
+            overflow: hidden;
+            /* Prevent overflow */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Shadow for depth */
+            transition: transform 0.3s;
+            /* Smooth transition on hover */
+            text-align: center;
+            /* Center the text in the card */
+            padding: 20px;
+            /* Padding inside cards */
+            margin-bottom: 20px;
+            /* Space between cards */
+        }
+        
+        .industry-card:hover {
+            transform: translateY(-5px);
+            /* Slight lift effect on hover */
+        }
+        
+        .industry-icon {
+            font-size: 3rem;
+            /* Size of the icon */
+            color: #30BCE8;
+            /* Color for the icon */
+            margin-bottom: 15px;
+            /* Space below the icon */
+        }
+        
+        .industry-name {
+            font-size: 1.5rem;
+            /* Size of the industry name */
+            color: #0E3A62;
+            /* Color for the industry names */
+            margin-bottom: 10px;
+            /* Space below the name */
+        }
+        
+        .industry-description {
+            font-size: 1rem;
+            /* Size of the description text */
+            color: #555;
+            /* Darker gray for description */
+            margin-bottom: 15px;
+            /* Space below the description */
+        }
+        
+        .learn-more {
+            background-color: #30BCE8;
+            /* Background for "Learn More" button */
+            color: #ffffff;
+            /* Text color for button */
+            padding: 10px 15px;
+            /* Padding for button */
+            text-decoration: none;
+            /* No underline */
+            border-radius: 5px;
+            /* Rounded corners for the button */
+            transition: background-color 0.3s;
+            /* Transition on hover */
+        }
+        
+        .learn-more:hover {
+            background-color: #1C9CBD;
+            /* Slightly darker blue on hover */
+        }
+        
+        .audience-container {
+            background-color: #f8f9fa;
+            /* Light background for the section */
+            padding: 40px;
+            /* Padding inside the section */
+            border-radius: 15px;
+            /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+            margin: 20px 0;
+            /* Margin from other sections */
+        }
+        
         .audience-title {
-            text-align: center; /* Center the title */
-            font-size: 2rem; /* Large title size */
-            color: #0D2D5C; /* Title color */
-            margin-bottom: 30px; /* Space below title */
+            text-align: center;
+            /* Center the title */
+            font-size: 2.5rem;
+            /* Large title size */
+            color: #0D2D5C;
+            /* Main color for the title */
+            margin-bottom: 30px;
+            /* Space below the title */
         }
-
+        
+        .progress-container {
+            margin-bottom: 30px;
+            /* Space between the progress bar and audience info */
+        }
+        
+        .progress-bar {
+            background-color: #e0e0e0;
+            /* Light background for the bar */
+            border-radius: 5px;
+            /* Rounded corners for the progress bar */
+            height: 30px;
+            /* Height of the progress bar */
+            overflow: hidden;
+            /* Prevent overflow */
+        }
+        
+        .progress-step {
+            height: 100%;
+            /* Full height of the progress bar */
+            color: white;
+            /* Text color inside the bar */
+            display: flex;
+            /* Flexbox for aligning text */
+            align-items: center;
+            /* Center items vertically */
+            justify-content: center;
+            /* Center items horizontally */
+            font-weight: bold;
+            /* Bold text for visibility */
+            position: relative;
+            /* Positioning for the tooltip */
+            padding: 0 10px;
+            /* Padding for edges */
+        }
+        
+        .audience-container {
+            background-color: #ffffff;
+            /* White background */
+            padding: 40px;
+            /* Inner padding */
+            border-radius: 8px;
+            /* Rounded corners */
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+            /* Soft shadow */
+            margin: 20px 0;
+            /* Margin from other sections */
+        }
+        
+        .audience-title {
+            text-align: center;
+            /* Center the title */
+            font-size: 2rem;
+            /* Large title size */
+            color: #0D2D5C;
+            /* Title color */
+            margin-bottom: 30px;
+            /* Space below title */
+        }
+        
         .audience-info {
-            display: flex; /* Flexbox layout */
-            justify-content: space-around; /* Space items evenly */
-            align-items: center; /* Center align */
-            flex-wrap: wrap; /* Allow wrapping for responsiveness */
+            display: flex;
+            /* Flexbox layout */
+            justify-content: space-around;
+            /* Space items evenly */
+            align-items: center;
+            /* Center align */
+            flex-wrap: wrap;
+            /* Allow wrapping for responsiveness */
         }
-
+        
         .audience-item {
-            background-color: #f0f4f8; /* Light background for items */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Inner padding */
-            text-align: center; /* Center text */
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-            width: 150px; /* Fixed width for uniformity */
-            margin-bottom: 20px; /* Space below items */
+            background-color: #f0f4f8;
+            /* Light background for items */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Inner padding */
+            text-align: center;
+            /* Center text */
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            /* Light shadow */
+            width: 150px;
+            /* Fixed width for uniformity */
+            margin-bottom: 20px;
+            /* Space below items */
         }
-
+        
         .progress-circle {
-            width: 100px; /* Width of the circle */
-            height: 100px; /* Height of the circle */
-            position: relative; /* Positioning context for child elements */
+            width: 100px;
+            /* Width of the circle */
+            height: 100px;
+            /* Height of the circle */
+            position: relative;
+            /* Positioning context for child elements */
         }
-
+        
         .progress-circle svg {
-            transform: rotate(-90deg); /* Rotate the SVG to start from the top */
+            transform: rotate(-90deg);
+            /* Rotate the SVG to start from the top */
         }
-
+        
         .progress-circle circle {
-            fill: none; /* No fill for the path */
-            stroke-width: 10; /* Stroke width */
+            fill: none;
+            /* No fill for the path */
+            stroke-width: 10;
+            /* Stroke width */
         }
-
+        
         .progress-circle .progress-bg {
-            stroke: #e0e0e0; /* Background circle color */
+            stroke: #e0e0e0;
+            /* Background circle color */
         }
-
+        
         .progress-circle .progress {
-            stroke: #0056A1; /* Progress color */
-            transition: stroke-dashoffset 0.5s ease; /* Smooth transition */
+            stroke: #0056A1;
+            /* Progress color */
+            transition: stroke-dashoffset 0.5s ease;
+            /* Smooth transition */
         }
-
+        
         .progress-value {
-            position: absolute; /* Absolute positioning */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Shift to center */
-            font-size: 1rem; /* Font size for percentage */
-            font-weight: bold; /* Make it bold */
-            color: #0056A1; /* Color for percentage */
+            position: absolute;
+            /* Absolute positioning */
+            top: 50%;
+            /* Center vertically */
+            left: 50%;
+            /* Center horizontally */
+            transform: translate(-50%, -50%);
+            /* Shift to center */
+            font-size: 1rem;
+            /* Font size for percentage */
+            font-weight: bold;
+            /* Make it bold */
+            color: #0056A1;
+            /* Color for percentage */
         }
-
+        
         .btn-custom {
-            display: block; /* Button display */
-            width: 100%; /* Full width */
-            background-color: #0056A1; /* Button background color */
-            color: #ffffff; /* Button text color */
-            padding: 12px; /* Button padding */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            font-size: 1rem; /* Button text size */
-            cursor: pointer; /* Pointer on hover */
-            transition: background-color 0.3s; /* Transition on hover */
-            margin-top: 20px; /* Space above button */
+            display: block;
+            /* Button display */
+            width: 100%;
+            /* Full width */
+            background-color: #0056A1;
+            /* Button background color */
+            color: #ffffff;
+            /* Button text color */
+            padding: 12px;
+            /* Button padding */
+            border: none;
+            /* Remove border */
+            border-radius: 5px;
+            /* Rounded corners */
+            font-size: 1rem;
+            /* Button text size */
+            cursor: pointer;
+            /* Pointer on hover */
+            transition: background-color 0.3s;
+            /* Transition on hover */
+            margin-top: 20px;
+            /* Space above button */
         }
-
+        
         .btn-custom:hover {
-            background-color: #004494; /* Darker color on hover */
+            background-color: #004494;
+            /* Darker color on hover */
         }
         /* Responsive adjustments */
+        
         @media (max-width: 992px) {
             .stats-box {
-                flex: 1 1 calc(50% - 20px); /* For tablets */
+                flex: 1 1 calc(50% - 20px);
+                /* For tablets */
             }
-
             .industry-card {
                 margin-bottom: 20px;
             }
         }
-
+        
         @media (max-width: 576px) {
             .stats-box {
-                flex: 1 1 100%; /* Full width for mobile */
+                flex: 1 1 100%;
+                /* Full width for mobile */
             }
-
             .hero-section h1 {
-                font-size: 2.5rem; /* Make title smaller on mobile */
+                font-size: 2.5rem;
+                /* Make title smaller on mobile */
             }
-
             .hero-section p {
-                font-size: 1rem; /* Make subtitle smaller on mobile */
+                font-size: 1rem;
+                /* Make subtitle smaller on mobile */
             }
         }
-   
-  </style>
+    </style>
 </head>
+
 <body>
-     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-white bg-white shadow-sm">
-    <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand fw-bold text-uppercase" href="index.html">
-            <img src="images/logo2.png" alt="Koinet Media" width="100">
-        </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <img src="images/knmlogo.png" alt="Koinet Media" width="100">
+            </a>
 
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active text-dark fw-bold" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="whatwedo.html">What We Do</a></li>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="whatwedo.html">What We Do</a></li>
 
-                <!-- Who We Serve Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" id="whoWeServeDropdown" role="button" data-bs-toggle="dropdown">
-                        Who We Serve
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Demand Professionals</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Marketers</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Sales Professionals</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Executives</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Agency Partners</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Channel Partners</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Healthcare Professionals</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Associations & Partners</a></li>
-                    </ul>
-                </li>
+                    <!-- What We Provide Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
+                    What We Provide
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html">Contact Discovery</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/emailmarketing.html">Email Marketing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/demadgeneration.html">Demand Generation</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/socialmedia.html">Social Media Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Appointment Generation</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/accountprofiling.html">Account Profiling</a></li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="focus_sectors.html">Focus Audiences</a></li>
-                
+                    <li class="nav-item"><a class="nav-link" href="focus_sectors.html">Focus Audiences</a></li>
 
-                <!-- Resources Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
-                        Resources
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-dark fw-bold" href="blog.html">Blog</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="infographics.html">Infographics</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="CaseStudies.html">Case Studies</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="articals.html">Articles</a></li>
-                    </ul>
-                </li>
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                    Resources
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="infographics.html">Infographics</a></li>
 
-                <!-- About Us Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark fw-bold" href="about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
-                        About Us
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our Story</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our Culture</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our People</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Leadership</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our Reviews</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our Accolades</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Join Us</a></li>
-                    </ul>
-                </li>
+                            <li><a class="dropdown-item" href="articals.html">Articles</a></li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item"><a class="nav-link text-dark  fw-bold" href="contact.html">Contact Us</a></li>
-            </ul>
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
+                    About Us
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="aboutus/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="aboutus/ourstory.html">Our Story</a></li>
+                            <li><a class="dropdown-item" href="aboutus/ourculture.html">Our Team & Culture</a></li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-<!-- Navbar Scroll Effect -->
-<script>
-    document.addEventListener("scroll", function () {
-        let navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-            navbar.classList.add("bg-dark");
-        } else {
-            navbar.classList.remove("bg-dark");
-        }
-    });
+    </nav>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar-custom");
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-transparent");
+            } else {
+                navbar.classList.remove("navbar-transparent");
+            }
+        });
     </script>
-    
-<!-- Hero Section -->
-<section class="hero-section">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Navbar Styling */
+        
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        /* Navbar Transparent on Scroll */
+        
+        .navbar-custom.navbar-transparent {
+            background: rgba(255, 255, 255, 0);
+            box-shadow: none;
+        }
+        /* Navbar Links */
+        
+        .navbar-custom .nav-link {
+            color: #000;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #e63946;
+        }
+        /* Dropdown Styling */
+        
+        .navbar-custom .dropdown-menu {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Dropdown Animation */
+        
+        .animate-dropdown {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Custom Toggler Button */
+        
+        .custom-toggler {
+            border: none;
+            background: none;
+        }
+        
+        .custom-toggler:focus {
+            box-shadow: none;
+        }
+        /* Responsive Navbar */
+        
+        @media (max-width: 991px) {
+            .navbar-custom {
+                background: rgba(255, 255, 255, 0.95);
+            }
+        }
+    </style>
+
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">
+                <span class="highlight">252+ MILLION</span> B2B PROFILES
+            </h1>
+            <p class="hero-subtitle">
+                Our extensive database of professionals from over <span class="highlight">16+ million</span> companies in
+                <span class="highlight">32+ verticals</span> allows us to deliver extraordinary engagement in your audience's niche.
+            </p>
+            <a href="#" class="cta-btn">Schedule Your Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
     <div class="container">
-      <h1 class="hero-title">
-        <span class="highlight">252+ MILLION</span> B2B PROFILES
-      </h1>
-      <p class="hero-subtitle">
-        Our extensive database of professionals from over <span class="highlight">16+ million</span> companies in 
-        <span class="highlight">32+ verticals</span> allows us to deliver extraordinary engagement in your audience's niche.
-      </p>
-      <a href="#" class="cta-btn">Schedule Your Free Consultation</a>
-    </div>
-  </section>
-  
-<!-- Stats Section -->
-<div class="container">
-    <div class="stats-container">
-      <div class="stats-box">
-        <h2><i class="fas fa-users"></i> 160,200,000</h2>
-        <p>B2B PROFILES</p>
-        <a href="#">NORTH AMERICA →</a>
-      </div>
-      <div class="stats-box">
-        <h2><i class="fas fa-users"></i> 1,350,000</h2>
-        <p>B2B PROFILES</p>
-        <a href="#">LATAM →</a>
-      </div>
-      <div class="stats-box">
-        <h2><i class="fas fa-building"></i> 32+</h2>
-        <p>MARKET VERTICALS</p>
-        <a href="#">VIEW VERTICALS →</a>
-      </div>
-      <div class="stats-box">
-        <h2><i class="fas fa-globe"></i> 80+</h2>
-        <p>COUNTRIES COVERED</p>
-        <a href="#">EXPLORE COUNTRIES →</a>
-      </div>
-      <div class="stats-box">
-        <h2><i class="fas fa-clock"></i> 95%</h2>
-        <p>DATA ACCURACY RATE</p>
-        <a href="#">LEARN MORE →</a>
-      </div>
-      <div class="stats-box">
-        <h2><i class="fas fa-chart-line"></i> 500+</h2>
-        <p>CLIENTS SERVED</p>
-        <a href="#">CLIENT TESTIMONIALS →</a>
-      </div>
-    </div>
-  </div>
-<!-- Industries Section -->
-<div class="industries-container">
-    <h2 class="industry-title">EXPLORE OUR INDUSTRIES</h2>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="industry-card">
-                <div class="industry-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <h3 class="industry-name">Artificial Intelligence</h3>
-                <p class="industry-description">Innovating solutions that leverage machine learning for smarter decisions and automation.</p>
-                <a href="#" class="learn-more">Learn More</a>
+        <div class="stats-container">
+            <div class="stats-box">
+                <h2><i class="fas fa-users"></i> 160,200,000</h2>
+                <p>B2B PROFILES</p>
+                <a href="#">NORTH AMERICA →</a>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="industry-card">
-                <div class="industry-icon">
-                    <i class="fas fa-heartbeat"></i>
-                </div>
-                <h3 class="industry-name">Healthcare</h3>
-                <p class="industry-description">Transforming patient care through advanced technologies and personalized medicine.</p>
-                <a href="#" class="learn-more">Learn More</a>
+            <div class="stats-box">
+                <h2><i class="fas fa-users"></i> 1,350,000</h2>
+                <p>B2B PROFILES</p>
+                <a href="#">LATAM →</a>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="industry-card">
-                <div class="industry-icon">
-                    <i class="fas fa-book"></i>
-                </div>
-                <h3 class="industry-name">Education</h3>
-                <p class="industry-description">Modern educational tools to enhance learning experiences and accessibility for all.</p>
-                <a href="#" class="learn-more">Learn More</a>
+            <div class="stats-box">
+                <h2><i class="fas fa-building"></i> 32+</h2>
+                <p>MARKET VERTICALS</p>
+                <a href="#">VIEW VERTICALS →</a>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="industry-card">
-                <div class="industry-icon">
-                    <i class="fas fa-bicycle"></i>
-                </div>
-                <h3 class="industry-name">Transportation</h3>
-                <p class="industry-description">Emerging technologies shaping the future of mobility and smart cities.</p>
-                <a href="#" class="learn-more">Learn More</a>
+            <div class="stats-box">
+                <h2><i class="fas fa-globe"></i> 80+</h2>
+                <p>COUNTRIES COVERED</p>
+                <a href="#">EXPLORE COUNTRIES →</a>
+            </div>
+            <div class="stats-box">
+                <h2><i class="fas fa-clock"></i> 95%</h2>
+                <p>DATA ACCURACY RATE</p>
+                <a href="#">LEARN MORE →</a>
+            </div>
+            <div class="stats-box">
+                <h2><i class="fas fa-chart-line"></i> 500+</h2>
+                <p>CLIENTS SERVED</p>
+                <a href="#">CLIENT TESTIMONIALS →</a>
             </div>
         </div>
     </div>
-</div>
+    <!-- Industries Section -->
+    <div class="industries-container">
+        <h2 class="industry-title">EXPLORE OUR INDUSTRIES</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="industry-name">Artificial Intelligence</h3>
+                    <p class="industry-description">Innovating solutions that leverage machine learning for smarter decisions and automation.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="industry-name">Healthcare</h3>
+                    <p class="industry-description">Transforming patient care through advanced technologies and personalized medicine.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="industry-name">Education</h3>
+                    <p class="industry-description">Modern educational tools to enhance learning experiences and accessibility for all.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <h3 class="industry-name">Transportation</h3>
+                    <p class="industry-description">Emerging technologies shaping the future of mobility and smart cities.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Audience Profile Section -->
     <div class="audience-container">
         <h2 class="audience-title">AUDIENCE PROFILE</h2>
-        
+
         <div class="audience-info">
             <div class="audience-item">
                 <div class="progress-circle" data-percent="29.74%">
@@ -539,7 +770,7 @@
                 </div>
                 <p class="audience-category">Top Management Level</p>
             </div>
-            
+
             <div class="audience-item">
                 <div class="progress-circle" data-percent="47.42%">
                     <svg width="100" height="100">
@@ -550,7 +781,7 @@
                 </div>
                 <p class="audience-category">Mid Management Level</p>
             </div>
-            
+
             <div class="audience-item">
                 <div class="progress-circle" data-percent="15.80%">
                     <svg width="100" height="100">
@@ -561,7 +792,7 @@
                 </div>
                 <p class="audience-category">Senior Employees</p>
             </div>
-            
+
             <div class="audience-item">
                 <div class="progress-circle" data-percent="7.04%">
                     <svg width="100" height="100">
@@ -573,7 +804,7 @@
                 <p class="audience-category">Individual Contributors</p>
             </div>
         </div>
-        
+
         <button class="btn btn-custom">REQUEST A CUSTOM AUDIENCE REPORT</button>
     </div>
 
@@ -589,151 +820,155 @@
             // Set stroke-dasharray for progress
             progress.style.strokeDasharray = circumference;
             progress.style.strokeDashoffset = offset; // Set the dash offset for animation
-            
+
             // Display the percentage value
             const progressValue = circle.querySelector('.progress-value');
             progressValue.innerText = percent;
         });
     </script>
- 
-   <!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row text-center">
-                <!-- Contact via Email -->
-                <div class="col-md-4">
-                    <div class="footer-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h4>Contact Us via Email</h4>
-                    <p>info@koinetmedia.com</p>
-                </div>
 
-                <!-- Office Address -->
-                <div class="col-md-4">
-                    <div class="footer-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p>info@koinetmedia.com</p>
                     </div>
-                    <h4>Our Office</h4>
-                    <p>Kharadi, Pune, Maharashtra, India, 411014</p>
-                </div>
 
-                <!-- Contact Number -->
-                <div class="col-md-4">
-                    <div class="footer-icon">
-                        <i class="fas fa-phone"></i>
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p>Kharadi, Pune, Maharashtra, India, 411014</p>
                     </div>
-                    <h4>Contact Us</h4>
-                    <p>+91 90215 68448</p>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p>+91 90215 68448</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-        <div class="container text-center">
-            <ul class="footer-links">
-                <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="footerpages/GDPR.html">GDPR</a></li>
-                <li><a href="footerpages/CCPA.html">CCPA</a></li>
-                <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
-            </ul>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <ul class="footer-links">
+                    <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="footerpages/CaseStudies.html">Case Studies</a></li>
+                    <li><a href="footerpages/GDPR.html">GDPR</a></li>
+                    <li><a href="footerpages/CCPA.html">CCPA</a></li>
+                    <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                </ul>
 
-            <!-- Copyright & Social Icons -->
-            <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <!-- Copyright & Social Icons -->
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- CSS -->
-<style>
-/* Footer Styling */
-.footer {
-    background: #1e1e1e;
-    color: #ffffff;
-    padding-top: 50px;
-}
+    <!-- CSS -->
+    <style>
+        /* Footer Styling */
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        /* Top Section */
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-top p {
+            color: #555;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        /* Bottom Section */
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #dc3545;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+    </style>
 
-/* Top Section */
-.footer-top {
-    background: #ffffff;
-    padding: 40px 0;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-
-.footer-top h4 {
-    margin-top: 10px;
-    font-weight: 600;
-    color: #222;
-}
-
-.footer-top p {
-    color: #555;
-}
-
-.footer-icon {
-    width: 60px;
-    height: 60px;
-    background: #dc3545;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    margin: 0 auto 15px;
-}
-
-/* Bottom Section */
-.footer-bottom {
-    padding: 30px 0;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 15px;
-}
-
-.footer-links li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.footer-links a {
-    color: #ddd;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #dc3545;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 0 8px;
-    color: white;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: #dc3545;
-}
-</style>
-
-<!-- Font Awesome for Icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

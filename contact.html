@@ -2,217 +2,535 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Contact Us - Koinet Media</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Koinet Media for innovative digital solutions. Reach out to us for inquiries, partnerships, or support.">
+    <title>Contact Us - Koinet Media</title>
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-    <!-- Custom Styles -->
     <style>
         body {
-            font-family: 'Nunito', sans-serif;
-            background: url('images/contact-bg.jpg') no-repeat center center/cover;
-            color: white;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
         }
-
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .contact-box {
-            background: rgba(0, 0, 0, 0.75);
-            padding: 40px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 800px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .contact-form, .contact-info {
-            width: 48%;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: none;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
-
-        .contact-form button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            background: #ff6b6b;
-            color: white;
-            font-size: 1rem;
-            transition: 0.3s;
-        }
-
-        .contact-form button:hover {
-            background: #ff4757;
-        }
-
-        .contact-info iframe {
-            width: 100%;
-            height: 250px;
-            border-radius: 5px;
-        }
-
-        .contact-info p {
-            margin: 10px 0;
-        }
-
-        .footer {
+        
+        .hero-section {
+            background: url('images/map-blur.jpg') center/cover no-repeat;
+            position: relative;
             text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
+            padding: 100px 20px;
+            color: white;
+        }
+        
+        .hero-section::before {
+            content: "";
             position: absolute;
-            bottom: 0;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background: rgba(0, 43, 91, 0.75);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .contact-section {
+            padding: 60px 0;
+        }
+        
+        .contact-info {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #002b5b;
+            color: white;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            background: red;
+        }
+        
+        .contact-btn i {
+            margin-right: 10px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+        }
+        
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: #002b5b;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #001d40;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-white bg-white shadow-sm">
-    <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand fw-bold text-uppercase" href="#">
-            <img src="images/logo2.png" alt="Koinet Media" width="100">
-        </a>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <img src="../images/knmlogo.png" alt="Koinet Media" width="100">
+            </a>
 
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active text-dark fw-bold" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="whatwedo.html">What We Do</a></li>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="whatwedo.html">What We Do</a></li>
 
-                <!-- Who We Serve Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" id="whoWeServeDropdown" role="button" data-bs-toggle="dropdown">
-                        Who We Serve
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Demand Professionals</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Marketers</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Sales Professionals</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Executives</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Agency Partners</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Channel Partners</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Healthcare Professionals</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Associations & Partners</a></li>
-                    </ul>
-                </li>
+                    <!-- What We Provide Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
+                    What We Provide
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html">Contact Discovery</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/emailmarketing.html">Email Marketing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/demadgeneration.html">Demand Generation</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/socialmedia.html">Social Media Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Appointment Generation</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/accountprofiling.html">Account Profiling</a></li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#">Focus Audiences</a></li>
-                
+                    <li class="nav-item"><a class="nav-link" href="focus_sectors.html">Focus Audiences</a></li>
 
-                <!-- Resources Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
-                        Resources
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Blog</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Infographics</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Case Studies</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Articles</a></li>
-                    </ul>
-                </li>
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                    Resources
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="infographics.html">Infographics</a></li>
 
-                <!-- About Us Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark fw-bold" href="about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
-                        About Us
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our Story</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our Culture</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our People</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Leadership</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our Reviews</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Our Accolades</a></li>
-                        <li><a class="dropdown-item text-dark fw-bold" href="#">Join Us</a></li>
-                    </ul>
-                </li>
+                            <li><a class="dropdown-item" href="articals.html">Articles</a></li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item"><a class="nav-link text-dark  fw-bold" href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
+                    About Us
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="aboutus/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="aboutus/ourstory.html">Our Story</a></li>
+                            <li><a class="dropdown-item" href="aboutus/ourculture.html">Our Team & Culture</a></li>
 
-<!-- Navbar Scroll Effect -->
-<script>
-document.addEventListener("scroll", function () {
-    let navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
-        navbar.classList.add("bg-dark");
-    } else {
-        navbar.classList.remove("bg-dark");
-    }
-});
-</script>
-    <div class="contact-container">
-        <div class="contact-box">
-            <div class="contact-form">
-                <h2>Get in Touch</h2>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <textarea placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit"><i class="fa fa-paper-plane"></i> Send Message</button>
-            </div>
-            <div class="contact-info">
-                <h2>Locate Us</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2848144443583!2d73.94209237423843!3d18.56119396793397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c36333b47b93%3A0x842ef6b263c7b5bf!2sKoinet%20Media!5e0!3m2!1sen!2sin!4v1717990873247!5m2!1sen!2sin"></iframe>
-                <p><i class="fa fa-map-marker-alt"></i> BD 2 Mars, N1 136, Morocco Casablanca</p>
-                <p><i class="fa fa-phone"></i> +212 522 275 386</p>
-                <p><i class="fa fa-envelope"></i> example@email.com</p>
-                <p>Catch us on social:</p>
-                <p>
-                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-                </p>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar-custom");
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-transparent");
+            } else {
+                navbar.classList.remove("navbar-transparent");
+            }
+        });
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Navbar Styling */
+        
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        /* Navbar Transparent on Scroll */
+        
+        .navbar-custom.navbar-transparent {
+            background: rgba(255, 255, 255, 0);
+            box-shadow: none;
+        }
+        /* Navbar Links */
+        
+        .navbar-custom .nav-link {
+            color: #000;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #e63946;
+        }
+        /* Dropdown Styling */
+        
+        .navbar-custom .dropdown-menu {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Dropdown Animation */
+        
+        .animate-dropdown {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Custom Toggler Button */
+        
+        .custom-toggler {
+            border: none;
+            background: none;
+        }
+        
+        .custom-toggler:focus {
+            box-shadow: none;
+        }
+        /* Responsive Navbar */
+        
+        @media (max-width: 991px) {
+            .navbar-custom {
+                background: rgba(255, 255, 255, 0.95);
+            }
+        }
+    </style>
+
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Contact Koinet Media</h1>
+            <p>Let's build something great together. Reach out to us today!</p>
+        </div>
     </div>
 
+    <div class="container contact-section">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="contact-info p-4">
+                    <h2>Get in Touch</h2> <br>
+                    <p>Email: info@koinetmedia.com</p>
+                    <p>Phone: +91 90215 68448</p>
+                    <p>Office: A Wing, 7th Floor, Office No.12, City Vista, Kharadi, Pune 411014</p>
+                    <button class="contact-btn w-100 mb-2" onclick="window.location.href='mailto:info@koinetmedia.com'">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </button>
+                    <button class="contact-btn w-100" onclick="window.location.href='tel:+919021568448'">
+                        <i class="fas fa-phone"></i> Call Now
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form id="contactForm">
+                    <h4 class="text-center">Contact Us</h4>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <div class="input-group flex-nowrap">
+                            <div class="input-group-prepend">
+                                <select class="form-control border-1 text-dark" id="countryCode" style="height: 55px; width: 100px;" required>
+                                    <option value="+91">India (+91)</option>
+                                    <option value="+1">USA (+1)</option>
+                                    <option value="+44">UK (+44)</option>
+                                    <option value="+93">Afghanistan (+93)</option>
+                                    <option value="+355">Albania (+355)</option>
+                                </select>
+                            </div>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="companyName" class="form-label">Company Name</label>
+                        <input type="text" class="form-control" id="companyName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=City+Vista,+Kharadi,+Pune+411014&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const submitButton = document.querySelector("#contactForm button");
+            submitButton.disabled = true; // Disable button
+            submitButton.innerText = "Submitting..."; // Change text
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                companyName: document.getElementById('companyName').value,
+                message: document.getElementById('message').value,
+                countryCode: document.getElementById('countryCode').value
+            };
+
+            try {
+                const response = await fetch('http://localhost:9000/api/postContact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert("Your message has been sent successfully!");
+                    document.getElementById('contactForm').reset();
+                } else {
+                    const errorData = await response.json();
+                    alert("Error: " + errorData.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while sending your message.');
+            } finally {
+                submitButton.disabled = false; // Re-enable button
+                submitButton.innerText = "Submit"; // Reset text
+            }
+        });
+    </script>
+
+    </script>
+    <!-- Footer Section -->
     <footer class="footer">
-        <p>&copy; 2025 Koinet Media. All rights reserved.</p>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p>info@koinetmedia.com</p>
+                    </div>
+
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p>Kharadi, Pune, Maharashtra, India, 411014</p>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p>+91 90215 68448</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <ul class="footer-links">
+                    <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="footerpages/CaseStudies.html">Case Studies</a></li>
+                    <li><a href="footerpages/GDPR.html">GDPR</a></li>
+                    <li><a href="footerpages/CCPA.html">CCPA</a></li>
+                    <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                </ul>
+
+                <!-- Copyright & Social Icons -->
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- CSS -->
+    <style>
+        /* Footer Styling */
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        /* Top Section */
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-top p {
+            color: #555;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        /* Bottom Section */
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #dc3545;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+    </style>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 
 </html>

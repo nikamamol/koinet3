@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team & Culture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        /* Global styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Header Styles */
+        
+        .header {
+            background: url('header-bg.jpg') center/cover no-repeat;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Banner Section */
+        
+        .banner {
+            position: relative;
+            background: url('https://thumbs.dreamstime.com/b/engaging-business-meeting-positive-team-discussion-fun-office-concept-banner-background-captures-essence-342393661.jpg') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .banner-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .banner h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .banner p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        /* Breadcrumb */
+        
+        .breadcrumb {
+            background: transparent;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Our Leaders Section */
+        
+        .leaders-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f4f4f9;
+        }
+        
+        .leaders-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .leaders-section span {
+            color: #007bff;
+        }
+        
+        .underline {
+            width: 60px;
+            height: 3px;
+            background: black;
+            margin: 10px auto;
+        }
+        /* Team Section */
+        
+        .team-section {
+            background: #f4f4f9;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .team-card {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .team-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .team-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 123, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+        
+        .team-overlay h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .team-overlay p {
+            font-size: 1rem;
+        }
+        
+        .social-icons {
+            margin-top: 10px;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 5px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <img src="../images/knmlogo.png" alt="Koinet Media" width="100">
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../whatwedo.html">What We Do</a></li>
+
+                    <!-- What We Provide Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
+                    What We Provide
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/contact_discovery.html">Contact Discovery</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/emailmarketing.html">Email Marketing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/demadgeneration.html">Demand Generation</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/socialmedia.html">Social Media Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Appointment Generation</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/accountprofiling.html">Account Profiling</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="../focus_sectors.html">Focus Audiences</a></li>
+
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                    Resources
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="../infographics.html">Infographics</a></li>
+
+                            <li><a class="dropdown-item" href="../articals.html">Articles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
+                    About Us
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../aboutus/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../aboutus/ourstory.html">Our Story</a></li>
+                            <li><a class="dropdown-item" href="../aboutus/ourculture.html">Our Team & Culture</a></li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar-custom");
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-transparent");
+            } else {
+                navbar.classList.remove("navbar-transparent");
+            }
+        });
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Navbar Styling */
+        
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        /* Navbar Transparent on Scroll */
+        
+        .navbar-custom.navbar-transparent {
+            background: rgba(255, 255, 255, 0);
+            box-shadow: none;
+        }
+        /* Navbar Links */
+        
+        .navbar-custom .nav-link {
+            color: #000;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #e63946;
+        }
+        /* Dropdown Styling */
+        
+        .navbar-custom .dropdown-menu {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Dropdown Animation */
+        
+        .animate-dropdown {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Custom Toggler Button */
+        
+        .custom-toggler {
+            border: none;
+            background: none;
+        }
+        
+        .custom-toggler:focus {
+            box-shadow: none;
+        }
+        /* Responsive Navbar */
+        
+        @media (max-width: 991px) {
+            .navbar-custom {
+                background: rgba(255, 255, 255, 0.95);
+            }
+        }
+    </style>
+
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="banner-content">
+            <h1>Our Team & Culture</h1>
+            <p>"Being a great place to work is the balance between great leaders and good culture"</p>
+            <nav class="breadcrumb justify-content-center">
+                <a href="#">Home</a> » <span class="text-light">Our Team & Culture</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- CSS -->
+    <style>
+        .our-culture {
+            background-color: rgb(13, 13, 59);
+            color: rgb(224, 223, 226);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .our-culture h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .underline {
+            width: 60px;
+            height: 3px;
+            background: rgb(212, 206, 206);
+            margin: 10px auto;
+        }
+        
+        .our-culture p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+    </style>
+
+    <!-- Content Creation Section -->
+    <section class="content-creation">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Section -->
+                <div class="col-md-6">
+                    <h2><strong>Content</strong> <span class="highlight">Creation</span></h2>
+                    <hr class="underline">
+                    <p>Whether you are writing a blog post, developing video content, or working on your landing page, you should be able to produce content that is not just engaging but must also be able to convert.</p>
+                    <p>COLEDA B2B with its team of highly experienced and skilled professional writers will help you create content for several platforms including blog posts, white papers, etc that will not just eventually augment your website’s traffic
+                        but will also convert leads for you. Our skilled professionals will help you design the content your audience is looking for, working as an extended arm to make content pieces that are easily consumable and relatable for your audience.</p>
+                    <p>Good B2B content creation must start with understanding the basics about the topic. Below are a few fundamentals our professionals use for producing high-quality and effective content pieces.</p>
+                </div>
+
+                <!-- Image Section -->
+                <div class="col-md-6">
+                    <div class="image-container">
+                        <img src="https://plus.unsplash.com/premium_photo-1666299433944-77ed60fda775?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29udGVudCUyMHdyaXRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Content Creation" class="img-fluid">
+                        <div class="overlay-box">
+                            <p>Koinet B2B with its team of highly experienced and skilled professional writers</p>
+                            <span class="arrow-icon">»</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS -->
+    <style>
+        .content-creation {
+            padding: 60px 20px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            color: #007bff;
+        }
+        
+        .underline {
+            width: 50px;
+            height: 3px;
+            background-color: black;
+            margin: 10px 0;
+        }
+        
+        .image-container {
+            position: relative;
+            max-width: 100%;
+        }
+        
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .overlay-box {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .arrow-icon {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .overlay-box {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+            .arrow-icon {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+
+    <!-- What is B2B Content Creation Section -->
+    <section class="b2b-content">
+        <div class="container">
+            <h2><strong>What Is B2B</strong> <span class="highlight">Content Creation</span></h2>
+            <hr class="underline">
+
+            <div class="accordion" id="b2bAccordion">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        1. PLANNING BEFORE ACTION COMES FIRST FOR US
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#b2bAccordion">
+                        <div class="accordion-body">
+                            Planning content ahead of time helps in achieving better engagement and consistency.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        2. KEYWORD STUFFING NO MORE WORKS
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#b2bAccordion">
+                        <div class="accordion-body">
+                            Modern SEO focuses on user intent rather than stuffing keywords unnaturally.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        3. DO NOT IGNORE GRAPHICS
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#b2bAccordion">
+                        <div class="accordion-body">
+                            Visual content enhances readability and engagement.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                        4. GIVING AWAY INFORMATION CAN BE A GOOD IDEA
+                    </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#b2bAccordion">
+                        <div class="accordion-body">
+                            Providing valuable information helps build trust and authority.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                        5. PRIORITIZE YOUR CALL TO ACTION
+                    </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#b2bAccordion">
+                        <div class="accordion-body">
+                            Clear and effective CTAs improve conversion rates.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                        6. STAY TRUE TO THE BRAND
+                    </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#b2bAccordion">
+                        <div class="accordion-body">
+                            Consistency in branding strengthens recognition and trust.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                        7. Try Getting Paid With Contact
+                    </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#b2bAccordion">
+                        <div class="accordion-body">
+                            Consistency in branding strengthens recognition and trust.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                        8. Diversity Your Content in Different Format
+                    </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#b2bAccordion">
+                        <div class="accordion-body">
+                            Consistency in branding strengthens recognition and trust.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- CSS -->
+    <style>
+        .b2b-content {
+            padding: 60px 20px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            color: #007bff;
+        }
+        
+        .underline {
+            width: 50px;
+            height: 3px;
+            background-color: black;
+            margin: 10px 0;
+        }
+        
+        .accordion-button {
+            background: white;
+            color: black;
+            font-weight: bold;
+            border: 1px solid #415a75;
+            box-shadow: none;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background: #007bff;
+            color: white;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 5px;
+        }
+        
+        .accordion-body {
+            font-size: 1rem;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 15px;
+        }
+    </style>
+
+    <!-- Bootstrap JS (Make sure Bootstrap is linked in your project) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Click Away Section -->
+    <section class="click-away-section">
+        <div class="container text-center">
+            <p class="content-text">
+                Undoubtedly blogs are a great source of engaging but diversifying content into different formats can help you create a wide-ranging impact. For instance, whitepapers, case studies, infographics, and slideshares will be able to draw more traffic to the
+                website. With the rising inclination of people toward video and audio, writers need to consider repurposing to appeal to a broader audience.
+            </p>
+        </div>
+
+        <!-- CTA Section -->
+        <!-- CTA Section with Reduced Image Size -->
+        <div class="cta-section mt-5">
+            <div class="container d-flex align-items-center justify-content-between">
+                <img src="../images/culture.png" alt="Online Meeting" class="small-image">
+                <div class="cta-text">
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS -->
+        <style>
+            .small-image {
+                width: 150px;
+                /* Adjust as needed */
+                height: auto;
+                animation: float 3s ease-in-out infinite;
+                /* Floating effect */
+                transition: transform 0.3s ease-in-out;
+                /* Smooth transition */
+                margin-top: -80px;
+            }
+            /* Floating Animation */
+            
+            @keyframes float {
+                0% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+                /* Move up */
+                100% {
+                    transform: translateY(0px);
+                }
+                /* Move down */
+            }
+            /* Hover Effect */
+            
+            .small-image:hover {
+                transform: scale(1.1);
+                /* Slightly enlarge on hover */
+            }
+        </style>
+
+    </section>
+
+    <!-- CSS -->
+    <style>
+        .click-away-section {
+            padding: 40px 20px;
+        }
+        
+        .content-text {
+            font-size: 1rem;
+            color: #333;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .cta-section {
+            background: linear-gradient(90deg, #86b0dd, #0056b3);
+            padding: 30px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cta-section .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+        }
+        
+        .cta-text h2 {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #b1d4fa;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #f8f9fa;
+            color: #0056b3;
+        }
+    </style>
+
+    <!-- Bootstrap (Ensure Bootstrap 5 is linked for proper styling) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p>info@koinetmedia.com</p>
+                    </div>
+
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p>Kharadi, Pune, Maharashtra, India, 411014</p>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p>+91 90215 68448</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <ul class="footer-links">
+                    <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="footerpages/CaseStudies.html">Case Studies</a></li>
+                    <li><a href="footerpages/GDPR.html">GDPR</a></li>
+                    <li><a href="footerpages/CCPA.html">CCPA</a></li>
+                    <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                </ul>
+
+                <!-- Copyright & Social Icons -->
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS -->
+    <style>
+        /* Footer Styling */
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        /* Top Section */
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-top p {
+            color: #555;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        /* Bottom Section */
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #dc3545;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+    </style>
+    <!-- Bootstrap (Ensure Bootstrap 5 is linked for proper styling) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+
+</html>

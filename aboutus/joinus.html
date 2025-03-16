@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now - B2B Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Global Styles */
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        /* Hero Section */
+        
+        .hero {
+            background: linear-gradient(135deg, navy, skyblue);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: fadeInUp 1.8s ease-in-out;
+        }
+        
+        .hero .btn-primary {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            background: black;
+            border: none;
+            animation: pulse 2s infinite;
+        }
+        
+        .hero .btn-primary:hover {
+            background: white;
+            color: black;
+        }
+        /* Why Choose Us Section */
+        
+        .why-choose-us {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .why-choose-us h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: navy;
+            margin-bottom: 30px;
+        }
+        
+        .feature-box {
+            background: skyblue;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .feature-box:hover {
+            transform: scale(1.05);
+        }
+        
+        .feature-box i {
+            font-size: 3rem;
+            color: navy;
+            margin-bottom: 15px;
+        }
+        /* Join Now Section */
+        
+        .join-now {
+            padding: 60px 20px;
+            background: navy;
+            color: white;
+            text-align: center;
+        }
+        
+        .join-now h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .join-now .btn-join {
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            background: skyblue;
+            border: none;
+            color: navy;
+            transition: 0.3s;
+        }
+        
+        .join-now .btn-join:hover {
+            background: white;
+            color: black;
+        }
+        /* Join Now Modal */
+        
+        .modal-content {
+            padding: 30px;
+            border-radius: 15px;
+        }
+        
+        .modal-header {
+            border-bottom: none;
+        }
+        
+        .modal-body input {
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .modal-body button {
+            width: 100%;
+            padding: 10px;
+            background: navy;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        
+        .modal-body button:hover {
+            background: skyblue;
+            color: black;
+        }
+        /* Animations */
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-white bg-white shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <img src="images/logo2.png" alt="Koinet Media" width="100">
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active text-dark fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="whatwedo.html">What We Do</a></li>
+
+                    <!-- Who We Serve Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" id="whoWeServeDropdown" role="button" data-bs-toggle="dropdown">
+                    Who We Serve
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Demand Professionals</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Marketers</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Sales Professionals</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Executives</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Agency Partners</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Channel Partners</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Healthcare Professionals</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Associations & Partners</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="focus_sectors.html">Focus Audiences</a></li>
+
+
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                    Resources
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark fw-bold" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="infographics.html">Infographics</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="CaseStudies.html">Case Studies</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="articals.html">Articles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold" href="about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
+                    About Us
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ourstory.html">Our Story</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ourculture.html">Our Culture</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ourpeople.html">Our People</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/leadership.html">Leadership</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ourreviews.html">Our Reviews</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ouraccolades.html">Our Accolades</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/joinus.html">Join Us</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link text-dark  fw-bold" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("bg-dark");
+            } else {
+                navbar.classList.remove("bg-dark");
+            }
+        });
+    </script>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Join the Future of B2B Marketing</h1>
+            <p>Unlock exclusive insights and strategies for business growth.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#joinNowModal">Join Now</button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Proven Strategies</h4>
+                        <p>We provide tested and effective marketing techniques.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-user-tie"></i>
+                        <h4>Expert Guidance</h4>
+                        <p>Our team of professionals ensures your success.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-globe"></i>
+                        <h4>Global Network</h4>
+                        <p>Connect with businesses worldwide and grow together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Now Section -->
+    <section class="join-now">
+        <div class="container">
+            <h2>Be a Part of Our Community</h2>
+            <p>Sign up today and take your business to the next level.</p>
+            <button class="btn btn-join" data-bs-toggle="modal" data-bs-target="#joinNowModal">Join Now</button>
+        </div>
+    </section>
+
+    <!-- Join Now Modal -->
+    <div class="modal fade" id="joinNowModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Join Now</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Company Name" required>
+                    <button type="submit">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p>info@koinetmedia.com</p>
+                    </div>
+
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p>Kharadi, Pune, Maharashtra, India, 411014</p>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p>+91 90215 68448</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <ul class="footer-links">
+                    <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="footerpages/GDPR.html">GDPR</a></li>
+                    <li><a href="footerpages/CCPA.html">CCPA</a></li>
+                    <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                </ul>
+
+                <!-- Copyright & Social Icons -->
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS -->
+    <style>
+        /* Footer Styling */
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        /* Top Section */
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-top p {
+            color: #555;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        /* Bottom Section */
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #dc3545;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+    </style>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

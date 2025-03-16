@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Reviews - B2B Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        /* General Styles */
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4faff;
+        }
+        /* Hero Section */
+        
+        .hero-section {
+            background: linear-gradient(90deg, #87CEFA, #1E3A5F);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+        /* Client Stats */
+        
+        .stats-section {
+            background: linear-gradient(90deg, #e0f7ff, #87CEFA);
+            padding: 60px 20px;
+            text-align: center;
+            color: #1E3A5F;
+        }
+        
+        .stats-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .stats-box {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+        
+        .stat-item {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        /* Why Choose Us */
+        
+        .why-choose-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .why-choose-box {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .why-choose-box:hover {
+            transform: translateY(-10px);
+        }
+        /* CTA Section */
+        
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .cta-section button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-section button:hover {
+            background-color: #c82333;
+        }
+        
+        .modal-header {
+            border-bottom: 2px solid #dc3545;
+        }
+        
+        .modal-title {
+            color: #dc3545;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .stats-box {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-white bg-white shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <img src="images/logo2.png" alt="Koinet Media" width="100">
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active text-dark fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="whatwedo.html">What We Do</a></li>
+
+                    <!-- Who We Serve Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" id="whoWeServeDropdown" role="button" data-bs-toggle="dropdown">
+                        Who We Serve
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Demand Professionals</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Marketers</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Sales Professionals</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Executives</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Agency Partners</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Channel Partners</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Healthcare Professionals</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="#">Associations & Partners</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="focus_sectors.html">Focus Audiences</a></li>
+
+
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark fw-bold" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="infographics.html">Infographics</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="CaseStudies.html">Case Studies</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="articals.html">Articles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold" href="about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
+                        About Us
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ourstory.html">Our Story</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ourculture.html">Our Culture</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ourpeople.html">Our People</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/leadership.html">Leadership</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ourreviews.html">Our Reviews</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/ouraccolades.html">Our Accolades</a></li>
+                            <li><a class="dropdown-item text-dark fw-bold" href="aboutus/joinus.html">Join Us</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link text-dark  fw-bold" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("bg-dark");
+            } else {
+                navbar.classList.remove("bg-dark");
+            }
+        });
+    </script>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>What Our Clients Say</h1>
+        <p>Discover why businesses trust us for their B2B marketing needs</p>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="reviews-section">
+        <div class="container">
+            <h2 class="text-primary mb-4">What Our Clients Say</h2>
+
+            <div class="review-slider">
+                <div class="review-container">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <img src="images/client1.jpg" alt="Client">
+                        <h4>John Doe</h4>
+                        <p>Marketing Manager</p>
+                        <p>"The best B2B marketing strategies I've ever seen. Highly recommended!"</p>
+                        <div class="stars">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <img src="images/client2.jpg" alt="Client">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, TechCorp</p>
+                        <p>"Their insights have been game-changing for our company!"</p>
+                        <div class="stars">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <img src="images/client3.jpg" alt="Client">
+                        <h4>Michael Smith</h4>
+                        <p>Sales Director</p>
+                        <p>"Innovative marketing solutions that truly work!"</p>
+                        <div class="stars">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
+                <div class="arrow next" onclick="nextSlide()">&#10095;</div>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="pagination">
+                <div class="dot active" onclick="goToSlide(0)"></div>
+                <div class="dot" onclick="goToSlide(1)"></div>
+                <div class="dot" onclick="goToSlide(2)"></div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .reviews-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #f4f9ff;
+        }
+        
+        .review-slider {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .review-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .review-card {
+            min-width: 100%;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .review-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #1E3A5F;
+        }
+        
+        .review-card h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1E3A5F;
+        }
+        
+        .review-card p {
+            font-size: 1rem;
+            color: gray;
+        }
+        
+        .stars i {
+            font-size: 18px;
+        }
+        /* Navigation Arrows */
+        
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #1E3A5F;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .arrow:hover {
+            color: #87CEFA;
+        }
+        
+        .prev {
+            left: -40px;
+        }
+        
+        .next {
+            right: -40px;
+        }
+        /* Pagination Dots */
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            background: #1E3A5F;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .dot.active {
+            background: #87CEFA;
+            transform: scale(1.3);
+        }
+    </style>
+
+    <script>
+        let currentIndex = 0;
+        const reviews = document.querySelector(".review-container");
+        const dots = document.querySelectorAll(".dot");
+
+        function updateSlider() {
+            reviews.style.transform = `translateX(${-currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % 3;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + 3) % 3;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+
+        // Auto slide
+        setInterval(nextSlide, 5000);
+    </script>
+
+
+    <!-- Client Stats -->
+    <div class="stats-section">
+        <h2>Trusted by Hundreds of Businesses</h2>
+        <div class="stats-box">
+            <div class="stat-item">⭐ 4.9/5 Rating</div>
+            <div class="stat-item">📈 500+ Companies</div>
+            <div class="stat-item">🌍 Global Reach</div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h2>Want to Share Your Experience?</h2>
+        <button data-bs-toggle="modal" data-bs-target="#reviewModal">Leave a Review</button>
+    </div>
+
+    <!-- Modal for Adding Review -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel">Submit Your Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="review" class="form-label">Your Review</label>
+                            <textarea class="form-control" id="review" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rating" class="form-label">Rating</label>
+                            <select class="form-select" id="rating" required>
+                                <option value="">Select Rating</option>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger" form="reviewForm">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p>info@koinetmedia.com</p>
+                    </div>
+
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p>Kharadi, Pune, Maharashtra, India, 411014</p>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p>+91 90215 68448</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <ul class="footer-links">
+                    <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="footerpages/GDPR.html">GDPR</a></li>
+                    <li><a href="footerpages/CCPA.html">CCPA</a></li>
+                    <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                </ul>
+
+                <!-- Copyright & Social Icons -->
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS -->
+    <style>
+        /* Footer Styling */
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        /* Top Section */
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-top p {
+            color: #555;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        /* Bottom Section */
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #dc3545;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+    </style>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

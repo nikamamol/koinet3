@@ -31,80 +31,181 @@
 
     <!-- recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 </head>
 
 <body>
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kharadi,pune,Maharashtra,India,411014</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 90215 68448</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@koinetmedia.com</small>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://x.com/MediaKoinet"><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/koiNetMediaITES"><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/company/31556606/"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/koinetmedia"><i class="fab fa-instagram fw-normal"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 shadow py-lg-0">
-            <a href="../index.html" class="navbar-brand p-0">
-                <!-- <img src="../images/Logo.png" alt="logo" width="150px" height="40px" />
-                <h5 class="mt-2">Koinet Media Ites Pvt Ltd.</h5> -->
-                <img src="../images/logo2.png" alt="logo" width="240px" height="50px" />
-
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <img src="../images/knmlogo.png" alt="Koinet Media" width="100">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="../index.html" class="nav-item nav-link text-dark">Home</a>
-                    <a href="../about.html" class="nav-item nav-link  text-dark">About</a>
-                    <!-- <a href="../service.html" class="nav-item nav-link">Services</a> -->
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../whatwedo.html">What We Do</a></li>
+
+                    <!-- What We Provide Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-item  text-dark" href="service.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu rounded-3 ">
-                            <li><a class="dropdown-item" href="../servicespages/accountmarketing.html">Account-Based Marketing</a></li>
-                            <li><a class="dropdown-item" href="../servicespages/multichanel_lead.html">Multi-Channel Lead</a></li>
-                            <li><a class="dropdown-item" href="../servicespages/contactdiscovery.html">Contact Discovery</a></li>
-                            <li><a class="dropdown-item" href="../servicespages/emailmarketing.html">Email-Marketing</a></li>
-                            <li><a class="dropdown-item" href="../servicespages/datappend.html">Data Append & Cleansing</a></li>
-                            <!-- <li><a class="dropdown-item" href="../servicespages/demandgeneration.html">Demand Generation</a></li> -->
-                            <li><a class="dropdown-item" href="../servicespages/socialmedia.html">Social Media Marketing</a></li>
-                            <li><a class="dropdown-item" href="../servicespages/appointment.html">Appointment Generation</a></li>
-                            <li><a class="dropdown-item" href="../servicespages/accountprofiling.html">Account Profiling</a></li>
-                            <li><a class="dropdown-item" href="../servicespages/seo.html">Search Engine Optimization (SEO)</a></li>
+                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
+                    What We Provide
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/contact_discovery.html">Contact Discovery</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/emailmarketing.html">Email Marketing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/demadgeneration.html">Demand Generation</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/socialmedia.html">Social Media Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Appointment Generation</a></li>
+                            <li><a class="dropdown-item" href="../what_we_provide/accountprofiling.html">Account Profiling</a></li>
                         </ul>
                     </li>
-                    <a href="../blog.html" class="nav-item nav-link  text-dark">Blog</a>
-                    <a href="../contact.html" class="nav-item nav-link  text-dark">Contact</a>
-                </div>
-            </div>
-        </nav>
 
-    </div>
+                    <li class="nav-item"><a class="nav-link" href="../focus_sectors.html">Focus Audiences</a></li>
+
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                    Resources
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="../infographics.html">Infographics</a></li>
+
+                            <li><a class="dropdown-item" href="../articals.html">Articles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
+                    About Us
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="../aboutus/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../aboutus/ourstory.html">Our Story</a></li>
+                            <li><a class="dropdown-item" href="../aboutus/ourculture.html">Our Team & Culture</a></li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar-custom");
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-transparent");
+            } else {
+                navbar.classList.remove("navbar-transparent");
+            }
+        });
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Navbar Styling */
+        
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        /* Navbar Transparent on Scroll */
+        
+        .navbar-custom.navbar-transparent {
+            background: rgba(255, 255, 255, 0);
+            box-shadow: none;
+        }
+        /* Navbar Links */
+        
+        .navbar-custom .nav-link {
+            color: #000;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #e63946;
+        }
+        /* Dropdown Styling */
+        
+        .navbar-custom .dropdown-menu {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Dropdown Animation */
+        
+        .animate-dropdown {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Custom Toggler Button */
+        
+        .custom-toggler {
+            border: none;
+            background: none;
+        }
+        
+        .custom-toggler:focus {
+            box-shadow: none;
+        }
+        /* Responsive Navbar */
+        
+        @media (max-width: 991px) {
+            .navbar-custom {
+                background: rgba(255, 255, 255, 0.95);
+            }
+        }
+    </style>
+
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Navbar End -->
 
     <div class="container">
@@ -465,87 +566,148 @@
     </div>
 
 
-    <footer>
-        <div class="container-fluid py-5 wow fadeIn position-relative" data-wow-delay="0.1s ">
-
-            <div class="container content-container ">
-                <video autoplay muted loop id="background-video" class="" style="opacity: 2;">
-                <source src="../images/footer.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-                <div class="row g-5 p-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-4">Our Office</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kharadi, Pune, Maharashtra, India, 411014</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9021568448</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@koinetmedia.com</p>
-                        <div class="d-flex pt-3">
-                            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://x.com/MediaKoinet"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/koiNetMediaITES"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/company/31556606/"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/koinetmedia"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-4">Quick Links</h4>
-                        <ul class="cusomHeight">
-                            <a class="btn btn-link" href="../footerpages/Privacy-policy.html">
-                                <li>Privacy Policy</li>
-                            </a>
-                            <a class="btn btn-link" href="../footerpages/GDPR.html">
-                                <li>GDPR</li>
-                            </a>
-                            <br>
-                            <a class="btn btn-link" href="../footerpages/CCPA.html">
-                                <li>CCPA</li>
-                            </a>
-                            <a class="btn btn-link" href="../footerpages/Terms-Condition.html">
-                                <li>Terms & Condition</li>
-                            </a>
-                            <a class="btn btn-link" href="../footerpages/Cookies.html">
-                                <li>Cookies</li>
-                            </a>
-                            <a class="btn btn-link" href="../footerpages/CaseStudies.html">
-                                <li>Case Studies</li>
-                            </a>
-                            <a class="btn btn-link" href="../footerpages/Media_Kit.html">
-                                <li>MediaKit</li>
-                            </a>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-4">Business Hours</h4>
-                        <p class="mb-1 text-white">Monday - Friday</p>
-                        <h6 class="text-light">24 Hours</h6>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-4">Newsletter</h4>
-                        <p>You can opt out of our newsletters at any time. See our privacy policy</p>
-                        <div class="position-relative w-100">
-                            <form id="signupForm" class="position-relative" action="https://formspree.io/f/xyzggpzp" method="POST">
-                                <input class="form-control py-2 " type="email" name="email" placeholder="Your email" required>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary py-2 w-100 mt-2 btn-sm">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright  py-4">
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; 2025 <a class="fw-medium text-light" href="#">Koinet | Media</a>, All Right Reserved.
+                <div class="row text-center">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p>info@koinetmedia.com</p>
+                    </div>
+
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p>Kharadi, Pune, Maharashtra, India, 411014</p>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p>+91 90215 68448</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <ul class="footer-links">
+                    <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="footerpages/CaseStudies.html">Case Studies</a></li>
+                    <li><a href="footerpages/GDPR.html">GDPR</a></li>
+                    <li><a href="footerpages/CCPA.html">CCPA</a></li>
+                    <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                </ul>
+
+                <!-- Copyright & Social Icons -->
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- CSS -->
+    <style>
+        /* Footer Styling */
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        /* Top Section */
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-top p {
+            color: #555;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        /* Bottom Section */
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #dc3545;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+    </style>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-danger btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 

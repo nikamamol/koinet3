@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Articles Post</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta property="og:title" content="Your Blog Post Title">
+    <meta property="og:description" content="Description of your blog post">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of your blog post">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- download pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Koinet Media - Unlock Your Business Growth with Innovative Digital Solutions">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Template Stylesheet -->
+    <link href="./css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <img src="images/knmlogo.png" alt="Koinet Media" width="100">
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="whatwedo.html">What We Do</a></li>
+
+                    <!-- What We Provide Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
+                    What We Provide
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="#">Account-Based Marketing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html">Contact Discovery</a></li>
+                            <li><a class="dropdown-item" href="#">Email Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Data Append & Cleansing</a></li>
+                            <li><a class="dropdown-item" href="#">Demand Generation</a></li>
+                            <li><a class="dropdown-item" href="#">Social Media Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Appointment Generation</a></li>
+                            <li><a class="dropdown-item" href="#">Account Profiling</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="focus_sectors.html">Focus Audiences</a></li>
+
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                    Resources
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="infographics.html">Infographics</a></li>
+
+                            <li><a class="dropdown-item" href="articals.html">Articles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
+                    About Us
+                </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="aboutus/ourstory.html">Our Story</a></li>
+                            <li><a class="dropdown-item" href="aboutus/ourculture.html">Our Team & Culture</a></li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar-custom");
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-transparent");
+            } else {
+                navbar.classList.remove("navbar-transparent");
+            }
+        });
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Navbar Styling */
+        
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        /* Navbar Transparent on Scroll */
+        
+        .navbar-custom.navbar-transparent {
+            background: rgba(255, 255, 255, 0);
+            box-shadow: none;
+        }
+        /* Navbar Links */
+        
+        .navbar-custom .nav-link {
+            color: #000;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #e63946;
+        }
+        /* Dropdown Styling */
+        
+        .navbar-custom .dropdown-menu {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Dropdown Animation */
+        
+        .animate-dropdown {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Custom Toggler Button */
+        
+        .custom-toggler {
+            border: none;
+            background: none;
+        }
+        
+        .custom-toggler:focus {
+            box-shadow: none;
+        }
+        /* Responsive Navbar */
+        
+        @media (max-width: 991px) {
+            .navbar-custom {
+                background: rgba(255, 255, 255, 0.95);
+            }
+        }
+    </style>
+
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <div class="container-fluid marginContainer text-dark " style="margin-top: 110px;">
+        <div class="row">
+            <div class="col-lg-1 mt-5 py-5 ">
+                <div class="col-12 col-lg-6 text-start text-lg-end  my-auto sticky-icons d-flex flex-sm-row flex-lg-column">
+                    <a class="btn btn-square btn-danger rounded-circle me-2 mb-2" onclick="shareOnTwitter()">
+                        <i class="fab fa-twitter fw-normal"></i>
+                    </a>
+
+                    <a class="btn btn-square btn-danger rounded-circle me-2 mb-2" onclick="shareOnFacebook()">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- <a class="btn btn-square btn-danger rounded-circle me-2 mb-2" onclick="shareOnInstagram()">
+                        <i class="fab fa-instagram fw-normal"></i>
+                    </a> -->
+                    <a class="btn btn-square btn-danger rounded-circle me-2 mb-2" onclick="shareOnLinkedIn()">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-lg-7 mx-auto justify-items-center">
+                <div class="text-center">
+                    <img id="blog-image" class="img-fluid mb-2" alt="Blog Image" width="100%">
+                </div>
+                <div class="col-lg-12 mt-4 mb-3 py-4">
+                    <p>
+                        <span class="float-end p-2 bg-danger text-white rounded-3">
+                            Category :  <span id="blog-category" class="fw-bold"></span>
+                        </span>
+                        <span class="p-2 bg-danger text-white rounded-3">
+                            Published on : <span id="blog-date" class="fw-bold"></span>
+                        </span>
+                    </p>
+                </div>
+                <h1 id="blog-title" class="display-6 mb-3 fw-bold text-center fs-1"></h1>
+                <div class="sofiya-1">
+                    <div class="post-content-wrapper">
+                        <div id="blog-content" class="rich-text w-richtext"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 text-center">
+                <button id="open_modal" class="btn btn-primary w-25 py-3 rounded-2" type="button">Download PDF <i class="fa fa-download ms-2"></i></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function shareOnTwitter() {
+            const postTitle = document.getElementById('blog-title').textContent; // Get your post title dynamically
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(postTitle)}&via=your_twitter_handle`);
+        }
+
+        function shareOnFacebook() {
+            const postTitle = document.getElementById('blog-title').textContent; // Get your post title dynamically
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(postTitle)}`);
+        }
+
+        function shareOnLinkedIn() {
+            const postTitle = document.getElementById('blog-title').textContent; // Get your post title dynamically
+            const postUrl = encodeURIComponent(window.location.href);
+            alert("Please copy the url link in this page and paste it in the LinkedIn post.");
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}`);
+
+        }
+    </script>
+
+
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-2 shadow border-0 rounded-5">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="../images/Logo.png" alt="" class="img-fluid mb-3" width="200px" height="50px">
+                    <p class="fw-bold fs-4">Koinet Media Articles</p>
+                    <p class="fs-2 fw-bold">Thank you for your interest! </p>
+                    <p>Our team will get in touch at after downloading our case-studies</p>
+                    <form id="contactForm" class="position-relative" action="https://formspree.io/f/xyzggpzp" method="POST">
+                        <input class="form-control popupBg w-100 py-3 ps-4 pe-5" id="emailInput" type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" id="downloadBtn" class="btn btn-danger py-2 position-absolute top-0 end-0 mt-2 me-2 rounded-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        async function fetchBlogDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const blogId = urlParams.get("id"); // Get the ID from URL
+
+            if (!blogId) {
+                console.error("No blog ID found in URL.");
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://localhost:9000/api/blog/${blogId}`); // Fetch blog by ID
+                const blog = await response.json();
+
+                if (!blog) {
+                    console.error("Blog not found.");
+                    return;
+                }
+
+                // Populate the page with blog data
+                document.getElementById("blog-title").textContent = blog.title;
+                document.getElementById("blog-image").src = blog.imageUrl || "https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_1280.jpg";
+                document.getElementById("blog-category").textContent = blog.category;
+                document.getElementById("blog-date").textContent = new Date(blog.date).toLocaleDateString();
+                document.getElementById("blog-content").innerHTML = blog.content;
+            } catch (error) {
+                console.error("Error fetching blog details:", error);
+            }
+        }
+
+        // Run function on page load
+        document.addEventListener("DOMContentLoaded", fetchBlogDetails);
+    </script>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p>info@koinetmedia.com</p>
+                    </div>
+
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p>Kharadi, Pune, Maharashtra, India, 411014</p>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p>+91 90215 68448</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <ul class="footer-links">
+                    <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="footerpages/CaseStudies.html">Case Studies</a></li>
+                    <li><a href="footerpages/GDPR.html">GDPR</a></li>
+                    <li><a href="footerpages/CCPA.html">CCPA</a></li>
+                    <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                </ul>
+
+                <!-- Copyright & Social Icons -->
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS -->
+    <style>
+        /* Footer Styling */
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        /* Top Section */
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-top p {
+            color: #555;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        /* Bottom Section */
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #dc3545;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+    </style>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+<!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
