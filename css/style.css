@@ -12,6 +12,12 @@ body {
 }
 
 
+/* test */
+
+
+/*  */
+
+
 /*** Spinner ***/
 
 .spinner {
@@ -626,9 +632,7 @@ h6,
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-;
-    
-    
+    ;
 }
 
 .animate-text {
@@ -641,7 +645,6 @@ h6,
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-   
 }
 
 .emailmarketing_bg {
@@ -674,18 +677,15 @@ h6,
 .socialBg {
     background-image: url('../images/sm1.avif');
     background-size: 80%;
-   
     background-position: center;
     background-repeat: no-repeat;
-    
 }
+
 .about_bg_img {
     background-image: url('../images/sm1.avif');
     background-size: 80%;
-   
     background-position: center;
     background-repeat: no-repeat;
-    
 }
 
 .acountBg {
@@ -711,7 +711,6 @@ h6,
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
-   
 }
 
 .seobg {
