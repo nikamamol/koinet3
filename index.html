@@ -253,50 +253,95 @@
     </script>
     <style>
         /* Background Image for Hero Section */
+        /* Responsive Hero Section */
         
         .hero-section {
             background: url('images/9057765.jpg') no-repeat center center;
             background-size: cover;
             color: white;
             padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
-        /* Dark Overlay on Hero Section */
+        /* Overlay for Better Readability */
         
         .overlay {
-            background: rgba(123, 123, 197, 0.541);
+            background: rgba(123, 123, 197, 0.75);
             padding: 50px;
             border-radius: 10px;
         }
-        /* CTA Button Styling */
+        /* CTA Button */
         
         .cta-button {
             background: #ff9800;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
             border-radius: 5px;
             font-size: 18px;
             cursor: pointer;
             margin-top: 20px;
+            display: inline-block;
+            transition: background 0.3s ease;
         }
         
         .cta-button:hover {
             background: #e68900;
         }
-        /* Overlay for Carousel Images */
+        /* Carousel Image Responsiveness */
         
-        .carousel-item {
-            position: relative;
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+        /* Mobile and Tablet Responsiveness */
+        
+        @media (max-width: 991px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+            .overlay {
+                padding: 30px;
+            }
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
         }
         
-        .carousel-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to left, rgba(0, 102, 255, 0.5) 10%, transparent 50%, rgba(0, 102, 255, 0.5) 90%);
-            z-index: 2;
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 20px;
+                text-align: center;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .carousel-item img {
+                max-height: 250px;
+            }
+            .cta-button {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .cta-button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
         }
     </style>
 
@@ -365,9 +410,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- Left Side - Text & Features -->
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-12">
                     <h2 class="section-title">
-                        Why Choose <span class="primary-color">KoiNet</span> <span class="black-color">Media?</span>
+                        Why Choose <span>KoiNet Media?</span>
                     </h2>
                     <p class="section-desc">
                         We are an innovative demand generation agency, providing businesses with data-driven solutions to enhance their sales pipelines and drive revenue.
@@ -393,10 +438,9 @@
                 </a>
                 </div>
 
-                <!-- Right Side - Image & Background Design -->
-                <div class="col-lg-6 position-relative">
+                <!-- Right Side - Image -->
+                <div class="col-lg-6 col-md-12 text-center">
                     <div class="image-wrapper">
-                        <div class="background-overlay"></div>
                         <img src="images/whtchooseus.png" alt="About KoiNet Media" class="main-image">
                     </div>
                 </div>
@@ -410,8 +454,9 @@
         
         .why-choose-section {
             position: relative;
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 80px 0;
+            background: #f8f9fa;
+            /* No gradient */
             overflow: hidden;
         }
         /* Section Title */
@@ -419,21 +464,15 @@
         .section-title {
             font-size: 36px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            color: black;
             margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .section-title .primary-color {
+        .section-title span {
             color: #007bff;
-            /* Primary Color */
-        }
-        
-        .section-title .black-color {
-            color: #000;
-            /* Black Color */
+            /* Primary color */
         }
         /* Section Description */
         
@@ -454,7 +493,6 @@
             margin-bottom: 15px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
-            overflow: hidden;
         }
         
         .feature-box:hover {
@@ -487,37 +525,24 @@
         /* Icon Colors */
         
         .bg-primary {
-            background: linear-gradient(45deg, #007bff, #00b4d8);
+            background: #007bff;
         }
         
         .bg-success {
-            background: linear-gradient(45deg, #28a745, #20c997);
+            background: #28a745;
         }
         
         .bg-warning {
-            background: linear-gradient(45deg, #ffc107, #fd7e14);
+            background: #ffc107;
         }
-        /* Image & Background */
+        /* Image */
         
         .image-wrapper {
-            position: relative;
+            text-align: center;
             width: 100%;
-            max-width: 450px;
+            max-width: 550px;
+            /* Increased image width */
             margin: auto;
-        }
-        
-        .background-overlay {
-            position: absolute;
-            top: -10%;
-            left: -10%;
-            width: 120%;
-            height: 120%;
-            background: linear-gradient(45deg, #007bff, #00b4d8);
-            z-index: -1;
-            border-radius: 20px;
-            transform: rotate(-5deg);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            animation: float 6s infinite ease-in-out;
         }
         
         .main-image {
@@ -529,82 +554,132 @@
         .main-image:hover {
             transform: scale(1.05);
         }
-        /* Floating Animation */
-        
-        @keyframes float {
-            0% {
-                transform: rotate(-5deg) translateY(0);
-            }
-            50% {
-                transform: rotate(-5deg) translateY(-10px);
-            }
-            100% {
-                transform: rotate(-5deg) translateY(0);
-            }
-        }
         /* Button */
         
         .btn-primary {
             padding: 12px 25px;
             font-size: 16px;
             border-radius: 5px;
-            background: linear-gradient(45deg, #007bff, #00b4d8);
-            border: none;
-            color: white;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: transparent;
+            /* No background */
+            border: 2px solid #007bff;
+            /* Primary color border */
+            color: #007bff;
+            /* Primary color text */
+            transition: all 0.3s ease-in-out;
         }
         
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+            background: #007bff;
+            /* Primary color background */
+            color: white;
+            /* Text turns white */
         }
         /* Responsive Design */
         
         @media (max-width: 992px) {
             .section-title {
                 font-size: 32px;
-                letter-spacing: 1.5px;
             }
             .section-desc {
                 font-size: 15px;
             }
+            .feature-box {
+                padding: 12px 15px;
+            }
+            .feature-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            .feature-text {
+                font-size: 15px;
+            }
+            .btn-primary {
+                padding: 10px 20px;
+                font-size: 15px;
+            }
             .image-wrapper {
-                max-width: 350px;
+                max-width: 500px;
+                /* Adjust for tablets */
             }
         }
         
         @media (max-width: 768px) {
             .why-choose-section {
-                padding: 80px 0;
+                padding: 60px 0;
             }
             .section-title {
                 font-size: 28px;
-                letter-spacing: 1px;
+                text-align: center;
             }
             .section-desc {
                 font-size: 14px;
+                text-align: center;
+            }
+            .feature-box {
+                padding: 10px 12px;
+            }
+            .feature-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            .feature-text {
+                font-size: 14px;
+            }
+            .btn-primary {
+                padding: 8px 16px;
+                font-size: 14px;
+                display: block;
+                text-align: center;
+                width: fit-content;
+                margin: 10px auto;
             }
             .image-wrapper {
-                max-width: 300px;
+                max-width: 450px;
+                /* Adjust for smaller screens */
+                margin-top: 20px;
             }
         }
         
         @media (max-width: 576px) {
+            .row {
+                flex-direction: column-reverse;
+                /* Image below text */
+            }
             .section-title {
                 font-size: 24px;
-                letter-spacing: 0.5px;
             }
             .section-desc {
                 font-size: 13px;
             }
+            .feature-box {
+                padding: 8px 10px;
+            }
+            .feature-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+            .feature-text {
+                font-size: 13px;
+            }
+            .btn-primary {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
             .image-wrapper {
-                max-width: 250px;
+                max-width: 400px;
+                /* Adjust for mobile */
             }
         }
     </style>
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
 
 
     <!-- Services Section -->
