@@ -202,14 +202,16 @@
     <div class="container-fluid hero-section">
         <div class="row text-center justify-content-center ">
             <div class="col-md-8 overlay">
-                <h1>Unleash Your <br><span id="changingWord" class="text-warning">
+                <h1 class="d-none d-md-block">Unleash Your <br><span id="changingWord" class="text-warning">
                      Business</span> Potential</h1>
+                <h2 class="d-block d-md-none mb-3">Unleash Your <br><span id="changingWord" class="text-warning">
+                        Business</span> Potential</h2>
                 <div class="row">
                     <div class="col-md-6 text-start">
                         <p>
                             Success isn’t just about being seen—it’s about making an impact. At
-                            <a href="/aboutus/overview.html"><strong>KoinetMedia</strong></a>, we don’t just generate leads; we create meaningful connections. With precision-targeted content and a strategy designed for engagement, we turn interest into
-                            action and clicks into conversions. Let’s redefine the way you grow.
+                            <a href="/aboutus/overview.html"><strong class="text-warning">KoinetMedia</strong></a>, we don’t just generate leads; we create meaningful connections. With precision-targeted content and a strategy designed for engagement,
+                            we turn interest into action and clicks into conversions. Let’s redefine the way you grow.
                         </p>
                         <a class="cta-button" href="contact.html">Get Started</a>
 
@@ -241,12 +243,12 @@
         </div>
     </div>
     <script>
-        const words = ["Business ", "Enterprise ", "Venture ", "Startup ", "Brand "];
+        const words = ["Business", "Enterprise", "Venture", "Startup", "Brand"];
         let index = 0;
 
         function changeWord() {
             index = (index + 1) % words.length;
-            document.getElementById("changingWord ").textContent = words[index];
+            document.getElementById("changingWord").textContent = words[index];
         }
 
         setInterval(changeWord, 2000); // Change word every 2 seconds
@@ -725,7 +727,12 @@
 
             <!-- Services Overview -->
             <div class="row align-items-center py-5">
-                <!-- Left Side: Service Descriptions -->
+                <!-- Left Side: Image -->
+                <div class="col-lg-6 text-center">
+                    <img src="images/serove1.png" alt="Services Illustration" class="img-fluid service-img height-">
+                </div>
+
+                <!-- Right Side: Service Descriptions -->
                 <div class="col-lg-6">
                     <h3 class="fw-bold text-uppercase text-primary">Our Service Offerings</h3>
                     <ul class="list-unstyled mt-4">
@@ -748,11 +755,6 @@
                             </p>
                         </li>
                     </ul>
-                </div>
-
-                <!-- Right Side: Image -->
-                <div class="col-lg-6 text-center">
-                    <img src="images/ServeBG2.png" alt="Services Illustration" class="img-fluid service-img">
                 </div>
             </div>
 
@@ -830,6 +832,7 @@
             margin-right: 5px;
         }
     </style>
+
 
     <!-- Testimonials Section -->
     <section class="py-5 text-center position-relative testimonials-bg">
@@ -2100,7 +2103,7 @@
         .footer-icon {
             width: 60px;
             height: 60px;
-            background: #dc3545;
+            background: #1A8AE6;
             color: white;
             border-radius: 50%;
             display: flex;
