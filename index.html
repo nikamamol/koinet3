@@ -811,131 +811,143 @@
     </style>
 
     <!-- Testimonials Section -->
-    <section class="py-5 text-center position-relative testimonials-bg ">
-        <!-- Animated Shapes -->
-        <div class="circle circle-1 "></div>
-        <div class="circle circle-2 "></div>
-        <div class="triangle triangle-1 "></div>
-        <div class="triangle triangle-2 "></div>
-        <div class="triangle triangle-3 "></div>
+    <section class="testimonials">
+        <div class="container-fluid">
+            <h2 class="section-title">What Our Clients Say</h2>
 
-        <div class="container position-relative ">
-            <h2 class="text-dark fw-bold animate__animated animate__fadeInUp ">Our Clients Love Us</h2>
-            <p class="mb-4 text-secondary animate__animated animate__fadeInUp animate__delay-1s ">See what our satisfied clients have to say about us.</p>
-
-            <!-- Testimonials Carousel -->
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <div class="carousel-inner">
+                    <!-- Testimonial 1 -->
                     <div class="carousel-item active">
-                        <div class="card border-0 shadow p-4">
-                            <p class="fst-italic">"Koinet Media helped us scale our outreach and boost lead quality significantly. A fantastic experience!"</p>
-                            <h5 class="fw-bold mt-3">- Mark Thompson</h5>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                “Koinet Media transformed our digital strategy and delivered beyond expectations.”
+                            </p>
+                            <h5 class="client-name">John Doe</h5>
+                            <span class="client-position">CEO, Tech Corp</span>
                         </div>
                     </div>
+
+                    <!-- Testimonial 2 -->
                     <div class="carousel-item">
-                        <div class="card border-0 shadow p-4">
-                            <p class="fst-italic">"Their data-driven marketing approach increased our customer engagement by 45%. Highly recommend!"</p>
-                            <h5 class="fw-bold mt-3">- Lisa Carter</h5>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                “Their expertise and approach helped us achieve outstanding marketing results.”
+                            </p>
+                            <h5 class="client-name">Jane Smith</h5>
+                            <span class="client-position">Marketing Director, Growth Inc.</span>
                         </div>
                     </div>
+
+                    <!-- Testimonial 3 -->
                     <div class="carousel-item">
-                        <div class="card border-0 shadow p-4">
-                            <p class="fst-italic">"Exceptional service! Koinet Media played a key role in expanding our B2B network with qualified leads."</p>
-                            <h5 class="fw-bold mt-3">- David Ramirez</h5>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                “Highly professional and results-driven. We saw a 300% increase in engagement.”
+                            </p>
+                            <h5 class="client-name">David Wilson</h5>
+                            <span class="client-position">Founder, StartUpX</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Carousel Controls -->
+                <!-- Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
+                <span class="carousel-control-prev-icon"></span>
+            </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+                <span class="carousel-control-next-icon"></span>
+            </button>
             </div>
-
         </div>
     </section>
 
-    <!-- CSS -->
+    <!-- CSS Styling -->
     <style>
-        /* Background Styling */
+        /* Testimonials Section */
         
-        .testimonials-bg {
-            position: relative;
-            background: linear-gradient(135deg, #E2F3FF, #D6FFE9);
+        .testimonials {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            /* Keeping the same background color */
             padding: 80px 0;
-            overflow: hidden;
+            text-align: center;
+            color: white;
+            width: 100%;
         }
-        /* Floating Geometric Shapes */
+        /* Section Title */
         
-        .circle,
-        .triangle {
-            position: absolute;
-            opacity: 0;
-            transform: scale(0);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
         }
-        /* Floating Circles */
+        /* Testimonial Content */
         
-        .circle {
+        .testimonial-content {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.2);
+        }
+        /* Testimonial Text */
+        
+        .testimonial-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #f1f1f1;
+            margin-bottom: 15px;
+        }
+        /* Client Name & Position */
+        
+        .client-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #fff;
+        }
+        
+        .client-position {
+            font-size: 1rem;
+            color: #ddd;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .testimonial-content {
+                padding: 30px;
+                width: 90%;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .testimonial-content {
+                width: 95%;
+            }
+            .testimonial-text {
+                font-size: 1.1rem;
+            }
+            .client-name {
+                font-size: 1.2rem;
+            }
+            .client-position {
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        /* Carousel Controls */
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(255, 255, 255, 0.7);
             border-radius: 50%;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            opacity: 0.7;
-        }
-        /* Circle 1 */
-        
-        .circle-1 {
-            width: 120px;
-            height: 120px;
-            top: 20%;
-            left: 15%;
-        }
-        /* Circle 2 */
-        
-        .circle-2 {
-            width: 80px;
-            height: 80px;
-            bottom: 15%;
-            right: 20%;
-        }
-        /* Triangle Animations */
-        
-        .triangle {
-            width: 100px;
-            height: 100px;
-            background: transparent;
-            border-left: 40px solid transparent;
-            border-right: 40px solid transparent;
-            border-bottom: 70px solid rgba(0, 0, 0, 0.1);
-        }
-        /* Triangle 1 */
-        
-        .triangle-1 {
-            top: 10%;
-            left: 20%;
-        }
-        /* Triangle 2 */
-        
-        .triangle-2 {
-            top: 50%;
-            right: 30%;
-        }
-        /* Triangle 3 */
-        
-        .triangle-3 {
-            bottom: 15%;
-            left: 50%;
-        }
-        /* Scroll Animation */
-        
-        .show-shapes .circle,
-        .show-shapes .triangle {
-            opacity: 1;
-            transform: scale(1);
+            padding: 10px;
         }
     </style>
 
@@ -957,38 +969,33 @@
             observer.observe(section);
         });
     </script>
+
     <!-- Why Partner with Koinet Media Section -->
-    <section class="py-5 text-dark text-center position-relative focus-section ">
-        <div class="container position-relative ">
-            <h2 class="fw-bold animate__animated animate__fadeInUp ">
-                Why Partner with <span class="text-highlight ">Koinet Media?</span>
+    <section class="why-partner-section">
+        <div class="container">
+            <h2 class="section-title">
+                WHY PARTNER WITH <span class="text-primary">KOINET</span> MEDIA?
             </h2>
-            <p class="mb-4 text-secondary animate__animated animate__fadeInUp animate__delay-1s ">
-                Partner with Koinet Media and you’ll get more than just leads – you’ll get conversions. Our approach is designed to drive real ROI – ensuring every marketing dollar is spent with purpose.
+            <p class="section-description">
+                Work with Koinet Media and get more than just leads – get real conversions. Our smart data-driven approach ensures every marketing dollar is well spent.
             </p>
 
-            <!-- Floating Animated Elements -->
-            <div class="floating-container ">
-                <div class="floating-item item-1 ">
-                    <div class="icon-wrapper ">
-                        <i class="fas fa-chart-line fa-3x text-primary "></i>
-                    </div>
-                    <h4 class="fw-bold mt-3 animate-text ">Increased Conversion Rates</h4>
-                    <p class="animate-text ">Our qualified leads are <strong>READY TO BUY</strong>.</p>
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-item fade-in">
+                    <i class="fas fa-chart-line icon"></i>
+                    <h4>Higher Conversion Rates</h4>
+                    <p>We deliver <strong>sales-ready leads</strong> that drive revenue.</p>
                 </div>
-                <div class="floating-item item-2 ">
-                    <div class="icon-wrapper ">
-                        <i class="fas fa-sync-alt fa-3x text-success "></i>
-                    </div>
-                    <h4 class="fw-bold mt-3 animate-text ">Improved Campaign Responsiveness</h4>
-                    <p class="animate-text ">Our <strong>DATA-DRIVEN APPROACH</strong> ensures your campaigns are always optimized.</p>
+                <div class="feature-item fade-in delay-1">
+                    <i class="fas fa-sync-alt icon"></i>
+                    <h4>Optimized Campaigns</h4>
+                    <p>Our <strong>data-driven strategies</strong> improve your campaign performance.</p>
                 </div>
-                <div class="floating-item item-3 ">
-                    <div class="icon-wrapper ">
-                        <i class="fas fa-hand-holding-usd fa-3x text-warning "></i>
-                    </div>
-                    <h4 class="fw-bold mt-3 animate-text ">Better ROI</h4>
-                    <p class="animate-text ">For every <strong>PENNY YOU SPEND</strong>, you will get more return.</p>
+                <div class="feature-item fade-in delay-2">
+                    <i class="fas fa-hand-holding-usd icon"></i>
+                    <h4>Better ROI</h4>
+                    <p>Maximize returns for <strong>every dollar spent</strong> with us.</p>
                 </div>
             </div>
         </div>
@@ -996,100 +1003,58 @@
 
     <!-- CSS -->
     <style>
-        /* Focus Section Styling */
+        /* General Section Styling */
         
-        .focus-section {
-            background: linear-gradient(120deg, #f9f9f9, #e3f2fd);
-            overflow: hidden;
-            position: relative;
-            padding: 80px 0;
-        }
-        /* Floating Animation */
-        
-        .floating-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 80px;
-            flex-wrap: wrap;
-            position: relative;
-        }
-        
-        .floating-item {
-            width: 280px;
+        .why-partner-section {
+            background: #ffffff;
+            padding: 60px 20px;
             text-align: center;
-            padding: 25px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: floatAnimation 3s infinite ease-in-out alternate;
         }
-        /* Floating Effect */
+        /* Title and Description */
         
-        @keyframes floatAnimation {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-12px);
-            }
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        /* Icon Glowing Effect */
         
-        .icon-wrapper {
-            display: inline-block;
-            padding: 15px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-            border-radius: 50%;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            animation: glow 1.5s infinite alternate ease-in-out;
+        .section-description {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            color: #555;
         }
-        /* Glowing Effect */
+        /* Responsive Features Grid */
         
-        @keyframes glow {
-            0% {
-                box-shadow: 0px 0px 10px rgba(0, 163, 255, 0.5);
-            }
-            100% {
-                box-shadow: 0px 0px 20px rgba(0, 163, 255, 1);
-            }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+        /* Feature Items */
+        
+        .feature-item {
+            padding: 20px;
+            transition: transform 0.3s ease-in-out, opacity 0.6s ease-in-out;
+            opacity: 0;
+        }
+        /* Icons */
+        
+        .icon {
+            font-size: 2.5rem;
+            color: var(--primary, #007bff);
+            margin-bottom: 15px;
         }
         /* Hover Effect */
         
-        .floating-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+        .feature-item:hover {
+            transform: translateY(-5px) scale(1.05);
         }
-        /* Animated Heading Highlight */
+        /* Fade-in Animation */
         
-        .text-highlight {
-            color: #002b5b;
-            background: linear-gradient(120deg, #00A3FF, #002b5b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        /* Text Animation */
-        
-        .animate-text {
-            opacity: 0;
-            transform: translateY(15px);
-            animation: fadeInUp 1s forwards ease-in-out;
-        }
-        
-        .item-1 .animate-text {
-            animation-delay: 0.2s;
-        }
-        
-        .item-2 .animate-text {
-            animation-delay: 0.4s;
-        }
-        
-        .item-3 .animate-text {
-            animation-delay: 0.6s;
-        }
-        
-        @keyframes fadeInUp {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(15px);
@@ -1099,63 +1064,84 @@
                 transform: translateY(0);
             }
         }
-        /* Individual Delays for Floating Elements */
+        /* Apply Animation */
         
-        .item-1 {
-            animation-delay: 0.2s;
+        .fade-in {
+            animation: fadeIn 1s forwards ease-in-out;
         }
         
-        .item-2 {
-            animation-delay: 0.4s;
+        .delay-1 {
+            animation-delay: 0.3s;
         }
         
-        .item-3 {
+        .delay-2 {
             animation-delay: 0.6s;
         }
     </style>
 
+    <!-- JavaScript to Trigger Animation on Scroll -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".fade-in");
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("animate");
+                        }
+                    });
+                }, {
+                    threshold: 0.5
+                }
+            );
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+
+
 
     <!-- Own Your Funnel Section -->
-    <section class="py-5 text-center position-relative " style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); ">
-        <div class="container position-relative ">
-            <h2 class="fw-bold animate__animated animate__fadeInUp ">
-                <span class="text-gradient-blue ">Own Your Funnel</span> with High-Performance Demand Programs
+    <section class="py-5 text-center position-relative" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+        <div class="container position-relative">
+            <h2 class="fw-bold animate__animated animate__fadeInUp text-uppercase text-responsive">
+                <span class="text-primary">MASTER YOUR FUNNEL</span> <span class="text-black">FOR MAXIMUM GROWTH</span>
             </h2>
-            <p class="lead text-muted animate__animated animate__fadeInUp animate__delay-1s ">
+            <p class="lead text-muted animate__animated animate__fadeInUp animate__delay-1s">
                 INFUSE demand strategists work with you using advanced tools to craft and optimize demand programs that deliver the audience, buyers, and account engagement to meet your goals.
             </p>
 
-            <div class="row mt-4 g-4 ">
+            <div class="row mt-4 g-4">
                 <!-- Data-Driven Demand Programs -->
-                <div class="col-md-4 ">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInLeft hover-effect ">
-                        <div class="icon-box bg-gradient-teal mb-3 ">
-                            <i class="fas fa-database fa-3x text-white "></i>
+                <div class="col-md-4 col-sm-12">
+                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInLeft hover-effect">
+                        <div class="icon-box bg-gradient-teal mb-3">
+                            <i class="fas fa-database fa-3x text-white"></i>
                         </div>
-                        <h4 class="fw-bold text-dark ">Data-Driven Demand Programs</h4>
-                        <p class="text-muted ">We analyze real-time data to create precision-targeted campaigns.</p>
+                        <h4 class="fw-bold text-dark">Data-Driven Demand Programs</h4>
+                        <p class="text-muted">We analyze real-time data to create precision-targeted campaigns.</p>
                     </div>
                 </div>
 
                 <!-- Smart Engagement Strategies -->
-                <div class="col-md-4 ">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInUp animate__delay-1s hover-effect ">
-                        <div class="icon-box bg-gradient-blue mb-3 ">
-                            <i class="fas fa-bullhorn fa-3x text-white "></i>
+                <div class="col-md-4 col-sm-12">
+                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInUp animate__delay-1s hover-effect">
+                        <div class="icon-box bg-gradient-blue mb-3">
+                            <i class="fas fa-bullhorn fa-3x text-white"></i>
                         </div>
-                        <h4 class="fw-bold text-dark ">Smart Engagement Strategies</h4>
-                        <p class="text-muted ">Advanced AI and automation for highly engaging interactions.</p>
+                        <h4 class="fw-bold text-dark">Smart Engagement Strategies</h4>
+                        <p class="text-muted">Advanced AI and automation for highly engaging interactions.</p>
                     </div>
                 </div>
 
                 <!-- Performance Optimization Tools -->
-                <div class="col-md-4 ">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInRight animate__delay-2s hover-effect ">
-                        <div class="icon-box bg-gradient-purple mb-3 ">
-                            <i class="fas fa-tools fa-3x text-white "></i>
+                <div class="col-md-4 col-sm-12">
+                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInRight animate__delay-2s hover-effect">
+                        <div class="icon-box bg-gradient-purple mb-3">
+                            <i class="fas fa-tools fa-3x text-white"></i>
                         </div>
-                        <h4 class="fw-bold text-dark ">Performance Optimization Tools</h4>
-                        <p class="text-muted ">Use cutting-edge tools to track and refine every campaign.</p>
+                        <h4 class="fw-bold text-dark">Performance Optimization Tools</h4>
+                        <p class="text-muted">Use cutting-edge tools to track and refine every campaign.</p>
                     </div>
                 </div>
             </div>
@@ -1177,11 +1163,18 @@
         .bg-gradient-purple {
             background: linear-gradient(135deg, #ab47bc, #8e24aa);
         }
+        /* Heading Styles */
         
-        .text-gradient-blue {
-            background: linear-gradient(135deg, #42a5f5, #1e88e5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .text-responsive {
+            letter-spacing: 2px;
+            font-weight: 900;
+            font-size: 2.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .text-responsive {
+                font-size: 1.8rem;
+            }
         }
         /* Floating Box Styling */
         
@@ -1215,55 +1208,23 @@
         .hover-effect:hover .icon-box {
             transform: scale(1.1);
         }
-        /* Animations */
+        /* Responsive */
         
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
+        @media (max-width: 576px) {
+            .floating-box {
+                padding: 20px;
             }
-            to {
-                opacity: 1;
-                transform: translateX(0);
+            .icon-box {
+                width: 70px;
+                height: 70px;
             }
-        }
-        
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
+            .text-responsive {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
             }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        
-        .animate-float {
-            animation: float 4s ease-in-out infinite;
         }
     </style>
+
 
     <!-- Our Insights Section -->
     <section class="py-5 bg-white position-relative insights-section">
@@ -2022,6 +1983,8 @@
                     <li><a href="footerpages/GDPR.html ">GDPR</a></li>
                     <li><a href="footerpages/CCPA.html ">CCPA</a></li>
                     <li><a href="footerpages/Terms-Condition.html ">Terms & Conditions</a></li>
+                    <li><a href="footerpages/Media_Kit.html ">Media Kit</a></li>
+
                 </ul>
 
                 <!-- Copyright & Social Icons -->
