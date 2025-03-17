@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What We Do - Koinet Media</title>
-    <title>Koinet Media - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Koinet Media - Unlock Your Business Growth with Innovative Digital Solutions">
 
@@ -22,8 +21,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
-
 </head>
 
 <body>
@@ -32,13 +29,13 @@
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand fw-bold text-uppercase" href="index.html">
-                <img src="/images/NewLogoKNM.png" alt="Koinet Media" width="120">
+                <img src="images/knmnew_prev_ui.png" alt="Koinet Media" width="100">
             </a>
 
             <!-- Mobile Toggle Button -->
             <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,8 +46,8 @@
                     <!-- What We Provide Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
-                        What We Provide
-                    </a>
+                    What We Provide
+                </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
@@ -69,8 +66,8 @@
                     <!-- Resources Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
-                        Resources
-                    </a>
+                    Resources
+                </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="blog.html">Blog</a></li>
                             <li><a class="dropdown-item" href="infographics.html">Infographics</a></li>
@@ -82,8 +79,8 @@
                     <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="about.html" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
-                        About Us
-                    </a>
+                    About Us
+                </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="aboutus/overview.html">Overview</a></li>
                             <li><a class="dropdown-item" href="aboutus/ourstory.html">Our Story</a></li>
@@ -190,17 +187,17 @@
 
 
     <!-- Hero Section -->
-    <section class="hero-section position-relative text-white d-flex align-items-center vh-100">
+    <section class="hero-section position-relative text-dark d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Left Side: 3D Illustration -->
-                <div class="col-lg-5 text-center">
+                <div class="col-lg-5 col-md-6 text-center mb-4 mb-md-0">
                     <img src="images/3d_working_man.jpeg" alt="3D Illustration" class="hero-image img-fluid">
                 </div>
 
                 <!-- Right Side: Hero Content -->
-                <div class="col-lg-7">
-                    <h1 class="fw-bold hero-title text-black">
+                <div class="col-lg-7 col-md-6">
+                    <h1 class=" hero-title fw-bold text-uppercase tracking-widest">
                         Elevate Your <span class="highlight-text">Style & Confidence</span>
                     </h1>
                     <p class="hero-description">
@@ -209,7 +206,7 @@
                     <p class="hero-description">
                         Stay ahead with curated styles and personalized recommendations tailored for you.
                     </p>
-                    <a href="#" class="btn hero-btn">Get Started</a>
+                    <a href="contact.html" class="btn hero-btn">Get Started</a>
                 </div>
             </div>
         </div>
@@ -225,13 +222,10 @@
         
         .hero-section {
             background: linear-gradient(135deg, #f8f9fa, #ffffff);
-            /* Kept original background */
-            padding: 60px 0;
-            /* Reduced height */
-            min-height: 60vh;
-            /* Adjusted for a more compact look */
+            padding: 50px 0;
+            min-height: 75vh;
+            /* Adjusted height for better mobile support */
             display: flex;
-            justify-content: center;
             align-items: center;
             position: relative;
             overflow: hidden;
@@ -239,16 +233,16 @@
         /* Hero Title */
         
         .hero-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: bold;
             line-height: 1.2;
+            color: black;
+            margin-bottom: 15px;
+            /* Reduced spacing */
         }
         
         .highlight-text {
-            color: #FF8C00;
-            background: linear-gradient(45deg, #ff7e5f, #ffcc33);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #007bff;
             font-weight: bold;
         }
         /* Hero Description */
@@ -256,7 +250,8 @@
         .hero-description {
             font-size: 1rem;
             color: #6c757d;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            /* Reduced spacing */
         }
         /* Hero Button */
         
@@ -265,22 +260,22 @@
             padding: 10px 25px;
             font-size: 1rem;
             font-weight: bold;
-            color: white;
-            background: linear-gradient(45deg, #ff7e5f, #ffcc33);
+            color: #007bff;
+            border: 2px solid #007bff;
             border-radius: 30px;
+            background: transparent;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0px 5px 15px rgba(255, 140, 0, 0.3);
         }
         
         .hero-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 20px rgba(255, 140, 0, 0.5);
+            background: #007bff;
+            color: white;
         }
         /* 3D Image Floating Animation */
         
         .hero-image {
-            max-width: 90%;
-            /* Slightly reduced size */
+            max-width: 100%;
+            height: auto;
             animation: float 3s infinite ease-in-out alternate;
         }
         
@@ -298,9 +293,8 @@
             position: absolute;
             top: 5%;
             left: -10%;
-            width: 250px;
-            /* Reduced size */
-            height: 250px;
+            width: 200px;
+            height: 200px;
             background: radial-gradient(circle, rgba(255, 140, 0, 0.5), transparent);
             border-radius: 50%;
             filter: blur(80px);
@@ -311,9 +305,8 @@
             position: absolute;
             bottom: 10%;
             right: -10%;
-            width: 220px;
-            /* Reduced size */
-            height: 220px;
+            width: 180px;
+            height: 180px;
             background: radial-gradient(circle, rgba(0, 183, 255, 0.5), transparent);
             border-radius: 50%;
             filter: blur(80px);
@@ -322,26 +315,52 @@
         /* Responsive Adjustments */
         
         @media (max-width: 992px) {
-            .hero-title {
-                font-size: 2rem;
-            }
             .hero-section {
-                padding: 50px 0;
+                min-height: 60vh;
+                padding: 40px 0;
                 text-align: center;
             }
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .hero-description {
+                font-size: 0.95rem;
+            }
             .hero-image {
-                max-width: 75%;
-                margin-bottom: 20px;
+                max-width: 80%;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 55vh;
+                padding: 30px 0;
+            }
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            .hero-description {
+                font-size: 0.9rem;
+            }
+            .hero-btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+            .hero-bg-shape,
+            .hero-glow {
+                display: none;
+                /* Hide unnecessary background elements on small screens */
             }
         }
     </style>
 
-
-
     <!-- Services Section -->
     <section class="services-section py-5">
         <div class="container text-center">
-            <h2 class="fw-bold text-primary mb-4">Our Services</h2>
+            <h2 class="fw-bold text-uppercase tracking-widest">
+                <span class="text-primary">Our</span> <span class="text-black">Services</span>
+            </h2>
             <p class="text-muted mb-5">
                 Empowering businesses with cutting-edge marketing strategies that drive real results.
             </p>
@@ -376,6 +395,35 @@
         .services-section {
             background: linear-gradient(to right, #f8f9fa, #e9ecef);
         }
+        /* Main heading styling */
+        
+        .tracking-widest {
+            letter-spacing: 2px;
+        }
+        
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+        
+        .text-black {
+            color: #000 !important;
+        }
+        /* Responsive adjustments */
+        
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.75rem;
+                /* Adjusts heading size for tablets */
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h2 {
+                font-size: 1.5rem;
+                /* Smaller heading on mobile */
+            }
+        }
+        /* Icon hover effect */
         
         .service-item i {
             transition: transform 0.3s ease-in-out;
@@ -386,11 +434,16 @@
         }
     </style>
 
-    <!-- Call to Action -->
+
+    <!-- Call to Action Section -->
     <section class="cta-section">
         <div class="container text-center">
-            <h2 class="cta-title">Ready to <span class="highlight">Grow Your Business?</span></h2>
-            <p class="cta-text">Connect with our experts today and see how we can drive success for your brand.</p>
+            <h2 class="fw-bold text-uppercase tracking-widest cta-title">
+                Ready to <span class="highlight">Grow Your Business?</span>
+            </h2>
+            <p class="cta-text">
+                Connect with our experts today and see how we can drive success for your brand.
+            </p>
             <a href="contact.html" class="cta-btn">Get in Touch</a>
         </div>
     </section>
@@ -413,8 +466,7 @@
         /* Title */
         
         .cta-title {
-            font-size: 2.8rem;
-            font-weight: bold;
+            font-size: 3rem;
             margin-bottom: 15px;
             animation: fadeInUp 1s ease-in-out;
         }
@@ -426,7 +478,7 @@
         /* Description */
         
         .cta-text {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             opacity: 0.85;
             margin-bottom: 30px;
             animation: fadeInUp 1.3s ease-in-out;
@@ -435,7 +487,7 @@
         
         .cta-btn {
             display: inline-block;
-            padding: 14px 32px;
+            padding: 14px 36px;
             font-size: 1.2rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -450,31 +502,33 @@
         .cta-btn:hover {
             background: #0078D4;
             transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 163, 255, 0.3);
         }
         /* CTA Background Animation */
         
-        .cta-section::before {
-            content: "";
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: rgba(0, 163, 255, 0.2);
-            border-radius: 50%;
-            top: -50px;
-            left: -50px;
-            animation: floatingEffect 5s infinite ease-in-out;
-        }
-        
+        .cta-section::before,
         .cta-section::after {
             content: "";
             position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: floatingEffect 6s infinite ease-in-out alternate;
+        }
+        
+        .cta-section::before {
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 163, 255, 0.3);
+            top: -50px;
+            left: -50px;
+        }
+        
+        .cta-section::after {
             width: 250px;
             height: 250px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
             bottom: -80px;
             right: -50px;
-            animation: floatingEffect 6s infinite ease-in-out alternate;
         }
         /* Floating Animation */
         
@@ -503,6 +557,19 @@
         }
         /* Responsive Design */
         
+        @media (max-width: 1024px) {
+            .cta-title {
+                font-size: 2.5rem;
+            }
+            .cta-text {
+                font-size: 1.1rem;
+            }
+            .cta-btn {
+                font-size: 1.1rem;
+                padding: 12px 28px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .cta-title {
                 font-size: 2.2rem;
@@ -515,40 +582,73 @@
                 padding: 12px 24px;
             }
         }
+        
+        @media (max-width: 576px) {
+            .cta-title {
+                font-size: 1.8rem;
+            }
+            .cta-text {
+                font-size: 0.95rem;
+            }
+            .cta-btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
     </style>
+
 
 
     <!-- Demand Strategies Section -->
     <section id="demand-strategies" class="demand-section">
         <div class="container">
-            <div class="row">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-uppercase tracking-widest text-primary">
+                    Demand Strategies
+                </h2>
+            </div>
+            <div class="row g-4">
                 <!-- Lead Gen Kick Starter -->
-                <div class="col-md-4 demand-card" data-bs-toggle="modal" data-bs-target="#leadGenModal">
-                    <h5>Lead Gen Kick Starter with <span>koinet media Lead Capture</span></h5>
-                    <hr>
-                    <p>Call-Ready Demand with koinet media inHQL</p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="demand-card" data-bs-toggle="modal" data-bs-target="#leadGenModal">
+                        <h5 class="fw-bold text-black">
+                            Lead Gen Kick Starter with <span>koinet media Lead Capture</span>
+                        </h5>
+                        <hr>
+                        <p>Call-Ready Demand with koinet media inHQL</p>
+                    </div>
                 </div>
 
                 <!-- Targeted Demand Generation -->
-                <div class="col-md-4 demand-card" data-bs-toggle="modal" data-bs-target="#targetedDemandModal">
-                    <h5>Targeted Demand Generation with <span>koinet media Triple Play Intent</span></h5>
-                    <p>Market Demand with koinet media Competitive Displacement</p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="demand-card" data-bs-toggle="modal" data-bs-target="#targetedDemandModal">
+                        <h5 class="fw-bold text-black">
+                            Targeted Demand Generation with <span>koinet media Triple Play Intent</span>
+                        </h5>
+                        <hr>
+                        <p>Market Demand with koinet media Competitive Displacement</p>
+                    </div>
                 </div>
 
                 <!-- Account Qualified Demand -->
-                <div class="col-md-4 demand-card" data-bs-toggle="modal" data-bs-target="#accountQualifiedModal">
-                    <h5>Account Qualified Demand with <span>koinet media ABM Focus</span></h5>
-                    <p>koinet media Content Creation with ITCurated</p>
+                <div class="col-lg-4 col-md-12">
+                    <div class="demand-card" data-bs-toggle="modal" data-bs-target="#accountQualifiedModal">
+                        <h5 class="fw-bold text-black">
+                            Account Qualified Demand with <span>koinet media ABM Focus</span>
+                        </h5>
+                        <hr>
+                        <p>koinet media Content Creation with ITCurated</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lead Gen Kick Starter Modal -->
+    <!-- Modals -->
     <div class="modal fade" id="leadGenModal" tabindex="-1" aria-labelledby="leadGenLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title" id="leadGenLabel">Lead Gen Kick Starter</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -559,11 +659,10 @@
         </div>
     </div>
 
-    <!-- Targeted Demand Generation Modal -->
     <div class="modal fade" id="targetedDemandModal" tabindex="-1" aria-labelledby="targetedDemandLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title" id="targetedDemandLabel">Targeted Demand Generation</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -574,11 +673,10 @@
         </div>
     </div>
 
-    <!-- Account Qualified Demand Modal -->
     <div class="modal fade" id="accountQualifiedModal" tabindex="-1" aria-labelledby="accountQualifiedLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title" id="accountQualifiedLabel">Account Qualified Demand</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -589,12 +687,11 @@
         </div>
     </div>
 
-    <!-- Bootstrap & Styling -->
+    <!-- Styles -->
     <style>
         .demand-section {
-            padding: 60px 0;
+            padding: 60px 20px;
             background: #f8f9fa;
-            text-align: center;
         }
         
         .demand-card {
@@ -603,7 +700,6 @@
             border-radius: 10px;
             transition: all 0.3s ease-in-out;
             text-align: left;
-            margin-top: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
         }
@@ -615,16 +711,16 @@
         
         .demand-card h5 {
             font-size: 1.2rem;
-            color: #0077b6;
             font-weight: bold;
+            color: #000;
         }
         
         .demand-card span {
-            color: #FF8C00;
+            color: #ff8c00;
         }
         
         .demand-card hr {
-            border-top: 2px solid orange;
+            border-top: 2px solid #ff8c00;
             width: 50px;
             margin-left: 0;
         }
@@ -634,8 +730,6 @@
         }
         
         .modal-header {
-            background: #0077b6;
-            color: white;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
@@ -648,6 +742,7 @@
 
     <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <section id="what-we-do" style="padding: 80px 0; background-color: #f9f9f9;">
         <div class="container">
@@ -829,12 +924,7 @@
         }
     </style>
 
-    <!-- Font Awesome for Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous "></script>
 
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js "></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
