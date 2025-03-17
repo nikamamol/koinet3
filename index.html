@@ -183,22 +183,7 @@
     <!-- Animate.css for Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-    <!-- Hero Section -->
-    <!-- <section class="hero">
-        <video autoplay muted loop class="hero-bg">
-        <source src="images/HeroVideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
-        <div class="hero-content">
-            <h1>Unleash Your Business Potential</h1>
-            <p>
-                Success isn’t just about being seen—it’s about making an impact. At <strong>KoinetMedia</strong>, we don’t just generate leads; we create meaningful connections. With precision-targeted content and a strategy designed for engagement, we
-                turn interest into action and clicks into conversions. Let’s redefine the way you grow.
-            </p>
-            <button class="cta-button">Get Started</button>
-        </div>
-    </section> -->
     <div class="container-fluid hero-section">
         <div class="row text-center justify-content-center ">
             <div class="col-md-8 overlay">
@@ -2011,6 +1996,268 @@
             startAutoSlide();
         });
     </script>
+
+
+    <!-- Our Insights Section -->
+    <section class="py-5 bg-white position-relative insights-section">
+        <div class="container position-relative text-center">
+            <!-- Heading -->
+            <h2 class="insights-heading">
+                <span class="highlight">OUR</span> <span class="dark-text">Blogs</span>
+            </h2>
+            <br>
+            <!-- Blog Container -->
+            <div id="blogs-container" class="insights-wrapper">
+                <!-- Blog posts will be injected here -->
+            </div>
+            <!-- Pagination Controls -->
+            <!-- <div class="pagination-controls">
+                <button onclick="prevPage()" class="btn btn-outline-primary fw-bold">Previous</button>
+                <span id="page-number" class="mx-3">1</span>
+                <button onclick="nextPage()" class="btn btn-outline-primary fw-bold">Next</button>
+            </div> -->
+        </div>
+        <div class="text-center">
+            <a href="blog.html" class="btn btn-primary btn-lg mt-5">More Blogs</a>
+        </div>
+    </section>
+
+
+    <!-- CSS -->
+    <style>
+        /* Insights Section */
+        /* Insights Section */
+        
+        .insights-section {
+            overflow: hidden;
+            position: relative;
+        }
+        /* Insights Heading */
+        
+        .insights-heading {
+            font-size: 2.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            display: inline-block;
+            position: relative;
+        }
+        /* "OUR" in primary blue */
+        
+        .insights-heading .highlight {
+            color: #007bff;
+        }
+        /* "Blogs" in black */
+        
+        .insights-heading .dark-text {
+            color: #000;
+        }
+        /* Insights Wrapper */
+        
+        .insights-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 50px;
+            align-items: center;
+        }
+        /* Insight Item */
+        
+        .insight-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 95%;
+            max-width: 1200px;
+        }
+        /* Alternating Alignment */
+        
+        .insight-left {
+            flex-direction: row;
+        }
+        
+        .insight-right {
+            flex-direction: row-reverse;
+        }
+        /* Insight Image */
+        
+        .insight-image img {
+            width: 220px;
+            height: 140px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .insight-item:hover .insight-image img {
+            transform: scale(1.05);
+        }
+        /* Insight Content */
+        
+        .insight-content {
+            max-width: 550px;
+            text-align: left;
+        }
+        /* Read More Button */
+        
+        .btn-outline-primary {
+            border-color: #007bff;
+            color: #007bff;
+            transition: 0.3s ease-in-out;
+        }
+        
+        .btn-outline-primary:hover {
+            background: #007bff;
+            color: white;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 992px) {
+            .insights-heading {
+                font-size: 2.2rem;
+                letter-spacing: 2px;
+            }
+            .insight-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .insight-left,
+            .insight-right {
+                flex-direction: column;
+            }
+            .insight-image img {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+            }
+            .insight-content {
+                text-align: center;
+                max-width: 100%;
+                margin-top: 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .insights-heading {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+        }
+    </style>
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const insightItems = document.querySelectorAll(".insight-item");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = "fadeInUp 1s forwards";
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            insightItems.forEach((item) => observer.observe(item));
+        });
+    </script>
+    <script>
+        let blogs = []; // Store fetched blogs
+        let currentPage = 1;
+        const blogsPerPage = 3; // Number of blogs per page
+
+        async function fetchBlogs() {
+            try {
+                const response = await fetch('http://localhost:9000/api/getblogs'); // API call
+                const data = await response.json();
+
+                if (Array.isArray(data)) {
+                    blogs = data; // Store blogs
+                    displayBlogs(); // Display blogs with pagination
+                } else {
+                    console.error("Unexpected API response:", data);
+                }
+            } catch (error) {
+                console.error("Error fetching blogs:", error);
+            }
+        }
+
+        function displayBlogs() {
+            const blogContainer = document.getElementById("blogs-container");
+            blogContainer.innerHTML = ""; // Clear previous content
+
+            // Calculate pagination indices
+            const startIndex = (currentPage - 1) * blogsPerPage;
+            const endIndex = startIndex + blogsPerPage;
+            const blogsToDisplay = blogs.slice(startIndex, endIndex);
+
+            if (blogsToDisplay.length === 0) {
+                blogContainer.innerHTML = "<p>No blogs found.</p>";
+                return;
+            }
+
+            blogsToDisplay.forEach((blog, index) => {
+                // Determine alignment
+                // const alignmentClass = index % 2 === 0 ? 'insight-left' : 'insight-right';
+
+                // Limit content to 5 words
+                const contentWords = blog.content.split(" ");
+                const shortContent = contentWords.slice(0, 5).join(" ") + (contentWords.length > 5 ? "..." : "");
+
+                blogContainer.innerHTML += `
+                <div class="insight-item ">
+                    <div class="insight-image">
+                        <img src="${blog.imageUrl || 'https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_1280.jpg'}" alt="Blog Image">
+                    </div>
+                    <div class="text-start">
+                        <h5 class="fw-bold">${blog.title}</h5>
+                          <p class="date py-2">
+                            <span class="rounded bg-primary text-white p-1">
+                                ${new Date(blog.date).toLocaleDateString()}
+                            </span>
+                        </p>
+                        <p>${shortContent}</p>
+                      
+                        <a href="viewblog.html?id=${blog._id}" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
+                    </div>
+                </div>`;
+            });
+
+            updatePagination(); // Update page number
+        }
+
+        function updatePagination() {
+            document.getElementById("page-number").textContent = currentPage;
+        }
+
+        function nextPage() {
+            const maxPages = Math.ceil(blogs.length / blogsPerPage);
+            if (currentPage < maxPages) {
+                currentPage++;
+                displayBlogs();
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayBlogs();
+            }
+        }
+
+        // Fetch blogs when the page loads
+        fetchBlogs();
+    </script>
+
+
+
 
 
     <!-- Footer Section -->
