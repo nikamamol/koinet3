@@ -118,26 +118,36 @@
         
         .navbar-custom {
             background: rgba(255, 255, 255, 0.7);
+            /* Default background */
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        /* Navbar Transparent on Scroll */
+        /* Navbar Hover Effect */
         
-        .navbar-custom.navbar-transparent {
-            background: rgba(255, 255, 255, 0);
-            box-shadow: none;
+        .navbar-custom:hover {
+            background-color: #30528D !important;
+            /* Light blue background on hover */
+        }
+        /* Navbar Links Text Color on Hover */
+        
+        .navbar-custom:hover .nav-link {
+            color: white !important;
+            /* White text color on hover */
+        }
+        /* Ensure the logo is not affected */
+        
+        .navbar-custom:hover .navbar-brand {
+            background-color: transparent !important;
+            /* Logo remains unaffected */
         }
         /* Navbar Links */
         
         .navbar-custom .nav-link {
             color: #000;
+            /* Default text color */
             font-weight: 600;
             transition: color 0.3s ease-in-out;
-        }
-        
-        .navbar-custom .nav-link:hover {
-            color: #e63946;
         }
         /* Dropdown Styling */
         
@@ -177,9 +187,11 @@
         @media (max-width: 991px) {
             .navbar-custom {
                 background: rgba(255, 255, 255, 0.95);
+                /* Default background for mobile */
             }
         }
     </style>
+
 
 
     <!-- Animate.css for Animations -->
@@ -716,11 +728,11 @@
         }
         
         .demand-card span {
-            color: #ff8c00;
+            color: #007bff;
         }
         
         .demand-card hr {
-            border-top: 2px solid #ff8c00;
+            border-top: 2px solid #007bff;
             width: 50px;
             margin-left: 0;
         }
@@ -768,16 +780,16 @@
                         <h3 style="color: #004c6d; font-size: 20px; font-weight: bold; border-bottom: 2px solid #004c6d; padding-bottom: 10px;">Demand Outcomes:</h3>
                         <ul style="list-style: none; padding: 0;">
                             <li style="padding: 8px 0; font-size: 16px;">
-                                <i class="fa fa-check-circle" style="color: #ff6b6b; margin-right: 8px;"></i> Opt-in contacts that fit your specific criteria
+                                <i class="fa fa-check-circle" style="color: #000A3D; margin-right: 8px;"></i> Opt-in contacts that fit your specific criteria
                             </li>
                             <li style="padding: 8px 0; font-size: 16px;">
-                                <i class="fa fa-check-circle" style="color: #ff6b6b; margin-right: 8px;"></i> Increased engagement for marketing & sales goals
+                                <i class="fa fa-check-circle" style="color: #000A3D; margin-right: 8px;"></i> Increased engagement for marketing & sales goals
                             </li>
                             <li style="padding: 8px 0; font-size: 16px;">
-                                <i class="fa fa-check-circle" style="color: #ff6b6b; margin-right: 8px;"></i> High-quality leads primed for further nurturing
+                                <i class="fa fa-check-circle" style="color: #000A3D; margin-right: 8px;"></i> High-quality leads primed for further nurturing
                             </li>
                         </ul>
-                        <a href="#" style="color: #ff6b6b; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 15px;">Drive your demand performance →</a>
+                        <a href="#" style="color: #000A3D; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 15px;">Drive your demand performance →</a>
                     </div>
                 </div>
             </div>

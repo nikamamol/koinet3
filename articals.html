@@ -447,26 +447,36 @@
         
         .navbar-custom {
             background: rgba(255, 255, 255, 0.7);
+            /* Default background */
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        /* Navbar Transparent on Scroll */
+        /* Navbar Hover Effect */
         
-        .navbar-custom.navbar-transparent {
-            background: rgba(255, 255, 255, 0);
-            box-shadow: none;
+        .navbar-custom:hover {
+            background-color: #30528D !important;
+            /* Light blue background on hover */
+        }
+        /* Navbar Links Text Color on Hover */
+        
+        .navbar-custom:hover .nav-link {
+            color: white !important;
+            /* White text color on hover */
+        }
+        /* Ensure the logo is not affected */
+        
+        .navbar-custom:hover .navbar-brand {
+            background-color: transparent !important;
+            /* Logo remains unaffected */
         }
         /* Navbar Links */
         
         .navbar-custom .nav-link {
             color: #000;
+            /* Default text color */
             font-weight: 600;
             transition: color 0.3s ease-in-out;
-        }
-        
-        .navbar-custom .nav-link:hover {
-            color: #e63946;
         }
         /* Dropdown Styling */
         
@@ -506,9 +516,11 @@
         @media (max-width: 991px) {
             .navbar-custom {
                 background: rgba(255, 255, 255, 0.95);
+                /* Default background for mobile */
             }
         }
     </style>
+
 
 
     <!-- Animate.css for Animations -->
