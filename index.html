@@ -19,6 +19,7 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
+
 </head>
 
 <body>
@@ -188,42 +189,50 @@
     <div class="container-fluid hero-section">
         <div class="row text-center justify-content-center ">
             <div class="col-md-8 overlay">
-                <h1 class="d-none d-md-block">Unleash Your <br><span id="changingWord" class="text-warning">
-                     Business</span> Potential</h1>
-                <h2 class="d-block d-md-none mb-3">Unleash Your <br><span id="changingWord" class="text-warning">
-                        Business</span> Potential</h2>
+                <h1 class="d-none d-md-block fw-bold text-uppercase tracking-widest text-white">
+                    Unleash Your <br><span id="changingWord" class="text-warning">Business</span> Potential
+                </h1>
+                <h2 class="d-block d-md-none mb-3 text-white fw-bold text-uppercase tracking-widest">
+                    Unleash Your <br><span id="changingWord" class="text-warning">Business</span> Potential
+                </h2> <br>
                 <div class="row">
                     <div class="col-md-6 text-start">
                         <p>
                             Success isn’t just about being seen—it’s about making an impact. At
-                            <a href="/aboutus/overview.html"><strong class="text-warning">KoinetMedia</strong></a>, we don’t just generate leads; we create meaningful connections. With precision-targeted content and a strategy designed for engagement,
-                            we turn interest into action and clicks into conversions. Let’s redefine the way you grow.
+                            <strong class="text-warning">KoinetMedia</strong>, we don’t just generate leads; we create meaningful connections. With precision-targeted content and a strategy designed for engagement, we turn interest into action and clicks
+                            into conversions. Let’s redefine the way you grow.
                         </p>
                         <a class="cta-button" href="contact.html">Get Started</a>
 
                     </div>
 
-                    <div class="col-md-6 ">
+                    <div class="col-md-6">
                         <!-- Bootstrap Carousel -->
-                        <div id="imageCarousel " class="carousel slide " data-bs-ride="carousel ">
-                            <div class="carousel-inner ">
+                        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
 
-                                <div class="carousel-item active ">
-                                    <div class="carousel-overlay "></div>
-                                    <img src="images/cr1.jpg " class="d-block w-100 " alt="Slide 1 ">
+                                <div class="carousel-item active " data-bs-interval="2000">
+                                    <div class="carousel-overlay"></div>
+                                    <img src="images/cr1.jpg" class="d-block w-100" alt="Slide 1">
                                 </div>
-                                <div class="carousel-item ">
-                                    <div class="carousel-overlay "></div>
-                                    <img src="/images/male-female-office-workers.jpg " class="d-block w-100 " alt="Slide 2 ">
+
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <div class="carousel-overlay"></div>
+                                    <img src="images/male-female-office-workers.jpg" class="d-block w-100" alt="Slide 2">
                                 </div>
-                                <div class="carousel-item ">
-                                    <div class="carousel-overlay "></div>
-                                    <img src="images/cr2.jpg " class="d-block w-100 " alt="Slide 3 ">
+
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <div class="carousel-overlay"></div>
+                                    <img src="images/cr2.jpg" class="d-block w-100" alt="Slide 3">
                                 </div>
+
                             </div>
+
+
 
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -234,7 +243,7 @@
 
         function changeWord() {
             index = (index + 1) % words.length;
-            document.getElementById("changingWord").textContent = words[index];
+            document.getElementById("changingWord").textContent = words[index]; // Removed extra space
         }
 
         setInterval(changeWord, 2000); // Change word every 2 seconds
@@ -272,6 +281,7 @@
             margin-top: 20px;
             display: inline-block;
             transition: background 0.3s ease;
+            text-decoration: none;
         }
         
         .cta-button:hover {
@@ -394,42 +404,42 @@
     </style>
 
     <!-- Why Choose KoiNet Media Section -->
-    <section class="why-choose-section">
-        <div class="container">
-            <div class="row align-items-center">
+    <section class="why-choose-section ">
+        <div class="container ">
+            <div class="row align-items-center ">
                 <!-- Left Side - Text & Features -->
-                <div class="col-lg-6 col-md-12">
-                    <h2 class="section-title">
+                <div class="col-lg-6 col-md-12 ">
+                    <h2 class="section-title ">
                         Why Choose <span>KoiNet Media?</span>
                     </h2>
-                    <p class="section-desc">
+                    <p class="section-desc ">
                         We are an innovative demand generation agency, providing businesses with data-driven solutions to enhance their sales pipelines and drive revenue.
                     </p>
 
                     <!-- Feature Boxes -->
-                    <div class="feature-box">
-                        <div class="feature-icon bg-primary"><i class="bi bi-database"></i></div>
-                        <div class="feature-text">Advanced Data Management Solutions</div>
+                    <div class="feature-box ">
+                        <div class="feature-icon bg-primary "><i class="bi bi-database "></i></div>
+                        <div class="feature-text ">Advanced Data Management Solutions</div>
                     </div>
-                    <div class="feature-box">
-                        <div class="feature-icon bg-success"><i class="bi bi-shield-lock"></i></div>
-                        <div class="feature-text">Cyber Security & Unified Communications</div>
+                    <div class="feature-box ">
+                        <div class="feature-icon bg-success "><i class="bi bi-shield-lock "></i></div>
+                        <div class="feature-text ">Cyber Security & Unified Communications</div>
                     </div>
-                    <div class="feature-box">
-                        <div class="feature-icon bg-warning"><i class="bi bi-rocket-takeoff"></i></div>
-                        <div class="feature-text">Personalized Technology Recommendations</div>
+                    <div class="feature-box ">
+                        <div class="feature-icon bg-warning "><i class="bi bi-rocket-takeoff "></i></div>
+                        <div class="feature-text ">Personalized Technology Recommendations</div>
                     </div>
 
                     <!-- Learn More Button -->
-                    <a href="/aboutus/overview.html" class="btn btn-primary mt-4">
-                    Learn More <i class="bi bi-arrow-right"></i>
+                    <a href="/aboutus/overview.html " class="btn btn-primary mt-4 ">
+                    Learn More <i class="bi bi-arrow-right "></i>
                 </a>
                 </div>
 
                 <!-- Right Side - Image -->
-                <div class="col-lg-6 col-md-12 text-center">
-                    <div class="image-wrapper">
-                        <img src="images/whtchooseus.png" alt="About KoiNet Media" class="main-image">
+                <div class="col-lg-6 col-md-12 text-center ">
+                    <div class="image-wrapper ">
+                        <img src="images/whtchooseus.png " alt="About KoiNet Media " class="main-image ">
                     </div>
                 </div>
             </div>
@@ -665,29 +675,29 @@
     </style>
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css ">
 
 
 
 
     <!-- Services Section -->
-    <section class="services-section py-5">
-        <div class="container">
+    <section class="services-section py-5 ">
+        <div class="container ">
             <!-- Section Heading -->
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-uppercase text-dark">Our Services</h2>
-                <p class="text-muted">Helping your business grow with expert digital solutions.</p>
+            <div class="text-center mb-5 ">
+                <h2 class="fw-bold text-uppercase text-dark ">Our Services</h2>
+                <p class="text-muted ">Helping your business grow with expert digital solutions.</p>
             </div>
 
             <!-- Why Choose Our Services -->
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 text-center">
-                    <img src="images/Serve1-remove-bg-io.png" alt="Why Choose Us" class="img-fluid service-img">
+            <div class="row align-items-center mb-5 ">
+                <div class="col-lg-6 text-center ">
+                    <img src="images/Serve1-remove-bg-io.png " alt="Why Choose Us " class="img-fluid service-img ">
                 </div>
-                <div class="col-lg-6">
-                    <div class="service-box p-4 shadow-sm rounded">
-                        <h3 class="fw-bold text-uppercase text-primary">Why Do You Need Our Services?</h3>
-                        <p class="text-muted">
+                <div class="col-lg-6 ">
+                    <div class="service-box p-4 shadow-sm rounded ">
+                        <h3 class="fw-bold text-uppercase text-primary ">Why Do You Need Our Services?</h3>
+                        <p class="text-muted ">
                             The modern marketing landscape is <strong>crowded and competitive</strong>. Traditional strategies often fall short, leaving businesses with a sea of
                             <strong>unqualified leads</strong> and dwindling ROI. The challenge is clear - how do you cut through the noise and connect with decision-makers? The answer lies in a strategic approach to demand generation.
                         </p>
@@ -696,14 +706,14 @@
             </div>
 
             <!-- Solution We Offer -->
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2 text-center">
-                    <img src="images/Serve2-remove-bg-io.png" alt="Solution We Offer" class="img-fluid service-img">
+            <div class="row align-items-center mb-5 ">
+                <div class="col-lg-6 order-lg-2 text-center ">
+                    <img src="images/Serve2-remove-bg-io.png " alt="Solution We Offer " class="img-fluid service-img ">
                 </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="service-box p-4 shadow-sm rounded">
-                        <h3 class="fw-bold text-uppercase text-primary">Solution We Can Offer You</h3>
-                        <p class="text-muted">
+                <div class="col-lg-6 order-lg-1 ">
+                    <div class="service-box p-4 shadow-sm rounded ">
+                        <h3 class="fw-bold text-uppercase text-primary ">Solution We Can Offer You</h3>
+                        <p class="text-muted ">
                             Koinet Media provides a solution to this challenge. Our demand generation services are built around three core pillars: Content Syndication, Lead Nurturing, and Qualification. We help businesses build strong sales pipelines and operate on a performance-based
                             model.
                         </p>
@@ -712,31 +722,31 @@
             </div>
 
             <!-- Services Overview -->
-            <div class="row align-items-center py-5">
+            <div class="row align-items-center py-5 ">
                 <!-- Left Side: Image -->
-                <div class="col-lg-6 text-center">
-                    <img src="images/serove1.png" alt="Services Illustration" class="img-fluid service-img height-">
+                <div class="col-lg-6 text-center ">
+                    <img src="images/serove1.png " alt="Services Illustration " class="img-fluid service-img height- ">
                 </div>
 
                 <!-- Right Side: Service Descriptions -->
-                <div class="col-lg-6">
-                    <h3 class="fw-bold text-uppercase text-primary">Our Service Offerings</h3>
-                    <ul class="list-unstyled mt-4">
-                        <li class="mb-4">
-                            <h4 class="text-dark fw-bold"><span class="emoji">📌</span> Content Syndication</h4>
-                            <p class="text-muted">
+                <div class="col-lg-6 ">
+                    <h3 class="fw-bold text-uppercase text-primary ">Our Service Offerings</h3>
+                    <ul class="list-unstyled mt-4 ">
+                        <li class="mb-4 ">
+                            <h4 class="text-dark fw-bold "><span class="emoji ">📌</span> Content Syndication</h4>
+                            <p class="text-muted ">
                                 We ensure your content reaches the right audience at the right time. Our network spans multiple platforms, targeting IT decision-makers with precision.
                             </p>
                         </li>
-                        <li class="mb-4">
-                            <h4 class="text-dark fw-bold"><span class="emoji">📌</span> Lead Nurturing & Qualification</h4>
-                            <p class="text-muted">
+                        <li class="mb-4 ">
+                            <h4 class="text-dark fw-bold "><span class="emoji ">📌</span> Lead Nurturing & Qualification</h4>
+                            <p class="text-muted ">
                                 Our lead nurturing process is tailored to each prospect’s journey. We engage leads with personalized content to inform, interest, and convert them.
                             </p>
                         </li>
                         <li>
-                            <h4 class="text-dark fw-bold"><span class="emoji">📌</span> Multi-Channel Approach</h4>
-                            <p class="text-muted">
+                            <h4 class="text-dark fw-bold "><span class="emoji ">📌</span> Multi-Channel Approach</h4>
+                            <p class="text-muted ">
                                 We use a multi-channel strategy including social media, email campaigns, and more to ensure maximum reach and engagement.
                             </p>
                         </li>
@@ -745,9 +755,9 @@
             </div>
 
             <!-- Call to Action -->
-            <div class="text-center mt-5">
-                <h4 class="fw-bold">Get in touch now to explore our services!</h4>
-                <a href="contact.html" class="btn btn-primary mt-3">Contact Us</a>
+            <div class="text-center mt-5 ">
+                <h4 class="fw-bold ">Get in touch now to explore our services!</h4>
+                <a href="contact.html " class="btn btn-primary mt-3 ">Contact Us</a>
             </div>
         </div>
     </section>
@@ -821,59 +831,59 @@
 
 
     <!-- Testimonials Section -->
-    <section class="py-5 text-center position-relative testimonials-bg">
+    <section class="py-5 text-center position-relative testimonials-bg ">
         <!-- Animated Shapes -->
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="triangle triangle-1"></div>
-        <div class="triangle triangle-2"></div>
-        <div class="triangle triangle-3"></div>
+        <div class="circle circle-1 "></div>
+        <div class="circle circle-2 "></div>
+        <div class="triangle triangle-1 "></div>
+        <div class="triangle triangle-2 "></div>
+        <div class="triangle triangle-3 "></div>
 
-        <div class="container position-relative">
-            <h2 class="fw-bold animate__animated animate__fadeInUp">
-                <span class="text-primary">Our Clients</span> Love Us
+        <div class="container position-relative ">
+            <h2 class="fw-bold animate__animated animate__fadeInUp ">
+                <span class="text-primary ">Our Clients</span> Love Us
             </h2>
-            <p class="mb-4 text-secondary animate__animated animate__fadeInUp animate__delay-1s">
+            <p class="mb-4 text-secondary animate__animated animate__fadeInUp animate__delay-1s ">
                 See what our satisfied clients have to say about us.
             </p>
 
             <!-- Testimonials Carousel -->
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="testimonial-box">
-                            <p class="testimonial-text">
-                                "Koinet Media helped us scale our outreach and boost lead quality significantly. A fantastic experience!"
+            <div id="testimonialCarousel " class="carousel slide " data-bs-ride="carousel " data-bs-interval="3000 ">
+                <div class="carousel-inner ">
+                    <div class="carousel-item active ">
+                        <div class="testimonial-box ">
+                            <p class="testimonial-text ">
+                                "Koinet Media helped us scale our outreach and boost lead quality significantly. A fantastic experience! "
                             </p>
-                            <h5 class="testimonial-author">- Mark Thompson</h5>
+                            <h5 class="testimonial-author ">- Mark Thompson</h5>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="testimonial-box">
-                            <p class="testimonial-text">
-                                "Their data-driven marketing approach increased our customer engagement by 45%. Highly recommend!"
+                    <div class="carousel-item ">
+                        <div class="testimonial-box ">
+                            <p class="testimonial-text ">
+                                "Their data-driven marketing approach increased our customer engagement by 45%. Highly recommend! "
                             </p>
-                            <h5 class="testimonial-author">- Lisa Carter</h5>
+                            <h5 class="testimonial-author ">- Lisa Carter</h5>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="testimonial-box">
-                            <p class="testimonial-text">
-                                "Exceptional service! Koinet Media played a key role in expanding our B2B network with qualified leads."
+                    <div class="carousel-item ">
+                        <div class="testimonial-box ">
+                            <p class="testimonial-text ">
+                                "Exceptional service! Koinet Media played a key role in expanding our B2B network with qualified leads. "
                             </p>
-                            <h5 class="testimonial-author">- David Ramirez</h5>
+                            <h5 class="testimonial-author ">- David Ramirez</h5>
                         </div>
                     </div>
                 </div>
 
                 <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev " type="button " data-bs-target="#testimonialCarousel " data-bs-slide="prev ">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 " aria-hidden="true "></span>
+                    <span class="visually-hidden ">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next " type="button " data-bs-target="#testimonialCarousel " data-bs-slide="next ">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3 " aria-hidden="true "></span>
+                    <span class="visually-hidden ">Next</span>
                 </button>
             </div>
         </div>
@@ -1031,29 +1041,29 @@
     </script>
 
     <!-- Why Partner with Koinet Media Section -->
-    <section class="why-partner-section">
-        <div class="container">
-            <h2 class="section-title">
-                WHY PARTNER WITH <span class="text-primary">KOINET</span> MEDIA?
+    <section class="why-partner-section ">
+        <div class="container ">
+            <h2 class="section-title ">
+                WHY PARTNER WITH <span class="text-primary ">KOINET</span> MEDIA?
             </h2>
-            <p class="section-description">
+            <p class="section-description ">
                 Work with Koinet Media and get more than just leads – get real conversions. Our smart data-driven approach ensures every marketing dollar is well spent.
             </p>
 
             <!-- Features Grid -->
-            <div class="features-grid">
-                <div class="feature-item fade-in">
-                    <i class="fas fa-chart-line icon"></i>
+            <div class="features-grid ">
+                <div class="feature-item fade-in ">
+                    <i class="fas fa-chart-line icon "></i>
                     <h4>Higher Conversion Rates</h4>
                     <p>We deliver <strong>sales-ready leads</strong> that drive revenue.</p>
                 </div>
-                <div class="feature-item fade-in delay-1">
-                    <i class="fas fa-sync-alt icon"></i>
+                <div class="feature-item fade-in delay-1 ">
+                    <i class="fas fa-sync-alt icon "></i>
                     <h4>Optimized Campaigns</h4>
                     <p>Our <strong>data-driven strategies</strong> improve your campaign performance.</p>
                 </div>
-                <div class="feature-item fade-in delay-2">
-                    <i class="fas fa-hand-holding-usd icon"></i>
+                <div class="feature-item fade-in delay-2 ">
+                    <i class="fas fa-hand-holding-usd icon "></i>
                     <h4>Better ROI</h4>
                     <p>Maximize returns for <strong>every dollar spent</strong> with us.</p>
                 </div>
@@ -1141,13 +1151,13 @@
 
     <!-- JavaScript to Trigger Animation on Scroll -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const elements = document.querySelectorAll(".fade-in");
+        document.addEventListener("DOMContentLoaded ", function() {
+            const elements = document.querySelectorAll(".fade-in ");
             const observer = new IntersectionObserver(
                 (entries) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
-                            entry.target.classList.add("animate");
+                            entry.target.classList.add("animate ");
                         }
                     });
                 }, {
@@ -1162,46 +1172,46 @@
 
 
     <!-- Own Your Funnel Section -->
-    <section class="py-5 text-center position-relative" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
-        <div class="container position-relative">
-            <h2 class="fw-bold animate__animated animate__fadeInUp text-uppercase text-responsive">
-                <span class="text-primary">MASTER YOUR FUNNEL</span> <span class="text-black">FOR MAXIMUM GROWTH</span>
+    <section class="py-5 text-center position-relative " style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); ">
+        <div class="container position-relative ">
+            <h2 class="fw-bold animate__animated animate__fadeInUp text-uppercase text-responsive ">
+                <span class="text-primary ">MASTER YOUR FUNNEL</span> <span class="text-black ">FOR MAXIMUM GROWTH</span>
             </h2>
-            <p class="lead text-muted animate__animated animate__fadeInUp animate__delay-1s">
+            <p class="lead text-muted animate__animated animate__fadeInUp animate__delay-1s ">
                 INFUSE demand strategists work with you using advanced tools to craft and optimize demand programs that deliver the audience, buyers, and account engagement to meet your goals.
             </p>
 
-            <div class="row mt-4 g-4">
+            <div class="row mt-4 g-4 ">
                 <!-- Data-Driven Demand Programs -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInLeft hover-effect">
-                        <div class="icon-box bg-gradient-teal mb-3">
-                            <i class="fas fa-database fa-3x text-white"></i>
+                <div class="col-md-4 col-sm-12 ">
+                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInLeft hover-effect ">
+                        <div class="icon-box bg-gradient-teal mb-3 ">
+                            <i class="fas fa-database fa-3x text-white "></i>
                         </div>
-                        <h4 class="fw-bold text-dark">Data-Driven Demand Programs</h4>
-                        <p class="text-muted">We analyze real-time data to create precision-targeted campaigns.</p>
+                        <h4 class="fw-bold text-dark ">Data-Driven Demand Programs</h4>
+                        <p class="text-muted ">We analyze real-time data to create precision-targeted campaigns.</p>
                     </div>
                 </div>
 
                 <!-- Smart Engagement Strategies -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInUp animate__delay-1s hover-effect">
-                        <div class="icon-box bg-gradient-blue mb-3">
-                            <i class="fas fa-bullhorn fa-3x text-white"></i>
+                <div class="col-md-4 col-sm-12 ">
+                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInUp animate__delay-1s hover-effect ">
+                        <div class="icon-box bg-gradient-blue mb-3 ">
+                            <i class="fas fa-bullhorn fa-3x text-white "></i>
                         </div>
-                        <h4 class="fw-bold text-dark">Smart Engagement Strategies</h4>
-                        <p class="text-muted">Advanced AI and automation for highly engaging interactions.</p>
+                        <h4 class="fw-bold text-dark ">Smart Engagement Strategies</h4>
+                        <p class="text-muted ">Advanced AI and automation for highly engaging interactions.</p>
                     </div>
                 </div>
 
                 <!-- Performance Optimization Tools -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInRight animate__delay-2s hover-effect">
-                        <div class="icon-box bg-gradient-purple mb-3">
-                            <i class="fas fa-tools fa-3x text-white"></i>
+                <div class="col-md-4 col-sm-12 ">
+                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInRight animate__delay-2s hover-effect ">
+                        <div class="icon-box bg-gradient-purple mb-3 ">
+                            <i class="fas fa-tools fa-3x text-white "></i>
                         </div>
-                        <h4 class="fw-bold text-dark">Performance Optimization Tools</h4>
-                        <p class="text-muted">Use cutting-edge tools to track and refine every campaign.</p>
+                        <h4 class="fw-bold text-dark ">Performance Optimization Tools</h4>
+                        <p class="text-muted ">Use cutting-edge tools to track and refine every campaign.</p>
                     </div>
                 </div>
             </div>
@@ -1287,49 +1297,49 @@
 
 
     <!-- Our Insights Section -->
-    <section class="py-5 bg-white position-relative insights-section">
-        <div class="container position-relative text-center">
+    <section class="py-5 bg-white position-relative insights-section ">
+        <div class="container position-relative text-center ">
             <!-- Heading -->
-            <h2 class="insights-heading animate__animated animate__fadeInUp">
-                <span class="highlight">OUR</span> <span class="dark-text">INSIGHTS</span>
+            <h2 class="insights-heading animate__animated animate__fadeInUp ">
+                <span class="highlight ">OUR</span> <span class="dark-text ">INSIGHTS</span>
             </h2>
             <br>
-            <p class="text-muted lead animate__animated animate__fadeInUp animate__delay-1s">
+            <p class="text-muted lead animate__animated animate__fadeInUp animate__delay-1s ">
                 Stay ahead with expert strategies, trends, and in-depth market analysis.
             </p>
 
             <!-- Floating Articles -->
-            <div class="insights-wrapper">
-                <div class="insight-item insight-left" data-aos="fade-right">
-                    <div class="insight-image">
-                        <img src="images/ap1.jpg" alt="Insight 1">
+            <div class="insights-wrapper ">
+                <div class="insight-item insight-left " data-aos="fade-right ">
+                    <div class="insight-image ">
+                        <img src="images/ap1.jpg " alt="Insight 1 ">
                     </div>
-                    <div class="insight-content">
-                        <h5 class="fw-bold">The Future of Demand Generation</h5>
+                    <div class="insight-content ">
+                        <h5 class="fw-bold ">The Future of Demand Generation</h5>
                         <p>How AI and automation are reshaping B2B lead generation.</p>
-                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
+                        <a href="resources/blog.html " class="btn btn-outline-primary fw-bold mt-2 ">Read More →</a>
                     </div>
                 </div>
 
-                <div class="insight-item insight-right" data-aos="fade-left">
-                    <div class="insight-image">
-                        <img src="images/ap2.jpg" alt="Insight 2">
+                <div class="insight-item insight-right " data-aos="fade-left ">
+                    <div class="insight-image ">
+                        <img src="images/ap2.jpg " alt="Insight 2 ">
                     </div>
-                    <div class="insight-content">
-                        <h5 class="fw-bold">Maximizing ROI with ABM</h5>
+                    <div class="insight-content ">
+                        <h5 class="fw-bold ">Maximizing ROI with ABM</h5>
                         <p>Top strategies to drive higher engagement and conversions.</p>
-                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
+                        <a href="resources/blog.html " class="btn btn-outline-primary fw-bold mt-2 ">Read More →</a>
                     </div>
                 </div>
 
-                <div class="insight-item insight-left" data-aos="fade-right">
-                    <div class="insight-image">
-                        <img src="images/ap3.avif" alt="Insight 3">
+                <div class="insight-item insight-left " data-aos="fade-right ">
+                    <div class="insight-image ">
+                        <img src="images/ap3.avif " alt="Insight 3 ">
                     </div>
-                    <div class="insight-content">
-                        <h5 class="fw-bold">How Intent Data is Changing Lead Generation</h5>
+                    <div class="insight-content ">
+                        <h5 class="fw-bold ">How Intent Data is Changing Lead Generation</h5>
                         <p>Real-time intent data helps reach the right audience.</p>
-                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
+                        <a href="resources/blog.html " class="btn btn-outline-primary fw-bold mt-2 ">Read More →</a>
                     </div>
                 </div>
             </div>
@@ -1355,12 +1365,12 @@
             display: inline-block;
             position: relative;
         }
-        /* "OUR" in primary blue */
+        /* "OUR " in primary blue */
         
         .insights-heading .highlight {
             color: #007bff;
         }
-        /* "INSIGHTS" in black */
+        /* "INSIGHTS " in black */
         
         .insights-heading .dark-text {
             color: #000;
@@ -1467,13 +1477,13 @@
     </style>
     <!-- JavaScript for Scroll Animations -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const insightItems = document.querySelectorAll(".insight-item");
+        document.addEventListener("DOMContentLoaded ", function() {
+            const insightItems = document.querySelectorAll(".insight-item ");
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.style.animation = "fadeInUp 1s forwards";
+                        entry.target.style.animation = "fadeInUp 1s forwards ";
                     }
                 });
             }, {
@@ -1610,43 +1620,43 @@
         });
     </script>
     <!-- PILLARS OF MULTI-CHANNEL LEAD -->
-    <div class="pillars-section">
-        <div class="py-5 text-center my-5">
-            <h2 class="section-heading">
-                <span class="highlight">3 CORE PILLARS</span> OF <span class="black-text">MULTI CHANNEL GROWTH</span> WITH KOI<span class="">NET MEDIA</span>
+    <div class="pillars-section ">
+        <div class="py-5 text-center my-5 ">
+            <h2 class="section-heading ">
+                <span class="highlight ">3 CORE PILLARS</span> OF <span class="black-text ">MULTI CHANNEL GROWTH</span> WITH KOI<span class=" ">NET MEDIA</span>
             </h2>
-            <p class="sub-heading">To build a high-impact lead generation strategy, businesses must focus on:</p>
+            <p class="sub-heading ">To build a high-impact lead generation strategy, businesses must focus on:</p>
         </div>
 
-        <div class="pillars-container">
+        <div class="pillars-container ">
             <!-- Pillar 1 - Content Syndication -->
-            <div class="pillar-card" style="background-color: #EDFCFF;">
-                <img src="images/ser1.png" alt="Content Syndication" class="pillar-img">
-                <h3 class="pillar-title">Content Syndication</h3>
-                <div class="pillar-line pillar-blue"></div>
-                <ul class="pillar-list">
+            <div class="pillar-card " style="background-color: #EDFCFF; ">
+                <img src="images/ser1.png " alt="Content Syndication " class="pillar-img ">
+                <h3 class="pillar-title ">Content Syndication</h3>
+                <div class="pillar-line pillar-blue "></div>
+                <ul class="pillar-list ">
                     <li>We distribute your content across multiple platforms to maximize reach.</li>
                     <li>Increase visibility, engagement, and brand awareness.</li>
                 </ul>
             </div>
 
             <!-- Pillar 2 - Cross-Platform Nurturing -->
-            <div class="pillar-card" style="background-color: #FDF6E9;">
-                <img src="images/ser2.png" alt="Cross-Platform Nurturing" class="pillar-img">
-                <h3 class="pillar-title">Cross-Platform Nurturing</h3>
-                <div class="pillar-line pillar-orange"></div>
-                <ul class="pillar-list">
+            <div class="pillar-card " style="background-color: #FDF6E9; ">
+                <img src="images/ser2.png " alt="Cross-Platform Nurturing " class="pillar-img ">
+                <h3 class="pillar-title ">Cross-Platform Nurturing</h3>
+                <div class="pillar-line pillar-orange "></div>
+                <ul class="pillar-list ">
                     <li>Our AI-driven approach keeps prospects engaged with dynamic experiences.</li>
                     <li>Personalized nurturing across email, social media, and digital ads.</li>
                 </ul>
             </div>
 
             <!-- Pillar 3 - Data Compliance & Transparency -->
-            <div class="pillar-card" style="background-color: #E8FFEF;">
-                <img src="images/ser3.png" alt="Data Compliance & Transparency" class="pillar-img">
-                <h3 class="pillar-title">Data Compliance & Transparency</h3>
-                <div class="pillar-line pillar-green"></div>
-                <ul class="pillar-list">
+            <div class="pillar-card " style="background-color: #E8FFEF; ">
+                <img src="images/ser3.png " alt="Data Compliance & Transparency " class="pillar-img ">
+                <h3 class="pillar-title ">Data Compliance & Transparency</h3>
+                <div class="pillar-line pillar-green "></div>
+                <ul class="pillar-list ">
                     <li>We ensure an ethical and GDPR-compliant lead generation process.</li>
                     <li>Providing full transparency to build trust with your audience.</li>
                 </ul>
@@ -1788,31 +1798,31 @@
 
 
     <!-- Clients Section -->
-    <section class="clients-section py-5">
-        <div class="container text-center">
+    <section class="clients-section py-5 ">
+        <div class="container text-center ">
             <!-- Attractive Heading -->
-            <h2 class="fw-bold text-uppercase tracking-widest">
-                Our <span class="text-black">Clients</span>
+            <h2 class="fw-bold text-uppercase tracking-widest ">
+                Our <span class="text-black ">Clients</span>
             </h2>
-            <div class="section-underline"></div>
-            <p class="text-muted lead">
+            <div class="section-underline "></div>
+            <p class="text-muted lead ">
                 Trusted by the best in the industry.
             </p>
 
             <!-- Clients Carousel -->
-            <div class="clients-carousel">
-                <div class="clients-track">
-                    <div class="client-logo"><img src="images/1.png" alt="Client 1"></div>
-                    <div class="client-logo"><img src="images/2.png" alt="Client 2"></div>
-                    <div class="client-logo"><img src="images/3.png" alt="Client 3"></div>
-                    <div class="client-logo"><img src="images/HPE.png" alt="Client 4"></div>
-                    <div class="client-logo"><img src="images/logo.webp" alt="Client 5"></div>
+            <div class="clients-carousel ">
+                <div class="clients-track ">
+                    <div class="client-logo "><img src="images/1.png " alt="Client 1 "></div>
+                    <div class="client-logo "><img src="images/2.png " alt="Client 2 "></div>
+                    <div class="client-logo "><img src="images/3.png " alt="Client 3 "></div>
+                    <div class="client-logo "><img src="images/HPE.png " alt="Client 4 "></div>
+                    <div class="client-logo "><img src="images/logo.webp " alt="Client 5 "></div>
                     <!-- Duplicate logos for infinite loop -->
-                    <div class="client-logo"><img src="images/1.png" alt="Client 1"></div>
-                    <div class="client-logo"><img src="images/2.png" alt="Client 2"></div>
-                    <div class="client-logo"><img src="images/3.png" alt="Client 3"></div>
-                    <div class="client-logo"><img src="images/HPE.png" alt="Client 4"></div>
-                    <div class="client-logo"><img src="images/logo.webp" alt="Client 5"></div>
+                    <div class="client-logo "><img src="images/1.png " alt="Client 1 "></div>
+                    <div class="client-logo "><img src="images/2.png " alt="Client 2 "></div>
+                    <div class="client-logo "><img src="images/3.png " alt="Client 3 "></div>
+                    <div class="client-logo "><img src="images/HPE.png " alt="Client 4 "></div>
+                    <div class="client-logo "><img src="images/logo.webp " alt="Client 5 "></div>
                 </div>
             </div>
         </div>
@@ -2000,26 +2010,26 @@
 
 
     <!-- Our Insights Section -->
-    <section class="py-5 bg-white position-relative insights-section">
-        <div class="container position-relative text-center">
+    <section class="py-5 bg-white position-relative insights-section ">
+        <div class="container position-relative text-center ">
             <!-- Heading -->
-            <h2 class="insights-heading">
-                <span class="highlight">OUR</span> <span class="dark-text">Blogs</span>
+            <h2 class="insights-heading ">
+                <span class="highlight ">OUR</span> <span class="dark-text ">Blogs</span>
             </h2>
             <br>
             <!-- Blog Container -->
-            <div id="blogs-container" class="insights-wrapper">
+            <div id="blogs-container " class="insights-wrapper ">
                 <!-- Blog posts will be injected here -->
             </div>
             <!-- Pagination Controls -->
-            <!-- <div class="pagination-controls">
-                <button onclick="prevPage()" class="btn btn-outline-primary fw-bold">Previous</button>
-                <span id="page-number" class="mx-3">1</span>
-                <button onclick="nextPage()" class="btn btn-outline-primary fw-bold">Next</button>
+            <!-- <div class="pagination-controls ">
+                <button onclick="prevPage() " class="btn btn-outline-primary fw-bold ">Previous</button>
+                <span id="page-number " class="mx-3 ">1</span>
+                <button onclick="nextPage() " class="btn btn-outline-primary fw-bold ">Next</button>
             </div> -->
         </div>
-        <div class="text-center">
-            <a href="blog.html" class="btn btn-primary btn-lg mt-5">More Blogs</a>
+        <div class="text-center ">
+            <a href="blog.html " class="btn btn-primary btn-lg mt-5 ">More Blogs</a>
         </div>
     </section>
 
@@ -2043,12 +2053,12 @@
             display: inline-block;
             position: relative;
         }
-        /* "OUR" in primary blue */
+        /* "OUR " in primary blue */
         
         .insights-heading .highlight {
             color: #007bff;
         }
-        /* "Blogs" in black */
+        /* "Blogs " in black */
         
         .insights-heading .dark-text {
             color: #000;
@@ -2153,13 +2163,13 @@
     </style>
     <!-- JavaScript for Scroll Animations -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const insightItems = document.querySelectorAll(".insight-item");
+        document.addEventListener("DOMContentLoaded ", function() {
+            const insightItems = document.querySelectorAll(".insight-item ");
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.style.animation = "fadeInUp 1s forwards";
+                        entry.target.style.animation = "fadeInUp 1s forwards ";
                     }
                 });
             }, {
@@ -2183,16 +2193,16 @@
                     blogs = data; // Store blogs
                     displayBlogs(); // Display blogs with pagination
                 } else {
-                    console.error("Unexpected API response:", data);
+                    console.error("Unexpected API response: ", data);
                 }
             } catch (error) {
-                console.error("Error fetching blogs:", error);
+                console.error("Error fetching blogs: ", error);
             }
         }
 
         function displayBlogs() {
-            const blogContainer = document.getElementById("blogs-container");
-            blogContainer.innerHTML = ""; // Clear previous content
+            const blogContainer = document.getElementById("blogs-container ");
+            blogContainer.innerHTML = " "; // Clear previous content
 
             // Calculate pagination indices
             const startIndex = (currentPage - 1) * blogsPerPage;
@@ -2203,44 +2213,31 @@
                 blogContainer.innerHTML = "<p>No blogs found.</p>";
                 return;
             }
+            blogsToDisplay.forEach((blog, index) => { // Determine alignment // const alignmentClass = index % 2 === 0 ? 'insight-left' : 'insight-right'; // Limit
 
-            blogsToDisplay.forEach((blog, index) => {
-                // Determine alignment
-                // const alignmentClass = index % 2 === 0 ? 'insight-left' : 'insight-right';
-
-                // Limit content to 5 words
                 const contentWords = blog.content.split(" ");
                 const shortContent = contentWords.slice(0, 5).join(" ") + (contentWords.length > 5 ? "..." : "");
-
                 blogContainer.innerHTML += `
-                <div class="insight-item ">
-                    <div class="insight-image">
-                        <img src="${blog.imageUrl || 'https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_1280.jpg'}" alt="Blog Image">
-                    </div>
-                    <div class="text-start">
-                        <h5 class="fw-bold">${blog.title}</h5>
-                          <p class="date py-2">
-                            <span class="rounded bg-primary text-white p-1">
+                        <div class="insight-item ">
+                            <div class="insight-image">
+                                <img src="${blog.imageUrl || 'https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_1280.jpg'}" alt="Blog Image">
+                            </div>
+                            <div class="text-start">
+                                <h5 class="fw-bold">${blog.title}</h5>
+                                <p class="date py-2">
+                                    <span class="rounded bg-primary text-white p-1">
                                 ${new Date(blog.date).toLocaleDateString()}
                             </span>
-                        </p>
-                        <p>${shortContent}</p>
-                      
-                        <a href="viewblog.html?id=${blog._id}" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
-                    </div>
-                </div>`;
+                                </p>
+                                <p>${shortContent}</p>
+
+                                <a href="viewblog.html?id=${blog._id}" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
+                            </div>
+                        </div>`;
             });
-
-            updatePagination(); // Update page number
-        }
-
-        function updatePagination() {
-            document.getElementById("page-number").textContent = currentPage;
-        }
-
-        function nextPage() {
-            const maxPages = Math.ceil(blogs.length / blogsPerPage);
-            if (currentPage < maxPages) {
+            updatePagination(); // Update page number } function updatePagination() { document.getElementById("page-number").textContent = currentPage; } function nextPage() { const maxPages = Math.ceil(blogs.length / blogsPerPage);
+            if (currentPage <
+                maxPages) {
                 currentPage++;
                 displayBlogs();
             }
@@ -2251,10 +2248,7 @@
                 currentPage--;
                 displayBlogs();
             }
-        }
-
-        // Fetch blogs when the page loads
-        fetchBlogs();
+        } // Fetch blogs when the page loads fetchBlogs();
     </script>
 
 
@@ -2404,7 +2398,9 @@
 
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js "></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js "></script> -->
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </html>
