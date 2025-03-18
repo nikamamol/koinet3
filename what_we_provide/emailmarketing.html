@@ -27,6 +27,7 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            padding-top: 25px;
         }
         /* Content Sections */
         
@@ -217,26 +218,36 @@
         
         .navbar-custom {
             background: rgba(255, 255, 255, 0.7);
+            /* Default background */
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        /* Navbar Transparent on Scroll */
+        /* Navbar Hover Effect */
         
-        .navbar-custom.navbar-transparent {
-            background: rgba(255, 255, 255, 0);
-            box-shadow: none;
+        .navbar-custom:hover {
+            background-color: #30528D !important;
+            /* Light blue background on hover */
+        }
+        /* Navbar Links Text Color on Hover */
+        
+        .navbar-custom:hover .nav-link {
+            color: white !important;
+            /* White text color on hover */
+        }
+        /* Ensure the logo is not affected */
+        
+        .navbar-custom:hover .navbar-brand {
+            background-color: transparent !important;
+            /* Logo remains unaffected */
         }
         /* Navbar Links */
         
         .navbar-custom .nav-link {
             color: #000;
+            /* Default text color */
             font-weight: 600;
             transition: color 0.3s ease-in-out;
-        }
-        
-        .navbar-custom .nav-link:hover {
-            color: #e63946;
         }
         /* Dropdown Styling */
         
@@ -276,6 +287,7 @@
         @media (max-width: 991px) {
             .navbar-custom {
                 background: rgba(255, 255, 255, 0.95);
+                /* Default background for mobile */
             }
         }
     </style>
@@ -286,7 +298,7 @@
     <!-- Header Section -->
     <div class="header-section mt-5">
         <div class="header-content">
-            <h1 class="fw-bold text-uppercase tracking-widest">Email Marketing in the US: The Future of Customer Engagement</h1>
+            <h1 class="fw-bold text-uppercase tracking-widest">Email Marketing: The Future of Customer Engagement</h1>
             <p>AI-Driven Personalization, Interactive Content & Automation</p>
             <a href="#" class="cta-button">Get Started</a>
         </div>
@@ -891,6 +903,7 @@
         </div>
     </section>
 
+    <!-- CSS for Email Marketing Section -->
     <style>
         /* Email Marketing Section */
         
@@ -939,9 +952,11 @@
         .email-marketing-list {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            /* Stack cards vertically */
             gap: 20px;
-            max-width: 800px;
+            /* Add gap between cards */
+            max-width: 1000px;
+            /* Adjust as needed */
             margin: 0 auto;
             opacity: 0;
             animation: fadeInUp 1.8s ease-in-out forwards;
@@ -957,14 +972,16 @@
             padding: 20px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 100%;
+            /* Make cards take full width */
         }
-        /* Hover Effect */
+        /* Ensure text content is aligned properly */
         
-        .email-marketing-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+        .email-text {
+            flex: 1;
+            /* Allow text to take remaining space */
         }
-        /* Icon */
+        /* Optional: Adjust icon size for consistency */
         
         .email-icon {
             font-size: 28px;
@@ -977,19 +994,14 @@
             border-radius: 50%;
             min-width: 50px;
             min-height: 50px;
+            flex-shrink: 0;
+            /* Prevent icon from shrinking */
         }
-        /* List Text */
+        /* Hover Effect */
         
-        .email-text h3 {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .email-text p {
-            font-size: 16px;
-            color: #555;
-            margin-top: 5px;
+        .email-marketing-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
         }
         /* Animations */
         
@@ -1013,7 +1025,6 @@
             }
         }
     </style>
-
     <!-- CTA Section -->
     <div class="cta-section">
         <h2 class="fw-bold text-uppercase tracking-widest">📩 🚀 Contact us today and supercharge your email marketing!</h2>
@@ -1072,6 +1083,7 @@
                     <li><a href="../footerpages/GDPR.html">GDPR</a></li>
                     <li><a href="../footerpages/CCPA.html">CCPA</a></li>
                     <li><a href="../footerpages/Terms-Condition.html">Terms & Conditions</a></li>
+                    <li><a href="../footerpages/Media_Kit.html">Media Kit</a></li>
                 </ul>
 
                 <!-- Copyright & Social Icons -->
