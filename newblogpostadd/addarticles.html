@@ -175,7 +175,7 @@
 
             console.log(postData); // Debugging: log the payload
 
-            fetch('http://localhost:9000/api/addarticles', {
+            fetch('https://koinetwebbackend.onrender.com/api/addarticles', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -213,7 +213,7 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             // URL of your API endpoint
-            const apiUrl = 'http://localhost:9000/api/getarticles';
+            const apiUrl = 'https://koinetwebbackend.onrender.com/api/getarticles';
 
             // Function to fetch the total number of blogs
             async function fetchTotalBlogs() {

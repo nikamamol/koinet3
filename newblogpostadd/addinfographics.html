@@ -175,7 +175,7 @@
 
             console.log(postData); // Debugging: log the payload
 
-            fetch('http://localhost:9000/api/addinfographics', {
+            fetch('https://koinetwebbackend.onrender.com/api/addinfographics', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -213,7 +213,7 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             // URL of your API endpoint
-            const apiUrl = 'http://localhost:9000/api/getinfographics';
+            const apiUrl = 'https://koinetwebbackend.onrender.com/api/getinfographics';
 
             // Function to fetch the total number of blogs
             async function fetchTotalBlogs() {
