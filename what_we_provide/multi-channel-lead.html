@@ -85,7 +85,7 @@
         }
         
         .cta-section .cta-button {
-            background: #ff8c00;
+            background: #df4040;
             color: white;
             padding: 12px 24px;
             text-decoration: none;
@@ -97,7 +97,7 @@
         }
         
         .cta-section .cta-button:hover {
-            background: #e07c00;
+            background: #df4040;
         }
         /* Responsive Design */
         
@@ -646,33 +646,33 @@
         <div class="pillars-container">
             <!-- Pillar 1 - Content Syndication -->
             <div class="pillar-card" style="background-color: #EDFCFF;">
-                <img src="../images/ser1.png" alt="Content Syndication" class="pillar-img">
+                <img src="../images/ser1.png" alt="Content Syndication" class="pillar-img"><br>
                 <h3 class="pillar-title">Content Syndication</h3>
-                <div class="pillar-line pillar-blue"></div>
-                <ul class="pillar-list">
-                    <li>We distribute your content across multiple platforms to maximize reach.</li>
+                <div class="pillar-line pillar-blue"></div><br>
+                <ul class="text-start">
+                    <li>We distribute your content across multiple platforms to maximize reach.</li><br>
                     <li>Increase visibility, engagement, and brand awareness.</li>
                 </ul>
             </div>
 
             <!-- Pillar 2 - Cross-Platform Nurturing -->
             <div class="pillar-card" style="background-color: #FDF6E9;">
-                <img src="../images/ser2.png" alt="Cross-Platform Nurturing" class="pillar-img">
+                <img src="../images/ser2.png" alt="Cross-Platform Nurturing" class="pillar-img"><br>
                 <h3 class="pillar-title">Cross-Platform Nurturing</h3>
-                <div class="pillar-line pillar-orange"></div>
-                <ul class="pillar-list">
-                    <li>Our AI-driven approach keeps prospects engaged with dynamic experiences.</li>
+                <div class="pillar-line pillar-orange"></div><br>
+                <ul class="text-start">
+                    <li>Our AI-driven approach keeps prospects engaged with dynamic experiences.</li><br>
                     <li>Personalized nurturing across email, social media, and digital ads.</li>
                 </ul>
             </div>
 
             <!-- Pillar 3 - Data Compliance & Transparency -->
             <div class="pillar-card" style="background-color: #E6FFED;">
-                <img src="../images/ser3.png" alt="Data Compliance & Transparency" class="pillar-img">
+                <img src="../images/ser3.png" alt="Data Compliance & Transparency" class="pillar-img"><br>
                 <h3 class="pillar-title">Data Compliance & Transparency</h3>
-                <div class="pillar-line pillar-green"></div>
-                <ul class="pillar-list">
-                    <li>We ensure an ethical and GDPR-compliant lead generation process.</li>
+                <div class="pillar-line pillar-green"></div><br>
+                <ul class="text-start">
+                    <li>We ensure an ethical and GDPR-compliant lead generation process.</li><br>
                     <li>Providing full transparency to build trust with your audience.</li>
                 </ul>
             </div>
@@ -917,30 +917,33 @@
     <!-- Lead Generation Growth Engine Section -->
     <section class="lead-gen-container">
         <div class="lead-gen-content">
-            <h2 class="lead-gen-heading fw-bold text-uppercase tracking-widest">Turn Your <span>Lead Gen</span> into a <span>Growth Engine</span></h2>
+            <h2 class="lead-gen-heading fw-bold text-uppercase tracking-widest"> Turn Your <span>Lead Gen</span> into a <span>Growth Engine</span></h2>
             <p class="lead-gen-subtext">
                 At <b>KoiNet Media</b>, we specialize in <b>automating, personalizing, and optimizing</b> lead generation strategies that attract the right prospects and drive real business growth.
             </p>
 
             <div class="lead-gen-list">
+                <!-- B2B & B2C Businesses -->
                 <div class="lead-gen-item">
-                    <span class="lead-icon">📈</span>
+                    <span class="lead-icon"></span>
                     <div class="lead-text">
                         <h3>B2B & B2C Businesses</h3>
                         <p>Looking to scale lead generation with data-driven strategies.</p>
                     </div>
                 </div>
 
+                <!-- Startups & Enterprises -->
                 <div class="lead-gen-item">
-                    <span class="lead-icon">🚀</span>
+                    <span class="lead-icon"></span>
                     <div class="lead-text">
                         <h3>Startups & Enterprises</h3>
                         <p>Boosting conversion rates with AI-powered targeting.</p>
                     </div>
                 </div>
 
+                <!-- AI-Driven Personalization -->
                 <div class="lead-gen-item">
-                    <span class="lead-icon">🤖</span>
+                    <span class="lead-icon"></span>
                     <div class="lead-text">
                         <h3>AI-Driven Personalization</h3>
                         <p>Automating and optimizing your lead nurturing process.</p>
@@ -950,7 +953,7 @@
         </div>
     </section>
 
-
+    <!-- CSS for Lead Gen Growth Engine Section -->
     <style>
         /* Lead Gen Section */
         
@@ -979,7 +982,7 @@
         /* Gradient Effect for Highlighted Words */
         
         .lead-gen-heading span {
-            background: linear-gradient(90deg, #ff4d4d, #ff9900);
+            background: #007bff;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -1001,7 +1004,7 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             opacity: 0;
             animation: fadeInUp 1.8s ease-in-out forwards;
@@ -1017,39 +1020,33 @@
             padding: 20px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 100%;
         }
-        /* Hover Effect */
+        /* Ensure text content is aligned properly */
         
-        .lead-gen-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+        .lead-text {
+            flex: 1;
         }
-        /* Icon */
+        /* Icon Styling */
         
         .lead-icon {
             font-size: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #ff9900;
+            background: #007bff;
             color: white;
             padding: 10px;
             border-radius: 50%;
             min-width: 50px;
             min-height: 50px;
+            flex-shrink: 0;
         }
-        /* List Text */
+        /* Hover Effect */
         
-        .lead-text h3 {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .lead-text p {
-            font-size: 16px;
-            color: #555;
-            margin-top: 5px;
+        .lead-gen-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
         }
         /* Animations */
         
@@ -1073,11 +1070,12 @@
             }
         }
     </style>
+
     <!-- CTA Section -->
     <div class="cta-section ">
-        <h2 class="fw-bold text-uppercase tracking-widest">🚀 Ready to scale your lead gen? Let’s do this!</h2>
+        <h2 class="fw-bold text-uppercase tracking-widest">Ready to scale your lead gen? Let’s do this!</h2>
         <p>Partner with KoinetMedia and take your multi-channel lead gen to the next level.</p>
-        <a href="contact.html " class="cta-button ">📩 Get in Touch</a>
+        <a href="contact.html " class="cta-button ">Get in Touch</a>
     </div>
 
     <!--  Footer Section -->
