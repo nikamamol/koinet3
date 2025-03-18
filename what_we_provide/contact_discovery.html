@@ -83,21 +83,31 @@
             font-size: 1.8rem;
             margin-bottom: 20px;
         }
+        /* CTA Button Styling */
         
         .cta-section .cta-button {
-            background: #ff8c00;
-            color: white;
+            background: transparent;
+            /* Transparent background by default */
+            color: #0d6efd;
+            /* Primary color for text */
+            border: 2px solid #ee2a2a;
+            /* Primary color border */
             padding: 12px 24px;
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
             border-radius: 8px;
-            transition: 0.3s;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
             display: inline-block;
         }
+        /* CTA Button Hover and Active (Click) Effect */
         
-        .cta-section .cta-button:hover {
-            background: #e07c00;
+        .cta-section .cta-button:hover,
+        .cta-section .cta-button:active {
+            background: rgba(223, 7, 7, 0.933);
+            /* Primary color background on hover/click */
+            color: white;
+            /* White text on hover/click */
         }
         /* Responsive Design */
         
@@ -938,6 +948,7 @@
         </div>
     </section>
 
+    <!-- CSS for Lead Gen Section -->
     <style>
         /* Lead Gen Section */
         
@@ -986,9 +997,11 @@
         .lead-gen-list {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            /* Stack cards vertically */
             gap: 20px;
-            max-width: 800px;
+            /* Add gap between cards */
+            max-width: 1000px;
+            /* Adjust as needed */
             margin: 0 auto;
             opacity: 0;
             animation: fadeInUp 1.8s ease-in-out forwards;
@@ -1004,14 +1017,16 @@
             padding: 20px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 100%;
+            /* Make cards take full width */
         }
-        /* Hover Effect */
+        /* Ensure text content is aligned properly */
         
-        .lead-gen-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+        .lead-text {
+            flex: 1;
+            /* Allow text to take remaining space */
         }
-        /* Icon */
+        /* Optional: Adjust icon size for consistency */
         
         .lead-icon {
             font-size: 28px;
@@ -1024,19 +1039,14 @@
             border-radius: 50%;
             min-width: 50px;
             min-height: 50px;
+            flex-shrink: 0;
+            /* Prevent icon from shrinking */
         }
-        /* List Text */
+        /* Hover Effect */
         
-        .lead-text h3 {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .lead-text p {
-            font-size: 16px;
-            color: #555;
-            margin-top: 5px;
+        .lead-gen-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
         }
         /* Animations */
         
