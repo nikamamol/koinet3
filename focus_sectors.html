@@ -184,100 +184,153 @@
             opacity: 1;
             /* Fade in */
         }
+        /* Focus Audience Section */
         
-        .industries-container {
-            background-color: #f0f4f8;
-            /* Light background color for the section */
-            padding: 40px;
-            /* Padding for the section */
+        .focus-audience-container {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 60px 30px;
+            text-align: center;
             border-radius: 15px;
-            /* Rounded corners for softness */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow for depth */
-            margin: 20px 0;
-            /* Margin from other sections */
         }
         
-        .industry-title {
-            text-align: center;
-            /* Center the title */
+        .content-wrapper {
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .focus-title {
             font-size: 2.5rem;
-            /* Large title size */
             color: #0E3A62;
-            /* Title color */
-            margin-bottom: 30px;
-            /* Space below the title */
+            font-weight: 700;
+            text-transform: uppercase;
         }
         
-        .industry-card {
-            background-color: #ffffff;
-            /* White background for cards */
-            border-radius: 10px;
-            /* Rounded corners for cards */
-            overflow: hidden;
-            /* Prevent overflow */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            /* Shadow for depth */
-            transition: transform 0.3s;
-            /* Smooth transition on hover */
-            text-align: center;
-            /* Center the text in the card */
-            padding: 20px;
-            /* Padding inside cards */
-            margin-bottom: 20px;
-            /* Space between cards */
+        .focus-description,
+        .focus-closing {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 25px;
+            font-weight: 500;
+            line-height: 1.6;
         }
         
-        .industry-card:hover {
-            transform: translateY(-5px);
-            /* Slight lift effect on hover */
-        }
-        
-        .industry-icon {
-            font-size: 3rem;
-            /* Size of the icon */
+        .highlight {
             color: #30BCE8;
-            /* Color for the icon */
-            margin-bottom: 15px;
-            /* Space below the icon */
+            font-weight: bold;
+        }
+        /* Audience Grid - Responsive Layout */
+        
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        /* Individual Audience Card */
+        
+        .audience-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-in-out forwards;
         }
         
-        .industry-name {
-            font-size: 1.5rem;
-            /* Size of the industry name */
+        .audience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Icons */
+        
+        .audience-icon {
+            font-size: 3rem;
+            color: #30BCE8;
+            margin-bottom: 15px;
+        }
+        
+        .audience-name {
+            font-size: 1.6rem;
             color: #0E3A62;
-            /* Color for the industry names */
-            margin-bottom: 10px;
-            /* Space below the name */
+            font-weight: 600;
         }
         
-        .industry-description {
+        .audience-info {
             font-size: 1rem;
-            /* Size of the description text */
             color: #555;
-            /* Darker gray for description */
-            margin-bottom: 15px;
-            /* Space below the description */
+            font-weight: 400;
+        }
+        /* Animation */
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive Adjustments */
+        
+        @media (max-width: 1200px) {
+            .audience-grid {
+                grid-template-columns: repeat(3, 1fr);
+                /* Show 3 cards per row */
+            }
         }
         
-        .learn-more {
-            background-color: #30BCE8;
-            /* Background for "Learn More" button */
-            color: #ffffff;
-            /* Text color for button */
-            padding: 10px 15px;
-            /* Padding for button */
-            text-decoration: none;
-            /* No underline */
-            border-radius: 5px;
-            /* Rounded corners for the button */
-            transition: background-color 0.3s;
-            /* Transition on hover */
+        @media (max-width: 992px) {
+            .audience-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* Show 2 cards per row */
+            }
+            .focus-title {
+                font-size: 2.2rem;
+            }
+            .focus-description,
+            .focus-closing {
+                font-size: 1.1rem;
+            }
         }
         
-        .learn-more:hover {
-            background-color: #1C9CBD;
-            /* Slightly darker blue on hover */
+        @media (max-width: 768px) {
+            .audience-grid {
+                grid-template-columns: repeat(1, 1fr);
+                /* Show 1 card per row */
+            }
+            .focus-title {
+                font-size: 2rem;
+            }
+            .focus-description,
+            .focus-closing {
+                font-size: 1rem;
+            }
+            .audience-card {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .focus-title {
+                font-size: 1.8rem;
+            }
+            .focus-description,
+            .focus-closing {
+                font-size: 0.95rem;
+            }
+            .audience-icon {
+                font-size: 2.5rem;
+            }
+            .audience-card {
+                padding: 15px;
+            }
         }
         
         .audience-container {
@@ -684,7 +737,7 @@
             </p>
             <a href="contact.html" class="cta-btn">Schedule Your Free Consultation</a>
         </div>
-    </section>
+    </section><br><br>
 
     <!-- Stats Section -->
     <div class="container">
@@ -720,53 +773,71 @@
                 <a href="#">CLIENT TESTIMONIALS →</a>
             </div>
         </div>
-    </div>
-    <!-- Industries Section -->
-    <div class="industries-container">
-        <h2 class="industry-title">EXPLORE OUR INDUSTRIES</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="industry-name">Artificial Intelligence</h3>
-                    <p class="industry-description">Innovating solutions that leverage machine learning for smarter decisions and automation.</p>
-                    <a href="#" class="learn-more">Learn More</a>
+    </div><br><br><br>
+    <!-- Our Focus Audience Section -->
+    <div class="focus-audience-container">
+        <div class="content-wrapper mt-5">
+            <h2 class="focus-title">Our Focus Audience</h2>
+            <p class="focus-description">
+                At <span class="highlight">Koinet Media</span>, we specialize in empowering businesses across diverse industries by connecting them with the right audience.
+            </p>
+
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon"><i class="fas fa-microchip"></i></div>
+                    <h3 class="audience-name">Technology Companies</h3>
+                    <p class="audience-info">Helping tech firms reach decision-makers through strategic outreach.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="audience-name">IT Service Providers</h3>
+                    <p class="audience-info">Enhancing brand visibility and generating high-quality leads.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="audience-name">Marketing Teams</h3>
+                    <p class="audience-info">Supporting marketing teams with data-driven campaign strategies.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="audience-name">C-Level Executives</h3>
+                    <p class="audience-info">Providing decision-makers with actionable insights and connections.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="audience-name">Startups</h3>
+                    <p class="audience-info">Helping startups grow their brand and scale their audience effectively.</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3 class="industry-name">Healthcare</h3>
-                    <p class="industry-description">Transforming patient care through advanced technologies and personalized medicine.</p>
-                    <a href="#" class="learn-more">Learn More</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3 class="industry-name">Education</h3>
-                    <p class="industry-description">Modern educational tools to enhance learning experiences and accessibility for all.</p>
-                    <a href="#" class="learn-more">Learn More</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-bicycle"></i>
-                    </div>
-                    <h3 class="industry-name">Transportation</h3>
-                    <p class="industry-description">Emerging technologies shaping the future of mobility and smart cities.</p>
-                    <a href="#" class="learn-more">Learn More</a>
-                </div>
-            </div>
+
+            <p class="focus-closing">
+                Whether you're looking to <span class="highlight">grow brand visibility, nurture leads, or drive conversions</span>,
+                <b>Koinet Media</b> is your trusted partner.
+            </p>
         </div>
     </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll(".audience-card");
+
+            function revealCards() {
+                const triggerHeight = window.innerHeight * 0.8;
+
+                cards.forEach((card) => {
+                    const cardTop = card.getBoundingClientRect().top;
+                    if (cardTop < triggerHeight) {
+                        card.classList.add("animate");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealCards);
+            revealCards();
+        });
+    </script>
+
     <!-- Audience Profile Section -->
     <div class="audience-container">
         <h2 class="audience-title">AUDIENCE PROFILE</h2>

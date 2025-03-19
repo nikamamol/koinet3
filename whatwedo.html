@@ -199,32 +199,36 @@
 
 
     <!-- Hero Section -->
-    <section class="hero-section position-relative text-dark d-flex align-items-center">
-        <div class="container">
+    <section class="hero-section position-relative text-light d-flex align-items-center">
+        <div class="hero-overlay"></div>
+        <!-- Gradient Overlay -->
+        <div class="container position-relative">
             <div class="row align-items-center">
                 <!-- Left Side: 3D Illustration -->
                 <div class="col-lg-5 col-md-6 text-center mb-4 mb-md-0 mt-5">
-                    <img src="images/3d_working_man.jpeg" alt="3D Illustration" class="hero-image img-fluid">
+                    <img src="images/herowedo.png" alt="Marketing Team" class="hero-image img-fluid animated-image">
                 </div>
 
                 <!-- Right Side: Hero Content -->
-                <div class="col-lg-7 col-md-6">
-                    <h1 class=" hero-title fw-bold text-uppercase tracking-widest">
-                        Elevate Your <span class="highlight-text">Style & Confidence</span>
+                <div class="col-lg-7 col-md-6 text-center text-md-start">
+                    <h1 class="hero-title fw-bold text-uppercase tracking-widest fade-in">
+                        What We Do at <span class="highlight-text">Koinet Media</span>
                     </h1>
-                    <p class="hero-description">
-                        Unlock the latest fashion trends and expert styling tips to redefine your look effortlessly.
+                    <p class="hero-description fade-in">
+                        We help B2B businesses connect with their target market through strategic marketing solutions.
                     </p>
-                    <p class="hero-description">
-                        Stay ahead with curated styles and personalized recommendations tailored for you.
+                    <p class="hero-description fade-in">
+                        Our full-service offering is designed to deliver <strong>qualified leads, brand visibility, and business growth</strong>.
                     </p>
-                    <a href="contact.html" class="btn hero-btn">Get Started</a>
+                    <p class="hero-description fade-in">
+                        Here’s how we can help you.
+                    </p><br>
+                    <a href="services.html" class="btn hero-btn fade-in">Explore Services</a>
                 </div>
             </div>
         </div>
 
         <!-- Background Decorative Elements -->
-        <div class="hero-bg-shape"></div>
         <div class="hero-glow"></div>
     </section>
 
@@ -233,24 +237,36 @@
         /* Hero Section Styling */
         
         .hero-section {
-            background: linear-gradient(135deg, #f8f9fa, #ffffff);
-            padding: 50px 0;
-            min-height: 75vh;
-            /* Adjusted height for better mobile support */
+            position: relative;
+            padding: 80px 0;
+            min-height: 80vh;
             display: flex;
             align-items: center;
-            position: relative;
-            overflow: hidden;
+            background: url("images/herobgwhatwedo.png") center/cover no-repeat;
+            /* Background Image */
+        }
+        /* Gradient Overlay */
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+            /* Dark Overlay */
         }
         /* Hero Title */
         
         .hero-title {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             line-height: 1.2;
-            color: black;
+            color: darkblue;
             margin-bottom: 15px;
-            /* Reduced spacing */
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-in-out forwards;
         }
         
         .highlight-text {
@@ -260,58 +276,66 @@
         /* Hero Description */
         
         .hero-description {
-            font-size: 1rem;
-            color: #6c757d;
-            margin-bottom: 10px;
-            /* Reduced spacing */
+            font-size: 1.1rem;
+            color: black;
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-in-out 0.2s forwards;
         }
         /* Hero Button */
         
         .hero-btn {
             display: inline-block;
-            padding: 10px 25px;
+            padding: 12px 30px;
             font-size: 1rem;
             font-weight: bold;
             color: #007bff;
-            border: 2px solid #007bff;
+            background: rgb(204, 218, 255);
             border-radius: 30px;
-            background: transparent;
             transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-in-out 0.4s forwards;
         }
         
         .hero-btn:hover {
             background: #007bff;
-            color: white;
+            transform: scale(1.05);
         }
-        /* 3D Image Floating Animation */
+        /* Image Animation */
         
-        .hero-image {
+        .animated-image {
             max-width: 100%;
             height: auto;
-            animation: float 3s infinite ease-in-out alternate;
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideIn 1s ease-in-out forwards;
         }
         
-        @keyframes float {
+        @keyframes fadeInUp {
             0% {
-                transform: translateY(0px);
+                opacity: 0;
+                transform: translateY(30px);
             }
             100% {
-                transform: translateY(-10px);
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
             }
         }
         /* Glowing Background Shape */
-        
-        .hero-bg-shape {
-            position: absolute;
-            top: 5%;
-            left: -10%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255, 140, 0, 0.5), transparent);
-            border-radius: 50%;
-            filter: blur(80px);
-            z-index: -1;
-        }
         
         .hero-glow {
             position: absolute;
@@ -328,9 +352,26 @@
         
         @media (max-width: 992px) {
             .hero-section {
+                min-height: 70vh;
+                padding: 60px 0;
+                text-align: center;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+            .hero-image {
+                max-width: 85%;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
                 min-height: 60vh;
                 padding: 40px 0;
-                text-align: center;
             }
             .hero-title {
                 font-size: 1.8rem;
@@ -338,13 +379,16 @@
             .hero-description {
                 font-size: 0.95rem;
             }
-            .hero-image {
-                max-width: 80%;
-                margin-bottom: 15px;
+            .hero-btn {
+                padding: 10px 25px;
+                font-size: 0.95rem;
+            }
+            .hero-glow {
+                display: none;
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
             .hero-section {
                 min-height: 55vh;
                 padding: 30px 0;
@@ -356,58 +400,97 @@
                 font-size: 0.9rem;
             }
             .hero-btn {
-                padding: 8px 20px;
+                padding: 10px 20px;
                 font-size: 0.9rem;
-            }
-            .hero-bg-shape,
-            .hero-glow {
-                display: none;
-                /* Hide unnecessary background elements on small screens */
             }
         }
     </style>
 
+
+
     <!-- Services Section -->
     <section class="services-section py-5">
         <div class="container text-center">
-            <h2 class="fw-bold text-uppercase tracking-widest">
-                <span class="text-primary">Our</span> <span class="text-black">Services</span>
+            <h2 class="fw-bold text-uppercase tracking-widest mb-4">
+                <span class="text-primary">Our</span> <span class="text-dark">Services</span>
             </h2>
             <p class="text-muted mb-5">
-                Empowering businesses with cutting-edge marketing strategies that drive real results.
+                We provide data-driven marketing solutions that enhance business growth and maximize ROI.
             </p>
             <div class="row gy-4">
-                <div class="col-md-4">
-                    <div class="service-item">
-                        <i class="fa fa-chart-line fa-4x text-primary mb-3"></i>
-                        <h4 class="fw-bold">Lead Generation</h4>
-                        <p class="text-muted">We help you generate high-quality B2B leads that convert into real business opportunities.</p>
+                <!-- Demand Generation -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <i class="fa fa-bullhorn"></i>
+                        </div>
+                        <h4>Demand Generation</h4>
+                        <p>Targeted, multi-channel campaigns that generate high-value leads and brand awareness.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-item">
-                        <i class="fa fa-bullseye fa-4x text-primary mb-3"></i>
-                        <h4 class="fw-bold">Account-Based Marketing</h4>
-                        <p class="text-muted">Personalized marketing strategies to target key accounts and drive meaningful engagement.</p>
+                <!-- Content Syndication -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <i class="fa fa-newspaper"></i>
+                        </div>
+                        <h4>Content Syndication</h4>
+                        <p>Amplify your expertise with high-quality content distribution across relevant platforms.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-item">
-                        <i class="fa fa-rocket fa-4x text-primary mb-3"></i>
-                        <h4 class="fw-bold">Content Marketing</h4>
-                        <p class="text-muted">Creating compelling content to educate, inform, and attract your ideal audience.</p>
+                <!-- Account-Based Marketing -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h4>Account-Based Marketing</h4>
+                        <p>Engage key decision-makers through tailored outreach strategies.</p>
+                    </div>
+                </div>
+                <!-- Appointment Setting -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <i class="fa fa-calendar-check"></i>
+                        </div>
+                        <h4>Appointment Setting</h4>
+                        <p>We qualify leads and schedule valuable meetings for your sales team.</p>
+                    </div>
+                </div>
+                <!-- Data Management -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <i class="fa fa-database"></i>
+                        </div>
+                        <h4>Data Management</h4>
+                        <p>Keep your database clean, updated, and ready for maximum campaign performance.</p>
+                    </div>
+                </div>
+                <!-- Analytics and Reporting -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <i class="fa fa-chart-bar"></i>
+                        </div>
+                        <h4>Analytics & Reporting</h4>
+                        <p>Gain deep insights into campaign performance with our data-driven reporting tools.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Custom CSS for Styling -->
+    <!-- Custom CSS for Professional Styling -->
     <style>
+        /* Section Background */
+        
         .services-section {
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            padding: 60px 20px;
         }
-        /* Main heading styling */
+        /* Heading Styling */
         
         .tracking-widest {
             letter-spacing: 2px;
@@ -417,32 +500,73 @@
             text-transform: uppercase;
         }
         
-        .text-black {
-            color: #000 !important;
+        .text-dark {
+            color: #343a40 !important;
         }
-        /* Responsive adjustments */
+        /* Service Card Styling */
+        
+        .service-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+        
+        .service-card h4 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        .service-card p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+        /* Icon Styling */
+        
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: #007bff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 2rem;
+            margin: 0 auto 15px;
+            transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        
+        .service-card:hover .icon-box {
+            background: #0056b3;
+            transform: scale(1.1);
+        }
+        /* Hover Effects */
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Responsive Layout Fixes */
         
         @media (max-width: 768px) {
-            h2 {
-                font-size: 1.75rem;
-                /* Adjusts heading size for tablets */
+            .service-card {
+                padding: 20px;
             }
         }
         
         @media (max-width: 576px) {
-            h2 {
-                font-size: 1.5rem;
-                /* Smaller heading on mobile */
+            .service-card {
+                padding: 15px;
             }
-        }
-        /* Icon hover effect */
-        
-        .service-item i {
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .service-item:hover i {
-            transform: scale(1.2);
+            .icon-box {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
         }
     </style>
 
@@ -451,12 +575,16 @@
     <section class="cta-section">
         <div class="container text-center">
             <h2 class="fw-bold text-uppercase tracking-widest cta-title">
-                Ready to <span class="highlight">Grow Your Business?</span>
+                Work With <span class="highlight">Us</span>
             </h2>
             <p class="cta-text">
-                Connect with our experts today and see how we can drive success for your brand.
+                At Koinet Media, we help you achieve your business goals through innovative demand generation solutions. We have the expertise and tools to support your growth journey. Whether you want to increase lead quality or streamline your sales process, we've
+                got you covered.
             </p>
-            <a href="contact.html" class="cta-btn">Get in Touch</a>
+            <p class="cta-text">
+                Let’s partner and unlock new opportunities for your business.
+            </p>
+            <a href="contact.html" class="cta-btn">Let's Collaborate</a>
         </div>
     </section>
 
@@ -492,7 +620,7 @@
         .cta-text {
             font-size: 1.25rem;
             opacity: 0.85;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             animation: fadeInUp 1.3s ease-in-out;
         }
         /* CTA Button */
