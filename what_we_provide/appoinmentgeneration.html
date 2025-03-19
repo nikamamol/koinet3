@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Profiling | KoinetMedia</title>
+    <title>KoiNet Media: Smarter Appointment Setting | More Sales</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,68 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            padding: 50px;
+            /* padding: 50px; */
+        }
+        /* Header Section */
+        
+        .header-section {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: url('../images/1.webp') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 43, 91, 0.6);
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .header-content h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        
+        .header-content p {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button:hover {
+            background-color: #ff3b3b;
         }
         /* Content Sections */
         
@@ -85,7 +146,7 @@
         }
         
         .cta-section .cta-button {
-            background: #d80d0d;
+            background: #DF4040;
             color: white;
             padding: 12px 24px;
             text-decoration: none;
@@ -97,7 +158,7 @@
         }
         
         .cta-section .cta-button:hover {
-            background: #d80d0d;
+            background: #DF4040;
         }
         /* Responsive Design */
         
@@ -296,222 +357,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!-- Header Section -->
-    <div class="header-section mt-5 ">
-        <div class="header-content mt-3 mt-md-5">
-            <h1 class="fw-bold text-uppercase tracking-widest">KoiNet Media: Better Account Profiling, More Conversions</h1>
-            <p>Know Your Best Accounts. Engage at the Right Time. Win More Deals.</p>
+    <div class="header-section">
+        <div class="header-content">
+            <h1>KoiNet Media: Smarter Appointment Setting. More Sales.</h1>
+            <p>Turn Leads into Meetings. Meetings into Sales.</p>
             <a href="../contact.html" class="cta-button">Get Started</a>
         </div>
     </div>
 
-    <style>
-        /* Header Section */
-        
-        .header-section {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background: url('../images/1.webp') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            text-align: center;
-        }
-        
-        .header-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 43, 91, 0.6);
-            z-index: 1;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        
-        .header-content h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-        
-        .header-content p {
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ff6b6b;
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        .cta-button:hover {
-            background-color: #ff3b3b;
-        }
-        
-        @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 2.2rem;
-            }
-            .header-content p {
-                font-size: 1.1rem;
-            }
-            .cta-button {
-                padding: 8px 15px;
-                font-size: 1rem;
-            }
-        }
-    </style>
-
     <!-- Introduction Section -->
     <div class="content-section">
-        <div class="content-wrapper">
-            <h2 class="fw-bold text-uppercase tracking-widest">AI Driven Profiling: <span class="highlight">Better Targeting</span></h2>
-            <ul class="content-list">
-                <li>Analyse large data to create full customer profiles</li>
-                <li>Identify key decision makers and personalize outreach</li>
-                <li>Engage with hyper relevant messaging</li>
-            </ul>
-            <p> <span class="emphasis">AI profiling increases conversions by 50%!</span></p>
-        </div>
-        <div class="sparkle-container"></div>
-        <!-- Sparkling Effect -->
+        <h2>Welcome to KoiNet Media</h2>
+        <p>
+            At KoiNet Media, we don’t just fill your pipeline—we deliver high-quality appointments that drive revenue. Our AI-powered, data-driven appointment setting strategies ensure you connect with the right prospect at the right time.
+        </p>
+        <p>
+            No more cold outreach that goes nowhere. No more wasted time chasing unqualified leads. We do the heavy lifting so you can close deals.
+        </p>
     </div>
-
     <style>
-        /* General Styles */
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .content-section {
-            position: relative;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #ffffff, #f0f8ff);
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            max-width: 800px;
-            margin: 50px auto;
-        }
-        
-        .content-wrapper {
-            position: relative;
-            z-index: 2;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        h2:hover {
-            transform: scale(1.05);
-            color: #00A3E0;
-        }
+        /* Additional styles for enhanced text */
         
         .highlight {
             color: #00A3E0;
+            /* Bright accent color */
             font-weight: bold;
+            /* Make highlighted text bold */
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for depth */
         }
         
         .emphasis {
             font-weight: bold;
+            /* Make emphasized text bold */
             color: #FF6F61;
+            /* Different color for emphasis */
             text-decoration: underline;
+            /* Underline for added emphasis */
+        }
+        /* Text animation on hover */
+        
+        .content-wrapper h2:hover {
+            transform: scale(1.05);
+            /* Slightly enlarge */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
         }
         
-        .content-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-        
-        .content-list li {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-            font-size: 1.1rem;
-            color: #555;
-        }
-        
-        .content-list li::before {
-            content: '•';
-            color: #00A3E0;
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -3px;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            color: #333;
+        .content-wrapper p {
             transition: color 0.3s ease;
+            /* Smooth transition for color */
         }
         
-        p:hover {
-            color: #00A3E0;
-        }
-        /* Sparkle Effect */
-        
-        .sparkle-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .sparkle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: #fff;
-            border-radius: 50%;
-            opacity: 0;
-            animation: sparkle 2s infinite;
-        }
-        
-        @keyframes sparkle {
-            0% {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-100px);
-            }
+        .content-wrapper p:hover {
+            color: #333;
+            /* Darker shade on hover */
         }
     </style>
 
@@ -520,46 +420,39 @@
         for (let i = 0; i < 20; i++) {
             const sparkle = document.createElement('div');
             sparkle.classList.add('sparkle');
-            sparkle.style.left = `${Math.random() * 100}%`;
-            sparkle.style.animationDelay = `${Math.random() * 2}s`;
             document.querySelector('.sparkle-container').appendChild(sparkle);
         }
     </script>
 
-    <!-- Omnichannel Section -->
+    <!-- AI Personalization Section -->
     <section class="content-section1 py-5 mx-4">
         <div class="animated-bg"></div>
         <!-- Background Animation -->
-        <h2 class="section-title animate-on-scroll fw-bold text-uppercase tracking-widest">Omnichannel Data Integration: <span class="highlight">Consistent Engagement</span></h2>
+        <h2 class="section-title animate-on-scroll">📈 AI Personalization for Higher Conversions</h2>
         <p class="section-subtext animate-on-scroll">
-            Sync customer data across email, LinkedIn, calls & web to ensure aligned messaging across all touchpoints.
+            For businesses, appointment setting is not just about making calls. It is about strategic outreach that resonates with prospects. Our AI personalization ensures your message is always relevant, leading to higher engagement and booking rates.
         </p>
-        <p class="section-subtext animate-on-scroll"> <span class="emphasis">Omnichannel increases engagement by 250%!</span></p>
 
         <div class="features-container">
             <div class="feature-card animate-on-scroll">
-                <img src="../images/ai.png" alt="Sync Icon">
-                <h3>Data Sync</h3>
-                <p>Sync customer data across all platforms seamlessly.</p>
+                <img src="../images/ai.png" alt="AI Analysis Icon">
+                <h3>Behavior Analysis</h3>
+                <p>AI analyzes customer behavior & preferences—Send the right message at the right time.</p>
             </div>
             <div class="feature-card animate-on-scroll">
-                <img src="../images/automation.png" alt="Messaging Icon">
-                <h3>Aligned Messaging</h3>
-                <p>Ensure consistent messaging across all channels.</p>
+                <img src="../images/automation.png" alt="Customization Icon">
+                <h3>Customized Outreach</h3>
+                <p>Make every interaction feel personal and engaging.</p>
             </div>
             <div class="feature-card animate-on-scroll">
-                <img src="../images/Interactive.png" alt="Collaboration Icon">
-                <h3>Improved Collaboration</h3>
-                <p>Enhance sales and marketing teamwork for better ROI.</p>
+                <img src="../images/Interactive.png" alt="Engagement Icon">
+                <h3>Higher Engagement</h3>
+                <p>More conversations, more meetings, more sales.</p>
             </div>
         </div>
 
-        <p class="closing-text animate-on-scroll">
-            In a world of fragmented touchpoints, omnichannel integration is the key to seamless customer experiences.
-        </p>
+        <p class="closing-text animate-on-scroll"> Our AI makes sure you connect with decision-makers who are ready to talk.</p>
     </section>
-
-    <!-- CSS Styling -->
     <style>
         /* Section Styling */
         
@@ -672,19 +565,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        /* Highlight and Emphasis Classes */
-        
-        .highlight {
-            color: #00A6FF;
-            font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
-        
-        .emphasis {
-            font-weight: bold;
-            color: #FFD700;
-            text-decoration: underline;
-        }
         /* Scroll Animations */
         
         .animate-on-scroll {
@@ -713,76 +593,50 @@
         });
     </script>
 
-    <!-- Real-Time Intent Section -->
+    <!-- Multi-Channel Engagement Section -->
     <div class="pillars-section">
         <div class="py-5 text-center my-5">
-            <h2 class="section-heading fw-bold text-uppercase tracking-widest">Real-Time Intent Analysis: Perfect Timing</h2>
-            <p>Track buyer signals and act at the right moment to maximize results.</p>
+            <h2 class="section-heading"> Multi-Channel Engagement: Reach Prospects Everywhere</h2>
+            <p>Today’s buyers are everywhere—email, LinkedIn, SMS, video calls, and phone. We reach them where they are.</p>
         </div>
 
         <div class="pillars-container">
-            <!-- Intent Card 1 -->
-            <div class="pillar-card">
-                <img src="../images/ser1.png" alt="Track Buyer Signals" class="pillar-img"><br>
-                <h3 class="pillar-title">Track Buyer Signals</h3>
+            <!-- Channel 1 - Multi-Channel Appointment Setting -->
+            <div class="pillar-card" style="background-color: #EDFCFF;">
+                <img src="../images/ser1.png" alt="Multi-Channel" class="pillar-img"><br>
+                <h3 class="pillar-title">Multi-Channel Appointment Setting</h3>
                 <div class="pillar-line pillar-blue"></div><br>
                 <ul class="text-start">
-                    <li>Identify prospects at peak interest with real-time intent data.</li><br>
-                    <li>Monitor online behavior to predict buying intent.</li>
+                    <li>Email, calls, LinkedIn, SMS & more.</li><br>
+                    <li>Engage prospects on multiple platforms.</li>
                 </ul>
             </div>
 
-            <!-- Intent Card 2 -->
-            <div class="pillar-card">
-                <img src="../images/ser2.png" alt="Trigger Outreach" class="pillar-img"><br>
-                <h3 class="pillar-title">Trigger Outreach</h3>
+            <!-- Channel 2 - Consistent Messaging -->
+            <div class="pillar-card" style="background-color: #FDF6E9;">
+                <img src="../images/ser2.png" alt="Consistent Messaging" class="pillar-img"><br>
+                <h3 class="pillar-title">Consistent Messaging</h3>
                 <div class="pillar-line pillar-orange"></div><br>
-                <ul class="text-dark">
-                    <li>Engage decision-makers when they're ready to buy.</li><br>
-                    <li>Automate personalized outreach for timely connections.</li>
+                <ul class="text-start">
+                    <li>Build trust and credibility across all channels.</li><br>
+                    <li>Ensure seamless communication flow.</li>
                 </ul>
             </div>
 
-            <!-- Intent Card 3 -->
-            <div class="pillar-card">
-                <img src="../images/ser3.png" alt="Be First to Market" class="pillar-img"><br>
-                <h3 class="pillar-title">Be First to Market</h3>
+            <!-- Channel 3 - Personalized Engagement -->
+            <div class="pillar-card" style="background-color: #E6FFED;">
+                <img src="../images/ser3.png" alt="Personalized Engagement" class="pillar-img"><br>
+                <h3 class="pillar-title">Personalized Engagement</h3>
                 <div class="pillar-line pillar-green"></div><br>
                 <ul class="text-start">
-                    <li>Act quickly to capitalize on emerging opportunities.</li><br>
-                    <li>Gain a competitive edge by being the first to engage.</li>
+                    <li>Engage prospects on their preferred channel.</li><br>
+                    <li>Increase response rates and conversions.</li>
                 </ul>
             </div>
-        </div>
-
-        <div class="text-center mt-5">
-            <p class="highlight-text"> Intent-driven marketing increases pipeline efficiency by 60%!</p>
         </div>
     </div>
 
     <style>
-        /* Highlight Text */
-        
-        .highlight-text {
-            font-size: 20px;
-            font-weight: bold;
-            color: #007bff;
-            margin-top: 20px;
-        }
-        /* Ensure consistency with existing styles */
-        
-        .pillars-section {
-            background: #fff;
-            padding: 20px 0;
-        }
-        
-        .section-heading {
-            font-size: 32px;
-            font-weight: bold;
-            color: #222;
-            margin-bottom: 10px;
-        }
-        
         .pillars-container {
             display: flex;
             justify-content: center;
@@ -854,7 +708,8 @@
         }
         
         .pillar-list li::before {
-            content: "✅";
+            /* content: "✅";
+           */
             color: #007bff;
             font-weight: bold;
             margin-right: 10px;
@@ -862,46 +717,26 @@
         }
     </style>
 
-    <!-- Lead Generation Services -->
-    <div class="lead-gen-section">
-        <h2 class="lead-heading fw-bold text-uppercase tracking-widest">
-            <span>Get More Sales with</span> KoiNet Media
+    <!-- Data-Driven Outreach Section -->
+    <div class="outreach-section mt-5">
+        <h2 class="outreach-heading">
+            <span> Data-Driven</span> Outreach for Smarter Appointments
         </h2>
-        <p class="lead-subtext">
-            Let’s build a better ABM strategy that drives growth.
+        <p class="outreach-subtext">
+            Timing is everything. We use real-time analytics to know exactly when and how to reach out.
         </p>
-
-        <div class="lead-services">
-            <div class="lead-card">
-                <i class="fas fa-user-check"></i>
-                <h3>AI Profiling</h3>
-                <p>Know your audience inside out with advanced AI insights.</p>
-            </div>
-
-            <div class="lead-card">
-                <i class="fas fa-bullhorn"></i>
-                <h3>Omnichannel</h3>
-                <p>Keep messaging seamless across all platforms.</p>
-            </div>
-
-            <div class="lead-card">
-                <i class="fas fa-envelope-open-text"></i>
-                <h3>Intent Based Outreach</h3>
-                <p>Engage prospects at the right moment with precision.</p>
-            </div>
-
-            <div class="lead-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>ABM Strategy</h3>
-                <p>Drive growth with a tailored account-based marketing approach.</p>
-            </div>
-        </div>
+        <ul class="outreach-list">
+            <li>AI analyzes the best time to contact prospects—<br>No more guessing</li>
+            <li>Lead scoring identifies high-value opportunities—<br>Talk to the best prospects first</li>
+            <li>Predictive analytics helps you stay ahead of the competition—<br>Engage before they do</li>
+        </ul>
+        <p class="outreach-highlight"> With data-backed insights, we optimize your outreach for maximum impact.</p>
     </div>
 
     <style>
         /* Section Container */
         
-        .lead-gen-section {
+        .outreach-section {
             background: linear-gradient(135deg, #0f172a, #1e293b);
             padding: 60px 30px;
             border-radius: 15px;
@@ -912,7 +747,7 @@
         }
         /* Heading with Animated Gradient */
         
-        .lead-heading {
+        .outreach-heading {
             font-size: 38px;
             font-weight: bold;
             margin-bottom: 15px;
@@ -925,59 +760,46 @@
         }
         /* Subtext */
         
-        .lead-subtext {
+        .outreach-subtext {
             font-size: 20px;
             margin-bottom: 30px;
             color: rgba(255, 255, 255, 0.7);
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
         }
-        /* Services Grid */
+        /* List Styling */
         
-        .lead-services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            justify-content: center;
-        }
-        /* Individual Service Cards */
-        
-        .lead-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        .outreach-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
             opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1.2s ease-out forwards;
+            animation: fadeIn 2s ease-in-out forwards;
         }
-        /* Card Hover Effect */
         
-        .lead-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
+        .outreach-list li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            text-align: left;
+            display: inline-block;
         }
-        /* Icons */
         
-        .lead-card i {
-            font-size: 40px;
+        .outreach-list li:before {
+            /*  content: '✔️';*/
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        /* Highlighted Text */
+        
+        .outreach-highlight {
+            font-size: 20px;
+            font-weight: bold;
             color: #ffeb3b;
-            margin-bottom: 10px;
-        }
-        /* Card Titles */
-        
-        .lead-card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        /* Card Description */
-        
-        .lead-card p {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            animation: fadeIn 2.5s ease-in-out forwards;
         }
         /* Keyframe Animations */
         
@@ -1002,13 +824,171 @@
         }
     </style>
 
-    <!-- CTA Section -->
+
+    <section class="advantage-container">
+        <div class="advantage-content">
+            <h2 class="advantage-heading"> The <span>KoiNet Media</span> Advantage</h2>
+            <p class="advantage-subtext">
+                Why choose <b>KoiNet Media</b> for appointment setting? Because we don’t just set meetings—we create <b>revenue opportunities</b>.
+            </p>
+
+            <div class="advantage-list">
+                <div class="advantage-item" style="width: 100%;">
+                    <span class="advantage-icon"></span>
+                    <div class="lead-text">
+                        <h3>AI + Human Expertise</h3>
+                        <p>Technology + skilled appointment setters for the best results.</p>
+                    </div>
+                </div>
+
+                <div class="advantage-item" style="width: 100%;">
+                    <span class="advantage-icon"></span>
+                    <div class="lead-text">
+                        <h3>High-Quality Appointments</h3>
+                        <p>Only connect with decision-makers ready to buy.</p>
+                    </div>
+                </div>
+
+                <div class="advantage-item" style="width: 100%;">
+                    <span class="advantage-icon"></span>
+                    <div class="lead-text">
+                        <h3>End-to-End Management</h3>
+                        <p>We handle outreach, follow-ups, and scheduling for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* KoiNet Media Advantage Section */
+        
+        .advantage-container {
+            background: linear-gradient(135deg, #ffffff, #f4f6fc);
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 50px auto;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-in-out forwards;
+        }
+        
+        .advantage-heading {
+            font-size: 42px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #222;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-in-out forwards;
+        }
+        
+        .advantage-heading span {
+            background: #007bff;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .advantage-subtext {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        
+        .advantage-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            /* max-width: 800px; */
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 1.8s ease-in-out forwards;
+        }
+        
+        .lead-text {
+            flex: 1;
+            /* Allow text to take remaining space */
+        }
+        
+        .advantage-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .advantage-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .advantage-icon {
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            min-width: 50px;
+            min-height: 50px;
+        }
+        
+        .advantage-text h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .advantage-text p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+
+    <!-- Final CTA Section -->
     <div class="cta-section">
-        <h2 class="text-white fw-bold text-uppercase tracking-widest"> Contact KoiNet Media today!</h2>
-        <a href="../contact.html" class="cta-button"> Get in Touch</a>
+        <h2> Ready to Book More Appointments and Close More Sales?</h2>
+        <p>
+            With KoiNet Media, your calendar will be filled with high-value, sales-ready appointments—so you can focus on what you do best: closing deals.
+        </p>
+        <a href="../contact.html" class="cta-button"> Let’s Talk!</a>
     </div>
 
-    <!--  Footer Section -->
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
@@ -1064,7 +1044,7 @@
                 </ul>
 
                 <!-- Copyright & Social Icons -->
-                <p class="text-white">&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -1159,6 +1139,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
