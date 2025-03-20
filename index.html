@@ -1302,91 +1302,42 @@
     <!-- Our Insights Section -->
     <section class="py-5 bg-white position-relative insights-section">
         <div class="container position-relative text-center">
-            <!-- Heading -->
-            <h2 class="insights-heading animate__animated animate__fadeInUp fw-bold text-uppercase tracking-widest">
-                <span class="highlight">OUR</span> <span class="dark-text">INSIGHTS</span>
+            <h2 class="insights-heading">
+                <span class="highlight">OUR</span> <span class="dark-text">Infographics</span>
             </h2>
             <br>
-            <p class="text-muted lead animate__animated animate__fadeInUp animate__delay-1s">
-                Stay ahead with expert strategies, trends, and in-depth market analysis.
-            </p>
-
-            <!-- Floating Articles -->
-            <div class="insights-wrapper">
-                <!-- Insight 1 -->
-                <div class="insight-item insight-left" data-aos="fade-right">
-                    <div class="insight-image">
-                        <img src="images/ap1.jpg" alt="Insight 1">
-                    </div>
-                    <div class="insight-content">
-                        <h5 class="fw-bold">The Future of Demand Generation</h5>
-                        <p>How AI and automation are reshaping B2B lead generation.</p>
-                        <!-- Added Date -->
-                        <small class="text-muted d-block mb-2">Published on: October 10, 2023</small>
-                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
-                    </div>
-                </div>
-
-                <!-- Insight 2 -->
-                <div class="insight-item insight-right" data-aos="fade-left">
-                    <div class="insight-image">
-                        <img src="images/ap2.jpg" alt="Insight 2">
-                    </div>
-                    <div class="insight-content">
-                        <h5 class="fw-bold">Maximizing ROI with ABM</h5>
-                        <p>Top strategies to drive higher engagement and conversions.</p>
-                        <!-- Added Date -->
-                        <small class="text-muted d-block mb-2">Published on: September 25, 2023</small>
-                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
-                    </div>
-                </div>
-
-                <!-- Insight 3 -->
-                <div class="insight-item insight-left" data-aos="fade-right">
-                    <div class="insight-image">
-                        <img src="images/ap3.avif" alt="Insight 3">
-                    </div>
-                    <div class="insight-content">
-                        <h5 class="fw-bold">How Intent Data is Changing Lead Generation</h5>
-                        <p>Real-time intent data helps reach the right audience.</p>
-                        <!-- Added Date -->
-                        <small class="text-muted d-block mb-2">Published on: August 15, 2023</small>
-                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
-                    </div>
-                </div>
+            <div id="infographics-container" class="insights-wrapper"></div>
+            <div class="pagination-controls">
+                <button id="prev-button" class="btn btn-outline-primary fw-bold">Previous</button>
+                <span id="page-number" class="mx-3">1</span>
+                <button id="next-button" class="btn btn-outline-primary fw-bold">Next</button>
             </div>
+        </div>
+        <div class="text-center">
+            <a href="infographics.html" class="btn btn-primary text-white btn-lg mt-5">More Infographics</a>
         </div>
     </section>
 
-    <!-- CSS -->
     <style>
-        /* Insights Section */
-        
         .insights-section {
             overflow: hidden;
             position: relative;
         }
-        /* Insights Heading */
         
         .insights-heading {
             font-size: 2.8rem;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 3px;
-            display: inline-block;
-            position: relative;
         }
-        /* "OUR" in primary blue */
         
         .insights-heading .highlight {
             color: #007bff;
         }
-        /* "INSIGHTS" in black */
         
         .insights-heading .dark-text {
             color: #000;
         }
-        /* Insights Wrapper */
         
         .insights-wrapper {
             display: flex;
@@ -1395,101 +1346,122 @@
             margin-top: 50px;
             align-items: center;
         }
-        /* Insight Item */
         
         .insight-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: #f8f9fa;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 95%;
-            max-width: 1200px;
+            max-width: 1000px;
+            gap: 15px;
         }
-        /* Alternating Alignment */
-        
-        .insight-left {
-            flex-direction: row;
-        }
-        
-        .insight-right {
-            flex-direction: row-reverse;
-        }
-        /* Insight Image */
         
         .insight-image img {
-            width: 220px;
-            height: 140px;
-            border-radius: 10px;
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
         
-        .insight-item:hover .insight-image img {
-            transform: scale(1.05);
+        .text-start {
+            flex: 1;
+            padding-left: 10px;
         }
-        /* Insight Content */
         
         .insight-content {
             max-width: 550px;
             text-align: left;
-        }
-        /* Date Styling */
-        
-        .insight-content small {
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-        /* Read More Button */
-        
-        .btn-outline-primary {
-            border-color: #007bff;
-            color: #007bff;
-            transition: 0.3s ease-in-out;
         }
         
         .btn-outline-primary:hover {
             background: #007bff;
             color: white;
         }
-        /* Responsive Design */
+        
+        .pagination-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         
         @media (max-width: 992px) {
             .insights-heading {
                 font-size: 2.2rem;
-                letter-spacing: 2px;
             }
             .insight-item {
                 flex-direction: column;
                 text-align: center;
-                padding: 30px;
-            }
-            .insight-left,
-            .insight-right {
-                flex-direction: column;
-            }
-            .insight-image img {
-                width: 100%;
-                max-width: 400px;
-                height: auto;
-            }
-            .insight-content {
-                text-align: center;
-                max-width: 100%;
-                margin-top: 15px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .insights-heading {
-                font-size: 1.8rem;
-                letter-spacing: 1px;
             }
         }
     </style>
+
+    <script>
+        let infographics = [];
+        let currentPage1 = 1;
+        const infographicsPerPage = 3;
+
+        async function fetchInfographics() {
+            try {
+                const response = await fetch('https://koinetwebbackend.onrender.com/api/getinfographics');
+                infographics = await response.json();
+                displayInfographics();
+            } catch (error) {
+                console.error("Error fetching infographics:", error);
+            }
+        }
+
+        function displayInfographics() {
+            const container = document.getElementById("infographics-container");
+            container.innerHTML = "";
+
+            const startIndex = (currentPage - 1) * infographicsPerPage;
+            const endIndex = startIndex + infographicsPerPage;
+            const dataToDisplay = infographics.slice(startIndex, endIndex);
+
+            if (dataToDisplay.length === 0) {
+                container.innerHTML = "<p>No infographics found.</p>";
+                return;
+            }
+
+            dataToDisplay.forEach((infographic) => {
+                container.innerHTML += `
+                    <div class="insight-item">
+                        <div class="insight-image">
+                            <img src="${infographic.imageUrl || 'https://via.placeholder.com/200'}" alt="Infographic Image">
+                        </div>
+                        <div class="text-start">
+                            <h5 class="fw-bold">${infographic.title}</h5>
+                              <small class="text-muted d-block mb-2">Published on: ${new Date(infographic.date).toLocaleDateString()}</small>
+                            <a href="viewinfographics.html?id=${infographic._id}" class="btn btn-outline-primary fw-bold mt-2">View Infographic →</a>
+                        </div>
+                    </div>`;
+            });
+            document.getElementById("page-number").textContent = currentPage;
+        }
+
+        document.getElementById("prev-button").addEventListener("click", () => {
+            if (currentPage1 > 1) {
+                currentPage1--;
+                displayInfographics();
+            }
+        });
+
+        document.getElementById("next-button").addEventListener("click", () => {
+            if (currentPage1 * infographicsPerPage < infographics.length) {
+                currentPage1++;
+                displayInfographics();
+            }
+        });
+
+        fetchInfographics();
+    </script>
 
     <!-- JavaScript for Scroll Animations -->
     <script>
@@ -2040,7 +2012,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="blog.html" class="btn btn-primary btn-lg mt-5">More Blogs</a>
+            <a href="blog.html" class="btn btn-primary text-white btn-lg mt-5">More Blogs</a>
         </div>
     </section>
 

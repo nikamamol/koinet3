@@ -188,14 +188,14 @@
                     if (data.error) {
                         alert(data.error);
                     } else {
-                        alert('Blog created successfully!');
+                        alert('Articles created successfully!');
                         // Optionally, redirect to the blog page or clear the form
                         document.getElementById('myForm').reset()
                     }
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    alert('An error occurred while creating the blog.');
+                    alert('An error occurred while creating the Articles.');
                 });
         });
 
