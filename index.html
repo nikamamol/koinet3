@@ -1439,6 +1439,7 @@
                         <div class="text-start">
                             <h5 class="fw-bold">${infographic.title}</h5>
                               <small class="text-muted d-block mb-2">Published on: ${new Date(infographic.date).toLocaleDateString()}</small>
+                                <p class=" d-block mb-2"> ${infographic.category}</p>
                             <a href="viewinfographics.html?id=${infographic._id}" class="btn btn-outline-primary fw-bold mt-2">View Infographic →</a>
                         </div>
                     </div>`;
@@ -2176,18 +2177,15 @@
             blogsToDisplay.forEach((blog) => {
                 const shortContent = blog.content.split(" ").slice(0, 5).join(" ") + "...";
                 blogContainer.innerHTML += `
-                    <div class="insight-item">
+                     <div class="insight-item">
                         <div class="insight-image">
-                            <img src="${blog.imageUrl || 'https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_1280.jpg'}" alt="Blog Image">
+                            <img src="${blog.imageUrl || 'https://via.placeholder.com/200'}" alt="Infographic Image">
                         </div>
                         <div class="text-start">
                             <h5 class="fw-bold">${blog.title}</h5>
-                            <p class="date py-2">
-                                <span class="rounded bg-primary text-white p-1">
-                                    ${new Date(blog.date).toLocaleDateString()}
-                                </span>
-                            </p>
-                                                    <a href="viewblog.html?id=${blog._id}" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
+                              <small class="text-muted d-block mb-2">Published on: ${new Date(blog.date).toLocaleDateString()}</small>
+                                <p class=" d-block mb-2"> ${blog.category}</p>
+                            <a href="viewblog.html?id=${blog._id}" class="btn btn-outline-primary fw-bold mt-2">View Blog →</a>
                         </div>
                     </div>`;
             });

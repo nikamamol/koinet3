@@ -549,9 +549,9 @@
 
         <!-- Pagination -->
         <div class="pagination">
-            <button class="btn btn-highlight" onclick="prevPage()">Previous</button>
+            <button class="btn btn-outline-primary" onclick="prevPage()">Previous</button>
             <span id="page-number" class="mx-3">1</span>
-            <button class="btn btn-highlight" onclick="nextPage()">Next</button>
+            <button class="btn btn-outline-primary" onclick="nextPage()">Next</button>
         </div>
     </div>
 
@@ -598,16 +598,18 @@
                 const blogItem = document.createElement("div");
                 blogItem.classList.add("blog-item");
                 blogItem.innerHTML = `
-            <img src="${blog.imageUrl || 'https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_1280.jpg'}" alt="Blog Image" height="200">
-            <div class="blog-content">
-                <a href="viewarticles.html?id=${blog._id}" class="blog-title"><h3>${blog.title}</h3></a>
-                <p class="date py-2"><span class="rounded bg-primary text-white p-1">${new Date(blog.date).toLocaleDateString()}</span></p>
-                <p>${shortContent}</p>
-              <div class="mt-2">
-    <a href="viewarticles.html?id=${blog._id}" class="btn btn-primary text-white px-3">Read More</a>
-</div>
-            </div>
-        `;
+          <div class="insight-item">
+                        <div class="insight-image">
+                            <img src="${blog.imageUrl || 'https://via.placeholder.com/200'}" alt="Infographic Image">
+                        </div>
+                        <div class="text-start">
+                            <h5 class="fw-bold">${blog.title}</h5>
+                              <small class="text-muted d-block mb-2">Published on: ${new Date(blog.date).toLocaleDateString()}</small>
+                             <p class=" d-block mb-2"> ${blog.category}</p>
+                            <a href="viewarticles.html?id=${blog._id}" class="btn btn-outline-primary fw-bold mt-2">View Blog →</a>
+                        </div>
+                    </div>`;
+
                 blogContainer.appendChild(blogItem);
             });
 
@@ -663,6 +665,91 @@
             <button class="btn btn-primary fw-bold" onclick="subscribe()">Subscribe</button>
         </div>
     </div>
+
+
+    <style>
+        .insights-section {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .insights-heading {
+            font-size: 2.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .insights-heading .highlight {
+            color: #007bff;
+        }
+        
+        .insights-heading .dark-text {
+            color: #000;
+        }
+        
+        .insights-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 50px;
+            align-items: center;
+        }
+        
+        .insight-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 95%;
+            max-width: 1000px;
+            gap: 15px;
+        }
+        
+        .insight-image img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .text-start {
+            flex: 1;
+            padding-left: 10px;
+        }
+        
+        .insight-content {
+            max-width: 550px;
+            text-align: left;
+        }
+        
+        .btn-outline-primary:hover {
+            background: #007bff;
+            color: white;
+        }
+        
+        .pagination-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 992px) {
+            .insights-heading {
+                font-size: 2.2rem;
+            }
+            .insight-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 
     <style>
         /* Newsletter Section Styling */
