@@ -70,8 +70,8 @@
                     </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="https://thetechgossip.com/resources/">Assets</a></li>
                             <li><a class="dropdown-item" href="infographics.html">Infographics</a></li>
-
                             <li><a class="dropdown-item" href="articals.html">Articles</a></li>
                         </ul>
                     </li>
@@ -1300,49 +1300,58 @@
 
 
     <!-- Our Insights Section -->
-    <section class="py-5 bg-white position-relative insights-section ">
-        <div class="container position-relative text-center ">
+    <section class="py-5 bg-white position-relative insights-section">
+        <div class="container position-relative text-center">
             <!-- Heading -->
-            <h2 class="insights-heading animate__animated animate__fadeInUp fw-bold text-uppercase tracking-widest ">
-                <span class="highlight ">OUR</span> <span class="dark-text ">INSIGHTS</span>
+            <h2 class="insights-heading animate__animated animate__fadeInUp fw-bold text-uppercase tracking-widest">
+                <span class="highlight">OUR</span> <span class="dark-text">INSIGHTS</span>
             </h2>
             <br>
-            <p class="text-muted lead animate__animated animate__fadeInUp animate__delay-1s ">
+            <p class="text-muted lead animate__animated animate__fadeInUp animate__delay-1s">
                 Stay ahead with expert strategies, trends, and in-depth market analysis.
             </p>
 
             <!-- Floating Articles -->
-            <div class="insights-wrapper ">
-                <div class="insight-item insight-left " data-aos="fade-right ">
-                    <div class="insight-image ">
-                        <img src="images/ap1.jpg " alt="Insight 1 ">
+            <div class="insights-wrapper">
+                <!-- Insight 1 -->
+                <div class="insight-item insight-left" data-aos="fade-right">
+                    <div class="insight-image">
+                        <img src="images/ap1.jpg" alt="Insight 1">
                     </div>
-                    <div class="insight-content ">
-                        <h5 class="fw-bold ">The Future of Demand Generation</h5>
+                    <div class="insight-content">
+                        <h5 class="fw-bold">The Future of Demand Generation</h5>
                         <p>How AI and automation are reshaping B2B lead generation.</p>
-                        <a href="resources/blog.html " class="btn btn-outline-primary fw-bold mt-2 ">Read More →</a>
+                        <!-- Added Date -->
+                        <small class="text-muted d-block mb-2">Published on: October 10, 2023</small>
+                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
                     </div>
                 </div>
 
-                <div class="insight-item insight-right " data-aos="fade-left ">
-                    <div class="insight-image ">
-                        <img src="images/ap2.jpg " alt="Insight 2 ">
+                <!-- Insight 2 -->
+                <div class="insight-item insight-right" data-aos="fade-left">
+                    <div class="insight-image">
+                        <img src="images/ap2.jpg" alt="Insight 2">
                     </div>
-                    <div class="insight-content ">
-                        <h5 class="fw-bold ">Maximizing ROI with ABM</h5>
+                    <div class="insight-content">
+                        <h5 class="fw-bold">Maximizing ROI with ABM</h5>
                         <p>Top strategies to drive higher engagement and conversions.</p>
-                        <a href="resources/blog.html " class="btn btn-outline-primary fw-bold mt-2 ">Read More →</a>
+                        <!-- Added Date -->
+                        <small class="text-muted d-block mb-2">Published on: September 25, 2023</small>
+                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
                     </div>
                 </div>
 
-                <div class="insight-item insight-left " data-aos="fade-right ">
-                    <div class="insight-image ">
-                        <img src="images/ap3.avif " alt="Insight 3 ">
+                <!-- Insight 3 -->
+                <div class="insight-item insight-left" data-aos="fade-right">
+                    <div class="insight-image">
+                        <img src="images/ap3.avif" alt="Insight 3">
                     </div>
-                    <div class="insight-content ">
-                        <h5 class="fw-bold ">How Intent Data is Changing Lead Generation</h5>
+                    <div class="insight-content">
+                        <h5 class="fw-bold">How Intent Data is Changing Lead Generation</h5>
                         <p>Real-time intent data helps reach the right audience.</p>
-                        <a href="resources/blog.html " class="btn btn-outline-primary fw-bold mt-2 ">Read More →</a>
+                        <!-- Added Date -->
+                        <small class="text-muted d-block mb-2">Published on: August 15, 2023</small>
+                        <a href="resources/blog.html" class="btn btn-outline-primary fw-bold mt-2">Read More →</a>
                     </div>
                 </div>
             </div>
@@ -1364,16 +1373,15 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 3px;
-            /* Tracking-widest effect */
             display: inline-block;
             position: relative;
         }
-        /* "OUR " in primary blue */
+        /* "OUR" in primary blue */
         
         .insights-heading .highlight {
             color: #007bff;
         }
-        /* "INSIGHTS " in black */
+        /* "INSIGHTS" in black */
         
         .insights-heading .dark-text {
             color: #000;
@@ -1400,7 +1408,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 95%;
             max-width: 1200px;
-            /* Increased width */
         }
         /* Alternating Alignment */
         
@@ -1415,7 +1422,6 @@
         
         .insight-image img {
             width: 220px;
-            /* Bigger image */
             height: 140px;
             border-radius: 10px;
             object-fit: cover;
@@ -1430,6 +1436,12 @@
         .insight-content {
             max-width: 550px;
             text-align: left;
+        }
+        /* Date Styling */
+        
+        .insight-content small {
+            font-size: 0.9rem;
+            color: #6c757d;
         }
         /* Read More Button */
         
@@ -1478,15 +1490,16 @@
             }
         }
     </style>
+
     <!-- JavaScript for Scroll Animations -->
     <script>
-        document.addEventListener("DOMContentLoaded ", function() {
-            const insightItems = document.querySelectorAll(".insight-item ");
+        document.addEventListener("DOMContentLoaded", function() {
+            const insightItems = document.querySelectorAll(".insight-item");
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.style.animation = "fadeInUp 1s forwards ";
+                        entry.target.style.animation = "fadeInUp 1s forwards";
                     }
                 });
             }, {
