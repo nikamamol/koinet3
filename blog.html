@@ -532,7 +532,7 @@
     </div>
 
     <!-- Blog Container Section -->
-    <div class="container mt-5">
+    <div class="container mt-5 text-center">
         <h2 class="mb-4">Latest Blogs</h2>
 
         <!-- Search Bar -->
@@ -540,23 +540,23 @@
             <input type="text" id="search" class="form-control" placeholder="Search blogs by name or category" onkeyup="searchBlogs()">
         </div>
 
-        <div class="blog-section" id="blogs-container">
-            <!-- Blogs will be injected here -->
-        </div>
 
-        <!-- Pagination -->
-        <div class="pagination mt-4 d-flex justify-content-center align-items-center" id="pagination-controls">
-            <button class="btn btn-outline-primary me-2" onclick="prevPage()">Previous</button>
-            <div id="page-numbers" class="mx-3"></div>
-            <button class="btn btn-outline-primary ms-2" onclick="nextPage()">Next</button>
+
+        <!-- View More Button -->
+        <div class="text-center">
+            <div id="blogs-container">
+                <!-- Blogs will be injected here -->
+            </div>
+            <button id="view-more-button" class="btn btn-primary mt-4" onclick="loadMoreBlogs()">View More</button>
+
         </div>
     </div>
 
     <script>
         let blogs = [];
-        let currentPage = 1;
-        const blogsPerPage = 3;
-        let filteredBlogs = []; // To store search results
+        let currentCount = 0;
+        const blogsPerLoad = 3;
+        let filteredBlogs = [];
 
         async function fetchBlogs() {
             try {
@@ -565,9 +565,8 @@
 
                 if (Array.isArray(data)) {
                     blogs = data;
-                    filteredBlogs = [...blogs]; // Initialize filteredBlogs with all blogs
-                    displayBlogs();
-                    updatePagination();
+                    filteredBlogs = [...blogs];
+                    loadMoreBlogs();
                 } else {
                     console.error("Unexpected API response:", data);
                 }
@@ -576,27 +575,16 @@
             }
         }
 
-        function displayBlogs() {
+        function loadMoreBlogs() {
             const blogContainer = document.getElementById("blogs-container");
-            blogContainer.innerHTML = "";
-
-            const startIndex = (currentPage - 1) * blogsPerPage;
-            const endIndex = startIndex + blogsPerPage;
-            const blogsToDisplay = filteredBlogs.slice(startIndex, endIndex);
-
-            if (blogsToDisplay.length === 0) {
-                blogContainer.innerHTML = "<p>No blogs found.</p>";
-                return;
-            }
+            const blogsToDisplay = filteredBlogs.slice(currentCount, currentCount + blogsPerLoad);
 
             blogsToDisplay.forEach(blog => {
-                const contentWords = blog.content.split(" ");
-                const shortContent = contentWords.slice(0, 15).join(" ") + (contentWords.length > 15 ? "..." : "");
-
-                blogContainer.innerHTML += `
-                <div class="insight-item">
+                const blogElement = document.createElement("div");
+                blogElement.className = "insight-item";
+                blogElement.innerHTML = `
                     <div class="insight-image">
-                        <img src="${blog.imageUrl || 'https://via.placeholder.com/200'}" alt="Infographic Image">
+                        <img src="${blog.imageUrl || 'https://via.placeholder.com/200'}" alt="Blog Image">
                     </div>
                     <div class="text-start">
                         <h5 class="fw-bold">${blog.title}</h5>
@@ -604,10 +592,15 @@
                         <p class="d-block mb-2">${blog.category}</p>
                         <a href="viewblog.html?id=${blog._id}" class="btn btn-outline-primary fw-bold mt-2">View Blog →</a>
                     </div>
-                </div>`;
+                `;
+                blogContainer.appendChild(blogElement);
             });
 
-            updatePagination();
+            currentCount += blogsToDisplay.length;
+
+            if (currentCount >= filteredBlogs.length) {
+                document.getElementById("view-more-button").style.display = "none";
+            }
         }
 
         function searchBlogs() {
@@ -616,90 +609,16 @@
                 blog.title.toLowerCase().includes(searchInput) ||
                 blog.category.toLowerCase().includes(searchInput)
             );
-            currentPage = 1;
-            displayBlogs();
+
+            document.getElementById("blogs-container").innerHTML = "";
+            currentCount = 0;
+            loadMoreBlogs();
         }
 
-        function updatePagination() {
-            const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
-            const pageNumbersContainer = document.getElementById("page-numbers");
-            pageNumbersContainer.innerHTML = "";
-
-            // Calculate which page numbers to show (e.g., show 5 pages at a time)
-            const maxPagesToShow = 5;
-            let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
-            let endPage = startPage + maxPagesToShow - 1;
-
-            if (endPage > totalPages) {
-                endPage = totalPages;
-                startPage = Math.max(1, endPage - maxPagesToShow + 1);
-            }
-
-            // Add page numbers
-            for (let i = startPage; i <= endPage; i++) {
-                const pageBtn = document.createElement("button");
-                pageBtn.className = `btn btn-sm ${i === currentPage ? 'btn-primary' : 'btn-outline-primary'} mx-1`;
-                pageBtn.textContent = i;
-                pageBtn.onclick = () => {
-                    currentPage = i;
-                    displayBlogs();
-                };
-                pageNumbersContainer.appendChild(pageBtn);
-            }
-
-            // Update Previous/Next button states
-            document.querySelector(".btn[onclick='prevPage()']").disabled = currentPage === 1;
-            document.querySelector(".btn[onclick='nextPage()']").disabled = currentPage === totalPages || totalPages === 0;
-        }
-
-        function nextPage() {
-            const maxPages = Math.ceil(filteredBlogs.length / blogsPerPage);
-            if (currentPage < maxPages) {
-                currentPage++;
-                displayBlogs();
-            }
-        }
-
-        function prevPage() {
-            if (currentPage > 1) {
-                currentPage--;
-                displayBlogs();
-            }
-        }
-
-        // Fetch blogs when the page loads
         fetchBlogs();
     </script>
 
     <style>
-        .insights-section {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .insights-heading {
-            font-size: 2.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        
-        .insights-heading .highlight {
-            color: #007bff;
-        }
-        
-        .insights-heading .dark-text {
-            color: #000;
-        }
-        
-        .insights-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            margin-top: 50px;
-            align-items: center;
-        }
-        
         .insight-item {
             display: flex;
             align-items: center;
@@ -709,8 +628,7 @@
             border-radius: 10px;
             box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 95%;
-            max-width: 1000px;
+            width: 100%;
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -720,7 +638,6 @@
             height: auto;
             border-radius: 8px;
             object-fit: cover;
-            transition: transform 0.3s ease;
         }
         
         .text-start {
@@ -728,35 +645,12 @@
             padding-left: 10px;
         }
         
-        .insight-content {
-            max-width: 550px;
-            text-align: left;
-        }
-        
         .btn-outline-primary:hover {
             background: #007bff;
             color: white;
         }
-        
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        
-        .pagination {
-            margin-top: 20px;
-        }
-        
-        @media (max-width: 992px) {
-            .insights-heading {
-                font-size: 2.2rem;
-            }
-            .insight-item {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
     </style>
+
 
     <!-- Newsletter Subscription -->
     <div class="container mt-5">
