@@ -114,11 +114,11 @@
 
 <body style="font-family:Arial, Helvetica, sans-serif;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white shadow-sm">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand fw-bold text-uppercase" href="index.html">
-                <img src="images/knmnew_prev_ui.png" alt="Koinet Media" width="100">
+                <img src="/images/knmnew_prev_ui.png" alt="Koinet Media" width="120">
             </a>
 
             <!-- Mobile Toggle Button -->
@@ -130,21 +130,23 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="whatwedo.html">What We Do</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="whatwedo.html">What We Do</a></li> -->
 
                     <!-- What We Provide Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
-                    What We Provide
-                </a>
+                        <a class="nav-link dropdown-toggle" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        What We Do
+                    </a>
+
                         <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="whatwedo.html">Expertise & Services</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
-                            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html">Contact Discovery</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html">Content Syndication</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/emailmarketing.html">Email Marketing</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/demadgeneration.html">Demand Generation</a></li>
-                            <li><a class="dropdown-item" href="what_we_provide/socialmedia.html">Social Media Marketing</a></li>
+                            <!-- <li><a class="dropdown-item" href="what_we_provide/socialmedia.html">Social Media Marketing</a></li> -->
                             <li><a class="dropdown-item" href="what_we_provide/appoinmentgeneration.html">Appointment Generation</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/accountprofiling.html">Account Profiling</a></li>
                         </ul>
@@ -159,7 +161,7 @@
                 </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://thetechgossip.com/resources/">Assets</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://thetechgossip.com/resources/">Repository</a></li>
                             <li><a class="dropdown-item" href="infographics.html">Infographics</a></li>
                             <li><a class="dropdown-item" href="articals.html">Articles</a></li>
                         </ul>
@@ -174,9 +176,6 @@
                             <li><a class="dropdown-item" href="aboutus/overview.html">Overview</a></li>
                             <li><a class="dropdown-item" href="aboutus/ourstory.html">Our Story</a></li>
                             <!-- <li><a class="dropdown-item" href="aboutus/ourculture.html">Our Team & Culture</a></li> -->
-
-
-
                         </ul>
                     </li>
 
@@ -192,6 +191,7 @@
             let navbar = document.querySelector(".navbar-custom");
             if (window.scrollY > 50) {
                 navbar.classList.add("navbar-transparent");
+                navbar.classList.add("shadow-sm");
             } else {
                 navbar.classList.remove("navbar-transparent");
             }
@@ -282,9 +282,9 @@
     </style>
 
 
-
     <!-- Animate.css for Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <div class="hero-section">
         <div class="hero-content">
             <h1>Contact Koinet Media</h1>
