@@ -20,79 +20,73 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 
 <body style="font-family:Arial, Helvetica, sans-serif;">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm navbar-custom">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand fw-bold text-uppercase" href="../index.html">
-                <img src="../images/knmnew_prev_ui.png" alt="Koinet Media" width="100">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/knmnew_prev_ui.png" alt="Koinet Media" width="120">
             </a>
 
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
-                    <!--   <li class="nav-item"><a class="nav-link" href="../whatwedo.html">What We Do</a></li>-->
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
 
-                    <!-- What We Provide Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         What We Do
                     </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="../whatwedo.html">Expertise & Services</a></li>
-                            <li><a class="dropdown-item" href="../what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
-                            <li><a class="dropdown-item" href="../what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
-                            <li><a class="dropdown-item" href="../what_we_provide/contact_discovery.html">Content Syndication</a></li>
-                            <li><a class="dropdown-item" href="../what_we_provide/emailmarketing.html">Email Marketing</a></li>
-                            <li><a class="dropdown-item" href="../what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
-                            <li><a class="dropdown-item" href="../what_we_provide/demadgeneration.html">Demand Generation</a></li>
-                            <!--  <li><a class="dropdown-item" href="../what_we_provide/socialmedia.html">Social Media Marketing</a></li>-->
-                            <li><a class="dropdown-item" href="../what_we_provide/appoinmentgeneration.html">Appointment Generation</a></li>
-                            <li><a class="dropdown-item" href="../what_we_provide/accountprofiling.html">Account Profiling</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeProvideDropdown">
+                            <li><a class="dropdown-item" href="whatwedo.html">Expertise & Services</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html">Content Syndication</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/emailmarketing.html">Email Marketing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/demadgeneration.html">Demand Generation</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/appoinmentgeneration.html">Appointment Generation</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/accountprofiling.html">Account Profiling</a></li>
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="../focus_sectors.html">Focus Audiences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="focus_sectors.html">Focus Audiences</a></li>
 
-                    <!-- Resources Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
-                        Resources
-                    </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://thetechgossip.com/resources/">Assets</a></li>
-                            <li><a class="dropdown-item" href="../infographics.html">Infographics</a></li>
-                            <li><a class="dropdown-item" href="../articals.html">Articles</a></li>
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://thetechgossip.com/resources/">Repository</a></li>
+                            <li><a class="dropdown-item" href="infographics.html">Infographics</a></li>
+                            <li><a class="dropdown-item" href="articals.html">Articles</a></li>
                         </ul>
                     </li>
 
-                    <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
-                        About Us
-                    </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="../aboutus/overview.html">Overview</a></li>
-                            <li><a class="dropdown-item" href="../aboutus/ourstory.html">Our Story</a></li>
-                            <!-- <li><a class="dropdown-item" href="../aboutus/ourculture.html">Our Team & Culture</a></li> -->
-
-
-
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                            <li><a class="dropdown-item" href="aboutus/overview.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="aboutus/ourstory.html">Our Story</a></li>
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -103,15 +97,15 @@
         document.addEventListener("scroll", function() {
             let navbar = document.querySelector(".navbar-custom");
             if (window.scrollY > 50) {
-                navbar.classList.add("navbar-transparent");
+                navbar.classList.add("shadow-sm");
             } else {
-                navbar.classList.remove("navbar-transparent");
+                navbar.classList.remove("shadow-sm");
             }
         });
     </script>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom CSS -->
     <style>
@@ -124,31 +118,24 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        /* Navbar Hover Effect */
-        
-        .navbar-custom:hover {
-            background-color: #30528D !important;
-            /* Light blue background on hover */
-        }
         /* Navbar Links Text Color on Hover */
-        
-        .navbar-custom:hover .nav-link {
-            color: white !important;
-            /* White text color on hover */
-        }
-        /* Ensure the logo is not affected */
-        
-        .navbar-custom:hover .navbar-brand {
-            background-color: transparent !important;
-            /* Logo remains unaffected */
-        }
-        /* Navbar Links */
         
         .navbar-custom .nav-link {
             color: #000;
             /* Default text color */
             font-weight: 600;
             transition: color 0.3s ease-in-out;
+        }
+        /* Hover Effect */
+        
+        .navbar-custom:hover {
+            background-color: #30528D !important;
+            /* Light blue background on hover */
+        }
+        
+        .navbar-custom:hover .nav-link {
+            color: white !important;
+            /* White text color on hover */
         }
         /* Dropdown Styling */
         
@@ -193,11 +180,6 @@
         }
     </style>
 
-
-    <!-- Animate.css for Animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-
     <!-- Hero Section -->
 
     <section class="hero-section position-relative text-light d-flex align-items-center">
@@ -218,7 +200,7 @@
                         Our full-service offering is designed to deliver <strong>qualified leads, brand visibility, and business growth</strong>.
                     </p>
                     <p class="hero-description fade-in">
-                        Here’s how we can help you.
+                        Here's how we can help you.
                     </p><br>
                     <a href="#services" class="btn hero-btn fade-in">Explore Services</a>
                 </div>
@@ -419,12 +401,8 @@
             }
         }
     </style>
-
-
-
-
     <!-- Services Section -->
-    <section class="services-section py-5">
+    <section id="services" class="services-section py-5">
         <div class="container text-center">
             <h2 class="fw-bold text-uppercase tracking-widest mb-4">
                 <span class="text-primary">Our</span> <span class="text-dark">Services</span>
@@ -767,193 +745,144 @@
 
 
 
-    <!-- Demand Strategies Section -->
-    <section id="demand-strategies" class="demand-section">
+    <!-- Demand Generation Strategies Section -->
+    <section id="demand-strategies" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-bold text-uppercase tracking-widest text-primary">
-                    Demand Strategies
-                </h2>
+                <h2 class="display-5 fw-bold text-primary mb-3">Smart Demand Generation Strategies</h2>
+                <p class="lead text-muted">We don't just generate leads - we create measurable business opportunities</p>
             </div>
+
             <div class="row g-4">
-                <!-- Lead Gen Kick Starter -->
+                <!-- Strategy 1 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="demand-card" data-bs-toggle="modal" data-bs-target="#leadGenModal">
-                        <h5 class="fw-bold text-black">
-                            Lead Gen Kick Starter with <span>koinet media Lead Capture</span>
-                        </h5>
-                        <hr>
-                        <p>Call-Ready Demand with koinet media inHQL</p>
+                    <div class="card h-100 border-0 shadow-sm strategy-card">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper bg-primary bg-opacity-10 mb-4">
+                                <i class="bi bi-lightning-charge-fill text-primary fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Quick-Start Pipeline Program</h3>
+                            <p>Perfect for businesses needing immediate results with our proven 90-day acceleration framework.</p>
+
+                            <div class="strategy-details mt-4">
+                                <h4 class="h6 text-uppercase text-muted mb-3">How it works:</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i> Multi-channel campaign execution</li>
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i> Priority lead scoring system</li>
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i> Weekly performance reviews</li>
+                                </ul>
+
+                                <div class="results-box bg-light p-3 mt-3 rounded">
+                                    <h4 class="h6 mb-2">Typical Results:</h4>
+                                    <p class="small mb-0">50-100 sales-ready leads in first 30 days</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Targeted Demand Generation -->
+                <!-- Strategy 2 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="demand-card" data-bs-toggle="modal" data-bs-target="#targetedDemandModal">
-                        <h5 class="fw-bold text-black">
-                            Targeted Demand Generation with <span>koinet media Triple Play Intent</span>
-                        </h5>
-                        <hr>
-                        <p>Market Demand with koinet media Competitive Displacement</p>
+                    <div class="card h-100 border-0 shadow-sm strategy-card">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper bg-success bg-opacity-10 mb-4">
+                                <i class="bi bi-people-fill text-success fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Target Account Engagement</h3>
+                            <p>Strategic approach for landing and expanding in your most valuable accounts.</p>
+
+                            <div class="strategy-details mt-4">
+                                <h4 class="h6 text-uppercase text-muted mb-3">How it works:</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i></i> Custom account selection criteria</li>
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i></i> Decision-maker mapping</li>
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i></i> Decision-maker mapping</li>
+
+                                </ul>
+
+                                <div class="results-box bg-light p-3 mt-3 rounded">
+                                    <h4 class="h6 mb-2">Typical Results:</h4>
+                                    <p class="small mb-0">3-5x engagement rates in target accounts</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Account Qualified Demand -->
-                <div class="col-lg-4 col-md-12">
-                    <div class="demand-card" data-bs-toggle="modal" data-bs-target="#accountQualifiedModal">
-                        <h5 class="fw-bold text-black">
-                            Account Qualified Demand with <span>koinet media ABM Focus</span>
-                        </h5>
-                        <hr>
-                        <p>koinet media Content Creation with ITCurated</p>
+                <!-- Strategy 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm strategy-card">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper bg-warning bg-opacity-10 mb-4">
+                                <i class="bi bi-graph-up-arrow text-warning fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Performance Growth Program</h3>
+                            <p>Data-driven optimization of existing campaigns to maximize ROI.</p>
+
+                            <div class="strategy-details mt-4">
+                                <h4 class="h6 text-uppercase text-muted mb-3">How it works:</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i> Conversion rate analysis</li>
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i> Channel performance audits</li>
+                                    <li class="mb-2"><i class="bi bi-cursor-fill"></i> Continuous A/B testing</li>
+                                </ul>
+
+                                <div class="results-box bg-light p-3 mt-3 rounded">
+                                    <h4 class="h6 mb-2">Typical Results:</h4>
+                                    <p class="small mb-0">30-60% improvement in lead quality</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="../contact.html" class="btn btn-primary btn-lg px-4 py-2">
+                    <i class="bi bi-calendar-check me-2"></i> Schedule Strategy Session
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Modals -->
-    <div class="modal fade" id="leadGenModal" tabindex="-1" aria-labelledby="leadGenLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="leadGenLabel">Lead Gen Kick Starter</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>koinet media Lead Capture</strong> is a powerful tool that helps generate high-quality leads through precision targeting. With its innovative approach, you get call-ready demand and better conversion rates.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="targetedDemandModal" tabindex="-1" aria-labelledby="targetedDemandLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="targetedDemandLabel">Targeted Demand Generation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>koinet media Triple Play Intent</strong> ensures that your marketing campaigns reach the right audience with pinpoint accuracy. This strategy boosts market demand and competitive displacement.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="accountQualifiedModal" tabindex="-1" aria-labelledby="accountQualifiedLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="accountQualifiedLabel">Account Qualified Demand</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>koinet media ABM Focus</strong> is a game-changer for account-based marketing. It combines content creation with ITCurated insights to generate high-value opportunities.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Styles -->
+    <!-- Custom CSS -->
     <style>
-        .demand-section {
-            padding: 60px 20px;
-            background: #f8f9fa;
+        .strategy-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 3px solid transparent;
         }
         
-        .demand-card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            transition: all 0.3s ease-in-out;
-            text-align: left;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-        
-        .demand-card:hover {
+        .strategy-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
         }
         
-        .demand-card h5 {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #000;
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .demand-card span {
-            color: #007bff;
+        .results-box {
+            border-left: 3px solid var(--bs-primary);
+        }
+        /* Color coding for each strategy */
+        
+        .strategy-card:nth-child(1):hover {
+            border-top-color: var(--bs-primary);
         }
         
-        .demand-card hr {
-            border-top: 2px solid #007bff;
-            width: 50px;
-            margin-left: 0;
+        .strategy-card:nth-child(2):hover {
+            border-top-color: var(--bs-success);
         }
         
-        .modal-content {
-            border-radius: 10px;
-        }
-        
-        .modal-header {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        
-        .modal-body p {
-            font-size: 1rem;
-            color: #333;
+        .strategy-card:nth-child(3):hover {
+            border-top-color: var(--bs-warning);
         }
     </style>
-
-    <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <section id="what-we-do" style="padding: 80px 0; background-color: #f9f9f9;">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Left Side: Description -->
-                <div class="col-lg-6">
-                    <h2 style="color: #004c6d; font-weight: bold;">Lead Gen Kick Starter with koinet media Lead Capture</h2>
-                    <p style="font-size: 16px; line-height: 1.6;">
-                        Kickstart demand generation with focused top-of-funnel campaigns and targeted lead nurture.
-                    </p>
-                    <p style="font-size: 16px; line-height: 1.6;">
-                        This program is ideal for B2B teams looking to use their content to generate opt-in contacts that fit specific industry criteria, including roles, company, and company size.
-                    </p>
-                    <p style="font-size: 16px; line-height: 1.6;">
-                        An essential nurture solution is added to continue engagement and readiness.
-                    </p>
-                    <a href="#" style="color: #007bff; font-weight: bold; text-decoration: none;">Discover 10 best practices to nurture top-of-funnel leads →</a>
-                </div>
-
-                <!-- Right Side: Outcomes Box -->
-                <div class="col-lg-6">
-                    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
-                        <h3 style="color: #004c6d; font-size: 20px; font-weight: bold; border-bottom: 2px solid #004c6d; padding-bottom: 10px;">Demand Outcomes:</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 8px 0; font-size: 16px;">
-                                <i class="fa fa-check-circle" style="color: #000A3D; margin-right: 8px;"></i> Opt-in contacts that fit your specific criteria
-                            </li>
-                            <li style="padding: 8px 0; font-size: 16px;">
-                                <i class="fa fa-check-circle" style="color: #000A3D; margin-right: 8px;"></i> Increased engagement for marketing & sales goals
-                            </li>
-                            <li style="padding: 8px 0; font-size: 16px;">
-                                <i class="fa fa-check-circle" style="color: #000A3D; margin-right: 8px;"></i> High-quality leads primed for further nurturing
-                            </li>
-                        </ul>
-                        <a href="#" style="color: #000A3D; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 15px;">Drive your demand performance →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
 
     <!-- Footer Section -->
     <footer class="footer ">
