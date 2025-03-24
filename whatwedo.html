@@ -199,17 +199,14 @@
 
 
     <!-- Hero Section -->
+
     <section class="hero-section position-relative text-light d-flex align-items-center">
         <div class="hero-overlay"></div>
-        <!-- Gradient Overlay -->
         <div class="container position-relative">
             <div class="row align-items-center">
-                <!-- Left Side: 3D Illustration -->
                 <div class="col-lg-5 col-md-6 text-center mb-4 mb-md-0 mt-5">
                     <img src="images/herowedo.png" alt="Marketing Team" class="hero-image img-fluid animated-image">
                 </div>
-
-                <!-- Right Side: Hero Content -->
                 <div class="col-lg-7 col-md-6 text-center text-md-start">
                     <h1 class="hero-title fw-bold text-uppercase tracking-wide fade-in">
                         What We Do at <span class="highlight-text">Koinet Media</span>
@@ -223,14 +220,13 @@
                     <p class="hero-description fade-in">
                         Here’s how we can help you.
                     </p><br>
-                    <a href="contact.html" class="btn hero-btn fade-in">Explore Services</a>
+                    <a href="#services" class="btn hero-btn fade-in">Explore Services</a>
                 </div>
             </div>
         </div>
-
-        <!-- Background Decorative Elements -->
         <div class="hero-glow"></div>
     </section>
+
 
     <!-- Custom CSS -->
     <style>
@@ -283,25 +279,26 @@
             transform: translateY(30px);
             animation: fadeInUp 1s ease-in-out 0.2s forwards;
         }
-        /* Hero Button */
+        /* Hero Button (Updated to Primary Color) */
         
         .hero-btn {
             display: inline-block;
             padding: 12px 30px;
             font-size: 1rem;
             font-weight: bold;
-            color: #007bff;
-            background: rgb(204, 218, 255);
+            color: white;
+            background: #007bff;
+            /* Primary Color */
             border-radius: 30px;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s ease-in-out 0.4s forwards;
         }
         
         .hero-btn:hover {
-            background: #007bff;
+            background: #0056b3;
             transform: scale(1.05);
         }
         /* Image Animation */
@@ -347,6 +344,23 @@
             border-radius: 50%;
             filter: blur(80px);
             z-index: -1;
+        }
+        /* Our Services Section */
+        
+        .our-services-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .our-services-section h2 {
+            font-size: 2.5rem;
+            color: #007bff;
+            font-weight: bold;
+        }
+        
+        .our-services-section p {
+            font-size: 1.1rem;
+            color: #333;
         }
         /* Responsive Adjustments */
         
@@ -405,6 +419,7 @@
             }
         }
     </style>
+
 
 
 
@@ -570,6 +585,20 @@
         }
     </style>
 
+    <script>
+        // Smooth scrolling script
+        document.querySelectorAll('.hero-btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetSection = document.querySelector('#services');
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 
     <!-- Call to Action Section -->
     <section class="cta-section">
@@ -630,7 +659,6 @@
             padding: 14px 36px;
             font-size: 1.2rem;
             font-weight: bold;
-            text-transform: uppercase;
             background: #00A3FF;
             color: white;
             border-radius: 50px;
@@ -926,36 +954,38 @@
 
 
 
+
     <!-- Footer Section -->
     <footer class="footer ">
         <div class="footer-top ">
             <div class="container ">
                 <div class="row text-center ">
                     <!-- Contact via Email -->
-                    <div class="col-md-4 ">
-                        <div class="footer-icon ">
-                            <i class="fas fa-envelope "></i>
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <h4>Contact Us via Email</h4>
-                        <p>info@koinetmedia.com</p>
+                        <p><a href="mailto:info@koinetmedia.com" class="contact-link">info@koinetmedia.com</a></p>
                     </div>
 
                     <!-- Office Address -->
-                    <div class="col-md-4 ">
-                        <div class="footer-icon ">
-                            <i class="fas fa-map-marker-alt "></i>
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h4>Our Office</h4>
-                        <p>Pune, Maharashtra, India, 411014</p>
+                        <p><a href="https://www.google.com/maps/place/Pune,+Maharashtra,+India+411014" target="_blank" class="contact-link">
+        Pune, Maharashtra, India 411014</a></p>
                     </div>
 
                     <!-- Contact Number -->
-                    <div class="col-md-4 ">
-                        <div class="footer-icon ">
-                            <i class="fas fa-phone "></i>
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
                         </div>
                         <h4>Contact Us</h4>
-                        <p>+91 90215 68448</p>
+                        <p><a href="tel:+919021568448" class="contact-link">+91 90215 68448</a></p>
                     </div>
                 </div>
             </div>
@@ -986,6 +1016,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- CSS -->
     <style>
