@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -148,13 +146,16 @@
             /* Align content to top */
             padding: 20px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            flex-wrap: wrap;
+            /* Allow flex items to wrap */
         }
         /* Stylish Background Image */
         
         .blog-item img {
             width: 200px;
             /* Fixed image size */
-            height: 200px;
+            height: auto;
+            /* Maintain aspect ratio */
             border-radius: 10px;
             margin-right: 50px;
         }
@@ -222,18 +223,20 @@
         
         @media (max-width: 768px) {
             .search-bar input {
-                width: 70%;
-                /* Increase width on smaller devices */
+                width: 100%;
+                /* Full width on smaller devices */
             }
             .blog-item {
                 flex-direction: column;
-                /* Stack items vertically */
+                /* Stack items vertically on smaller screens */
                 align-items: flex-start;
                 /* Align content to start */
             }
             .blog-item img {
                 margin-bottom: 15px;
                 /* Space below image */
+                width: 100%;
+                /* Adjust image to fit responsive layout */
             }
         }
         
@@ -349,6 +352,154 @@
             animation: fadeIn 1s;
             /* Body animation on load */
         }
+        /* Newsletter Section Styling */
+        
+        .newsletter {
+            background-color: #e6f2ff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .newsletter:hover {
+            transform: scale(1.02);
+        }
+        
+        .newsletter h2 {
+            font-size: 2rem;
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #0056b3;
+            padding: 10px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control::placeholder {
+            color: #aaa;
+        }
+        
+        .form-control:focus {
+            border-color: #004085;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+            border-radius: 5px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        /* Responsive Footer */
+        
+        @media (max-width: 768px) {
+            .form-control {
+                width: 100%;
+                /* Full width for input */
+            }
+            .btn-primary {
+                width: 100%;
+                /* Full width for button */
+            }
+            .footer .footer-top,
+            .footer .footer-bottom {
+                flex-direction: column;
+                /* Stack footer elements */
+                align-items: center;
+                /* Center elements */
+            }
+            .footer-links {
+                flex-direction: column;
+                /* Stack links */
+            }
+        }
+        
+        .footer {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+        
+        .footer-top {
+            background: #ffffff;
+            padding: 40px 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .footer-top h4 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            background: #1A8AE6;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #007bff;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #007bff;
+        }
     </style>
 </head>
 
@@ -363,8 +514,8 @@
 
             <!-- Mobile Toggle Button -->
             <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -375,8 +526,8 @@
                     <!-- What We Provide Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
-                        What We Do
-                    </a>
+                            What We Do
+                        </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="../whatwedo.html">Expertise & Services</a></li>
                             <li><a class="dropdown-item" href="../what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
@@ -396,8 +547,8 @@
                     <!-- Resources Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
-                        Resources
-                    </a>
+                            Resources
+                        </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
                             <li><a class="dropdown-item" target="_blank" href="https://thetechgossip.com/resources/">Assets</a></li>
@@ -409,15 +560,12 @@
                     <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
-                        About Us
-                    </a>
+                            About Us
+                        </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="../aboutus/overview.html">Overview</a></li>
                             <li><a class="dropdown-item" href="../aboutus/ourstory.html">Our Story</a></li>
                             <!-- <li><a class="dropdown-item" href="../aboutus/ourculture.html">Our Team & Culture</a></li> -->
-
-
-
                         </ul>
                     </li>
 
@@ -439,93 +587,6 @@
         });
     </script>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <style>
-        /* Navbar Styling */
-        
-        .navbar-custom {
-            background: rgba(255, 255, 255, 0.7);
-            /* Default background */
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        /* Navbar Hover Effect */
-        
-        .navbar-custom:hover {
-            background-color: #30528D !important;
-            /* Light blue background on hover */
-        }
-        /* Navbar Links Text Color on Hover */
-        
-        .navbar-custom:hover .nav-link {
-            color: white !important;
-            /* White text color on hover */
-        }
-        /* Ensure the logo is not affected */
-        
-        .navbar-custom:hover .navbar-brand {
-            background-color: transparent !important;
-            /* Logo remains unaffected */
-        }
-        /* Navbar Links */
-        
-        .navbar-custom .nav-link {
-            color: #000;
-            /* Default text color */
-            font-weight: 600;
-            transition: color 0.3s ease-in-out;
-        }
-        /* Dropdown Styling */
-        
-        .navbar-custom .dropdown-menu {
-            background: rgba(255, 255, 255, 0.95);
-            border: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        /* Dropdown Animation */
-        
-        .animate-dropdown {
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        /* Custom Toggler Button */
-        
-        .custom-toggler {
-            border: none;
-            background: none;
-        }
-        
-        .custom-toggler:focus {
-            box-shadow: none;
-        }
-        /* Responsive Navbar */
-        
-        @media (max-width: 991px) {
-            .navbar-custom {
-                background: rgba(255, 255, 255, 0.95);
-                /* Default background for mobile */
-            }
-        }
-    </style>
-
-
-    <!-- Animate.css for Animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
     <!-- Hero Section -->
     <div class="hero">
         <h1 class="display-4 fw-bold text-uppercase tracking-widest">Stay Ahead with the Latest Blog</h1>
@@ -541,15 +602,12 @@
             <input type="text" id="search" class="form-control" placeholder="Search blogs by name or category" onkeyup="searchBlogs()">
         </div>
 
-
-
         <!-- View More Button -->
         <div class="text-center">
             <div id="blogs-container">
                 <!-- Blogs will be injected here -->
             </div>
             <button id="view-more-button" class="btn btn-primary mt-4" onclick="loadMoreBlogs()">View More</button>
-
         </div>
     </div>
 
@@ -631,12 +689,15 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 100%;
             gap: 90px;
+            /* Space between image and text */
             margin-bottom: 20px;
         }
         
         .insight-image img {
             width: 200px;
+            /* Fixed image size */
             height: auto;
+            /* Maintain aspect ratio */
             border-radius: 8px;
             object-fit: cover;
         }
@@ -650,194 +711,34 @@
             background: #007bff;
             color: white;
         }
-    </style>
-
-
-    <!-- Newsletter Subscription -->
-    <div class="container mt-5">
-        <div class="newsletter">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Get the latest blogs straight to your inbox</p>
-            <input type="email" id="email" class="form-control mb-3" placeholder="Enter your email">
-            <button class="btn btn-primary fw-bold" onclick="subscribe()">Subscribe</button>
-        </div>
-    </div>
-
-    <style>
+        /* Responsive adjustments */
+        
+        @media (max-width: 768px) {
+            .search-bar input {
+                width: 100%;
+                /* Full width on smaller devices */
+            }
+            .insight-item {
+                flex-direction: column;
+                /* Stack items for small screens */
+                align-items: flex-start;
+                /* Align items to the left */
+            }
+            .insight-image img {
+                width: 100%;
+                /* Make image responsive */
+                margin-bottom: 15px;
+                /* Space below image */
+            }
+        }
         /* Newsletter Section Styling */
         
         .newsletter {
-            background-color: #e6f2ff;
-            /* Soft light blue background */
-            padding: 30px;
-            border-radius: 12px;
-            /* Rounded corners */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            /* Soft shadow for depth */
-            text-align: center;
-            /* Centered text alignment */
-            transition: transform 0.3s;
-            /* Smooth hover effect */
+            opacity: 0;
+            /* Initially hidden */
+            animation: fadeIn 1.5s forwards;
+            /* Fade in with animation */
         }
-        
-        .newsletter:hover {
-            transform: scale(1.02);
-            /* Slightly scale up on hover */
-        }
-        
-        .newsletter h2 {
-            font-size: 2rem;
-            /* Increase heading size */
-            color: #0056b3;
-            /* Dark blue for heading */
-            margin-bottom: 15px;
-        }
-        
-        .newsletter p {
-            font-size: 1.2rem;
-            /* Slightly larger text */
-            color: #333;
-            /* Dark gray for paragraph */
-            margin-bottom: 20px;
-        }
-        
-        .form-control {
-            border-radius: 5px;
-            /* Rounded corners for input */
-            border: 1px solid #0056b3;
-            /* Blue border */
-            padding: 10px;
-            /* Padding for input */
-            transition: border-color 0.3s;
-            /* Smooth transition */
-        }
-        
-        .form-control::placeholder {
-            color: #aaa;
-            /* Placeholder color */
-        }
-        
-        .form-control:focus {
-            border-color: #004085;
-            /* Darker blue on focus */
-            box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
-            /* Shadow effect on focus */
-        }
-        
-        .btn-primary {
-            background-color: #007bff;
-            /* Bright blue button color */
-            border: none;
-            /* Remove border */
-            color: white;
-            /* White text color */
-            padding: 10px 20px;
-            font-size: 1rem;
-            /* Button font size */
-            transition: background-color 0.3s, transform 0.2s;
-            /* Transition effects */
-            border-radius: 5px;
-            /* Rounded corners for button */
-        }
-        
-        .btn-primary:hover {
-            background-color: #0056b3;
-            /* Darker blue on hover */
-            transform: scale(1.05);
-            /* Slight scale effect on hover */
-        }
-        /* Responsive Styles */
-        
-        @media (max-width: 576px) {
-            .form-control {
-                width: 100%;
-                /* Full width for mobile */
-            }
-            .btn-primary {
-                width: 100%;
-                /* Full width for the button on small devices */
-            }
-        }
-    </style>
-
-    <script>
-        function subscribe() {
-            const email = document.getElementById("email").value;
-            if (email) {
-                alert(`Thank you for subscribing with ${email}!`);
-                // Add your subscription logic here
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        }
-    </script>
-
-
-
-    <!-- Footer Section -->
-    <footer class="footer ">
-        <div class="footer-top ">
-            <div class="container ">
-                <div class="row text-center ">
-                    <!-- Contact via Email -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Contact Us via Email</h4>
-                        <p><a href="mailto:info@koinetmedia.com" class="contact-link">info@koinetmedia.com</a></p>
-                    </div>
-
-                    <!-- Office Address -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Our Office</h4>
-                        <p><a href="https://www.google.com/maps/place/Pune,+Maharashtra,+India+411014" target="_blank" class="contact-link">
-        Pune, Maharashtra, India 411014</a></p>
-                    </div>
-
-                    <!-- Contact Number -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h4>Contact Us</h4>
-                        <p><a href="tel:+919021568448" class="contact-link">+91 90215 68448</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom ">
-            <div class="container text-center ">
-                <ul class="footer-links ">
-                    <li><a href="footerpages/Privacy-policy.html ">Privacy Policy</a></li>
-                    <li><a href="footerpages/CaseStudies.html ">Case Studies</a></li>
-                    <li><a href="footerpages/GDPR.html ">GDPR</a></li>
-                    <li><a href="footerpages/CCPA.html ">CCPA</a></li>
-                    <li><a href="footerpages/Terms-Condition.html ">Terms & Conditions</a></li>
-                    <li><a href="footerpages/Media_Kit.html ">Media Kit</a></li>
-
-                </ul>
-
-                <!-- Copyright & Social Icons -->
-                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
-                <div class="social-icons ">
-                    <a target="_blank" href="https://x.com/KoinetMedia "><i class="fab fa-twitter "></i></a>
-                    <a target="_blank" href="https://www.facebook.com/KoiNetMedia/"><i class="fab fa-facebook "></i></a>
-                    <a target="_blank" href="https://www.instagram.com/koinetmedia1/ "><i class="fab fa-instagram "></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/koinet-media/posts/ "><i class="fab fa-linkedin "></i></a>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- CSS -->
-    <style>
         /* Footer Styling */
         
         .footer {
@@ -845,38 +746,6 @@
             color: #ffffff;
             padding-top: 50px;
         }
-        /* Top Section */
-        
-        .footer-top {
-            background: #ffffff;
-            padding: 40px 0;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-        }
-        
-        .footer-top h4 {
-            margin-top: 10px;
-            font-weight: 600;
-            color: #222;
-        }
-        
-        .footer-top p {
-            color: #555;
-        }
-        
-        .footer-icon {
-            width: 60px;
-            height: 60px;
-            background: #1A8AE6;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin: 0 auto 15px;
-        }
-        /* Bottom Section */
         
         .footer-bottom {
             padding: 30px 0;
@@ -915,9 +784,90 @@
         }
     </style>
 
+    <!-- Newsletter Subscription -->
+    <div class="container mt-5">
+        <div class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest blogs straight to your inbox</p>
+            <input type="email" id="email" class="form-control mb-3" placeholder="Enter your email">
+            <button class="btn btn-primary fw-bold" onclick="subscribe()">Subscribe</button>
+        </div>
+    </div>
+
+    <script>
+        function subscribe() {
+            const email = document.getElementById("email").value;
+            if (email) {
+                alert(`Thank you for subscribing with ${email}!`);
+                // Add your subscription logic here
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="footer ">
+        <div class="footer-top ">
+            <div class="container ">
+                <div class="row text-center ">
+                    <!-- Contact via Email -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Contact Us via Email</h4>
+                        <p><a href="mailto:info@koinetmedia.com" class="contact-link">info@koinetmedia.com</a></p>
+                    </div>
+
+                    <!-- Office Address -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Office</h4>
+                        <p><a href="https://www.google.com/maps/place/Pune,+Maharashtra,+India+411014" target="_blank" class="contact-link">
+                            Pune, Maharashtra, India 411014</a></p>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="col-md-4">
+                        <div class="footer-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Us</h4>
+                        <p><a href="tel:+919021568448" class="contact-link">+91 90215 68448</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom ">
+            <div class="container text-center ">
+                <ul class="footer-links ">
+                    <li><a href="footerpages/Privacy-policy.html ">Privacy Policy</a></li>
+                    <li><a href="footerpages/CaseStudies.html ">Case Studies</a></li>
+                    <li><a href="footerpages/GDPR.html ">GDPR</a></li>
+                    <li><a href="footerpages/CCPA.html ">CCPA</a></li>
+                    <li><a href="footerpages/Terms-Condition.html ">Terms & Conditions</a></li>
+                    <li><a href="footerpages/Media_Kit.html ">Media Kit</a></li>
+                </ul>
+
+                <!-- Copyright & Social Icons -->
+                <p>© 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
+                <div class="social-icons ">
+                    <a target="_blank" href="https://x.com/KoinetMedia "><i class="fab fa-twitter "></i></a>
+                    <a target="_blank" href="https://www.facebook.com/KoiNetMedia/"><i class="fab fa-facebook "></i></a>
+                    <a target="_blank" href="https://www.instagram.com/koinetmedia1/ "><i class="fab fa-instagram "></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/koinet-media/posts/ "><i class="fab fa-linkedin "></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Font Awesome for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous "></script>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js "></script>
