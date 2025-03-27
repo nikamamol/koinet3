@@ -18,6 +18,7 @@
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,9 +59,10 @@
             font-size: 3.5rem;
             /* Increased size for prominence */
             font-weight: bold;
+            margin-bottom: 20px;
             color: #343a40;
             /* Main text color */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 3.4);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
             /* Soft shadow for better visibility */
         }
         
@@ -96,58 +98,57 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
+            gap: 20px;
+            margin-top: 20px;
         }
         
         .stats-box {
             background: linear-gradient(135deg, #62A2DB, #0096E4);
-            padding: 12px 8px;
-            width: calc(25% - 12px);
-            min-width: 120px;
-            border-radius: 10px;
+            /* Gradient background */
+            padding: 20px;
+            width: calc(25% - 20px);
+            /* Adjust for 3 boxes per row */
+            border-radius: 15px;
+            /* Increased border radius for softer look */
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            /* Softer shadow */
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* Transition effects */
             color: white;
+            /* Text color for contrast */
         }
         
         .stats-box:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            /* Lift effect on hover */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            /* Deepened shadow on hover */
         }
         
         .stats-box h2 {
-            font-size: 1.5rem;
-            margin: 6px 0;
+            font-size: 2.5rem;
+            /* Size for prominence */
+            margin: 10px 0;
         }
         
         .stats-box p {
-            font-size: 0.8rem;
-            margin: 3px 0;
-            line-height: 1.2;
+            font-size: 1rem;
+            margin: 5px 0;
         }
         
-        .stats-box i {
-            font-size: 0.9em;
+        .stats-box a {
+            color: #ffeb3b;
+            /* Bright link color for emphasis */
+            font-weight: bold;
+            text-decoration: none;
+            /* Remove underline */
+            transition: color 0.3s;
         }
         
-        @media (max-width: 768px) {
-            .stats-box {
-                width: calc(33% - 12px);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .stats-box {
-                width: calc(50% - 12px);
-            }
-            .stats-box h2 {
-                font-size: 1.3rem;
-            }
-            .stats-box p {
-                font-size: 0.75rem;
-            }
+        .stats-box a:hover {
+            color: #fff;
+            /* Change link color on hover for contrast */
         }
         /* Tooltip Styling */
         
@@ -427,20 +428,18 @@
         }
         
         .audience-item {
-            background-color: #f0f4f8;
-            /* Light background for items */
-            border-radius: 8px;
-            /* Rounded corners */
-            padding: 20px;
-            /* Inner padding */
+            width: 170px;
+            height: 230px;
+            /* Set a fixed height for all cards */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             text-align: center;
-            /* Center text */
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-            /* Light shadow */
-            width: 150px;
-            /* Fixed width for uniformity */
-            margin-bottom: 20px;
-            /* Space below items */
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         
         .progress-circle {
@@ -553,37 +552,39 @@
 
 <body style="font-family:Arial, Helvetica, sans-serif;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white shadow-sm">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand fw-bold text-uppercase" href="index.html">
-                <img src="images/knmnew_prev_ui.png" width="100">
+                <img src="/images/knmnew_prev_ui.png" alt="Koinet Media" width="120">
             </a>
 
             <!-- Mobile Toggle Button -->
             <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="whatwedo.html">What We Do</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="whatwedo.html">What We Do</a></li> -->
 
                     <!-- What We Provide Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown">
-                    What We Provide
-                </a>
+                        <a class="nav-link dropdown-toggle" id="whatWeProvideDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            What We Do
+                        </a>
+
                         <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="whatwedo.html">Expertise & Services</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/account-based-marketing.html">Account-Based Marketing</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/multi-channel-lead.html">Multi-Channel Lead</a></li>
-                            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html">Contact Discovery</a></li>
+                            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html">Content Syndication</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/emailmarketing.html">Email Marketing</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/dataappend.html">Data Append & Cleansing</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/demadgeneration.html">Demand Generation</a></li>
-                            <li><a class="dropdown-item" href="what_we_provide/socialmedia.html">Social Media Marketing</a></li>
+                            <!-- <li><a class="dropdown-item" href="what_we_provide/socialmedia.html">Social Media Marketing</a></li> -->
                             <li><a class="dropdown-item" href="what_we_provide/appoinmentgeneration.html">Appointment Generation</a></li>
                             <li><a class="dropdown-item" href="what_we_provide/accountprofiling.html">Account Profiling</a></li>
                         </ul>
@@ -594,11 +595,11 @@
                     <!-- Resources Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
-                    Resources
-                </a>
+                        Resources
+                    </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://thetechgossip.com/resources/">Assets</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://thetechgossip.com/resources/">Repository</a></li>
                             <li><a class="dropdown-item" href="infographics.html">Infographics</a></li>
                             <li><a class="dropdown-item" href="articals.html">Articles</a></li>
                         </ul>
@@ -607,15 +608,12 @@
                     <!-- About Us Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown">
-                    About Us
-                </a>
+                        About Us
+                    </a>
                         <ul class="dropdown-menu animate-dropdown">
                             <li><a class="dropdown-item" href="aboutus/overview.html">Overview</a></li>
                             <li><a class="dropdown-item" href="aboutus/ourstory.html">Our Story</a></li>
                             <!-- <li><a class="dropdown-item" href="aboutus/ourculture.html">Our Team & Culture</a></li> -->
-
-
-
                         </ul>
                     </li>
 
@@ -631,6 +629,7 @@
             let navbar = document.querySelector(".navbar-custom");
             if (window.scrollY > 50) {
                 navbar.classList.add("navbar-transparent");
+                navbar.classList.add("shadow-sm");
             } else {
                 navbar.classList.remove("navbar-transparent");
             }
@@ -721,18 +720,23 @@
     </style>
 
 
-
     <!-- Animate.css for Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <h1 class="hero-title">
-                <span class="highlight">11+ MILLION</span>
-                <h1>B2B PROFILES</h1>
+                <span class="highlight">11+ MILLION</span></h1>
+            <h1 class="hero-title">
+                B2B PROFILES
             </h1>
             <p class="hero-subtitle">
-                Our extensive database of professionals from over <span class="highlight"> 1.3Million+ </span> companies allows us to deliver extraordinary engagement in your audience's niche </p>
+                <!-- Our extensive database of professionals from over <span class="highlight">2.6+ million</span> companies in
+                <span class="highlight">32+ verticals</span> allows us to deliver extraordinary engagement in your audience's niche. -->
+                Our extensive database of professionals from over <span class="highlight"></span>1.3Million+</span> companies allows us to deliver extraordinary engagement in your audience's niche.
+            </p>
             <a href="contact.html" class="cta-btn">Schedule Your Free Consultation</a>
         </div>
     </section><br><br>
@@ -740,53 +744,44 @@
     <!-- Stats Section -->
     <div class="container">
         <div class="stats-container">
-            <!-- First Row (4 cards) -->
             <div class="stats-box">
-                <h2><i class="fas fa-building"></i> 5.72 Million+</h2>
+
+                <h3><i class="fas fa-users"></i><br><br> 5.72 Million+</h3>
                 <p>B2B PROFILES</p>
-                <span style="color: #ffffff; font-weight: bold;  padding: 2px 6px; border-radius: 3px;">
-                    NORTH AMERICA
-                </span>
+                <p>NORTH AMERICA </p>
             </div>
             <div class="stats-box">
-                <h2><i class="fas fa-users"></i> 770K+</h2>
+                <h3><i class="fas fa-users"></i><br><br>770K+</h3>
                 <p>B2B PROFILES</p>
-                <span style="color: #ffffff; font-weight: bold;  padding: 2px 6px; border-radius: 3px;">
-                LATAM
+                <p>LATAM </p>
             </div>
             <div class="stats-box">
-                <h2><i class="fas fa-building"></i> 3.3 Million+</h2>
+                <h3><i class="fas fa-building"></i> <br><br>3.3 Million+</h3>
                 <p>MARKET VERTICALS</p>
-                <span style="color: #ffffff; font-weight: bold;  padding: 2px 6px; border-radius: 3px;">
-              EMEA
+                <p>EMEA </p>
             </div>
             <div class="stats-box">
-                <h2><i class="fas fa-building"></i> 1.21 Million+</h2>
+                <h3><i class="fas fa-building"></i><br><br> 1.21 Million+</h3>
                 <p>B2B PROFILES</p>
                 <span style="color: #ffffff; font-weight: bold;  padding: 2px 6px; border-radius: 3px;">
                 APAC
             </div>
-               
-
-            <!-- Second Row (3 cards) -->
             <div class="stats-box">
-                <h2><i class="fas fa-globe"></i> 80+</h2>
+                <h3><i class="fas fa-globe"></i><br><br> 80+</h3>
                 <p>COUNTRIES COVERED</p>
-                <span style="color: #ffffff; font-weight: bold;  padding: 2px 6px; border-radius: 3px;">
-                EXPLORE COUNTRIES 
+                <!-- <p>EXPLORE COUNTRIES </p> -->
             </div>
             <div class="stats-box">
-                <h2><i class="fas fa-clock"></i> 95%</h2>
+                <h3><i class="fas fa-clock"></i> <br><br> 95%</h3>
                 <p>DATA ACCURACY RATE</p>
-                <span style="color: #ffffff; font-weight: bold;  padding: 2px 6px; border-radius: 3px;">
-               LEARN MORE
+                <!-- <p>LEARN MORE </p> -->
             </div>
             <div class="stats-box">
-                <h2><i class="fas fa-chart-line"></i> 500+</h2>
+                <h3><i class="fas fa-chart-line"></i><br><br> 500+</h3>
                 <p>CLIENTS SERVED</p>
-                <span style="color: #ffffff; font-weight: bold;  padding: 2px 6px; border-radius: 3px;">
-                    CLIENTS SERVED
-                </div>
+                <!-- <p>CLIENT TESTIMONIALS </p> -->
+            </div>
+        </div>
     </div><br><br><br>
     <!-- Our Focus Audience Section -->
     <div class="focus-audience-container">
@@ -854,7 +849,7 @@
         </script>
 
         <!-- Audience Profile Section -->
-        <div class="audience-container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <div class="audience-container" style="max-width: 900px; margin: 0 auto; padding: 20px;">
             <h2 class="audience-title" style="text-align: center; margin-bottom: 20px; font-size: 24px; color: #333;">AUDIENCE PROFILE</h2>
 
             <div class="audience-info" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
@@ -868,7 +863,7 @@
                 </svg>
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; font-weight: bold;">8.15%</div>
                     </div>
-                    <p style="font-size: 14px; margin-top: 10px; color: #555; font-weight: 500;">C Suite & Ownership</p>
+                    <p class="fw-bold">C Suite & Ownership</p>
                 </div>
 
                 <!-- Card 2 -->
@@ -881,7 +876,7 @@
                 </svg>
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; font-weight: bold;">41.54%</div>
                     </div>
-                    <p style="font-size: 14px; margin-top: 10px; color: #555; font-weight: 500;">Sr. Management</p>
+                    <p class="fw-bold">Sr. Management</p>
                 </div>
 
                 <!-- Card 3 -->
@@ -894,7 +889,7 @@
                 </svg>
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; font-weight: bold;">32.23%</div>
                     </div>
-                    <p style="font-size: 14px; margin-top: 10px; color: #555; font-weight: 500;">Mid-Level Management</p>
+                    <p class="fw-bold">Mid-Level Management</p>
                 </div>
 
                 <!-- Card 4 -->
@@ -907,7 +902,7 @@
                 </svg>
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; font-weight: bold;">18.08%</div>
                     </div>
-                    <p style="font-size: 14px; margin-top: 10px; color: #555; font-weight: 500;">Entry Level & Others</p>
+                    <p class="fw-bold">Entry Level & Others</p>
                 </div>
             </div>
 
@@ -945,6 +940,8 @@
                 progressValue.innerText = percent;
             });
         </script>
+
+
 
         <!-- Footer Section -->
         <footer class="footer ">
