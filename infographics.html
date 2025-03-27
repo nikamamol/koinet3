@@ -349,6 +349,41 @@
             animation: fadeIn 1s;
             /* Body animation on load */
         }
+        /* Responsive adjustments for insight items */
+        
+        @media (max-width: 768px) {
+            .insight-item {
+                flex-direction: column;
+                /* Stack items for small screens */
+                align-items: flex-start;
+                /* Align items to the start */
+            }
+            .insight-image img {
+                width: 100%;
+                /* Make image responsive */
+                margin-bottom: 15px;
+                /* Space below image */
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .newsletter h2 {
+                font-size: 1.5rem;
+                /* Smaller title for mobile */
+            }
+            .newsletter p {
+                font-size: 1rem;
+                /* Font size for smaller screens */
+            }
+            .form-control {
+                width: 100%;
+                /* Full width on small devices */
+            }
+            .btn-primary {
+                width: 100%;
+                /* Full width for the button on small devices */
+            }
+        }
     </style>
 </head>
 
