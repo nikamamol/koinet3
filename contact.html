@@ -415,122 +415,117 @@
         }
         /* Responsive Adjustments */
         
-        @media (max-width: 1199px) {
+        @media (max-width: 1399.98px) {
+            .contact-hero h1 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 1199.98px) {
             .contact-container {
                 max-width: 960px;
             }
-        }
-        
-        @media (max-width: 991px) {
-            .navbar-custom {
-                background: rgba(255, 255, 255, 0.95);
-            }
-            .contact-container {
-                margin-top: -30px;
-            }
             .contact-form,
             .contact-info {
-                padding: 30px;
-            }
-            .contact-hero h1 {
-                font-size: 2.4rem;
-            }
-            .map-container iframe {
-                height: 400px;
+                padding: 40px;
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 991.98px) {
+             :root {
+                --navbar-height: 60px;
+            }
             .contact-hero {
-                padding: 80px 0 60px;
+                padding: 100px 0 50px;
+            }
+            .navbar-collapse {
+                background: rgba(255, 255, 255, 0.98);
+                padding: 15px;
+                margin-top: 10px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .contact-form h2,
+            .contact-info h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .contact-hero {
+                padding: 90px 0 40px;
             }
             .contact-hero h1 {
                 font-size: 2rem;
+                margin-bottom: 1rem;
             }
             .contact-hero p {
                 font-size: 1rem;
                 max-width: 90%;
             }
-            .contact-card {
-                margin-bottom: 20px;
+            .contact-form,
+            .contact-info {
+                padding: 30px;
             }
-            .map-container iframe {
-                height: 350px;
+            .form-control {
+                height: 45px;
+                font-size: 0.95rem;
             }
-            .footer-top {
-                border-radius: 30px;
+            .btn-submit {
+                padding: 12px 25px;
+                font-size: 0.95rem;
             }
         }
         
-        @media (max-width: 576px) {
+        @media (max-width: 575.98px) {
+             :root {
+                --navbar-height: 55px;
+            }
             .contact-hero {
-                padding: 60px 0 40px;
+                padding: 80px 0 30px;
             }
             .contact-hero h1 {
                 font-size: 1.8rem;
-                margin-bottom: 1rem;
             }
-            .contact-hero p {
-                font-size: 0.95rem;
+            .contact-container {
+                margin-top: -20px;
             }
             .contact-form,
             .contact-info {
                 padding: 25px;
             }
             .form-control {
-                height: 45px;
                 font-size: 0.9rem;
-            }
-            .btn-submit {
-                padding: 12px 20px;
-                font-size: 0.9rem;
+                padding-left: 15px;
             }
             .info-item {
                 padding-left: 35px;
             }
             .info-item i {
-                font-size: 1.3rem;
-            }
-            .map-container iframe {
-                height: 300px;
-            }
-            .footer-top h4 {
-                font-size: 1.1rem;
-            }
-            .footer-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
+                font-size: 1.2rem;
             }
         }
         
-        @media (max-width: 480px) {
+        @media (max-width: 424.98px) {
             .contact-hero h1 {
                 font-size: 1.6rem;
+            }
+            .contact-hero p {
+                font-size: 0.95rem;
             }
             .contact-form h2,
             .contact-info h3 {
                 font-size: 1.4rem;
             }
-            .form-control {
-                padding-left: 15px;
+            .btn-submit {
+                font-size: 0.9rem;
             }
-            .info-item {
-                padding-left: 30px;
-            }
-            .info-item i {
-                font-size: 1.2rem;
-            }
-            .map-container iframe {
-                height: 250px;
-            }
-            .footer-links li {
-                display: block;
-                margin: 10px 0;
+            .info-item h4 {
+                font-size: 1rem;
             }
         }
         
-        @media (max-width: 360px) {
+        @media (max-width: 374.98px) {
             .contact-hero h1 {
                 font-size: 1.5rem;
             }
@@ -538,14 +533,8 @@
             .contact-info h3 {
                 font-size: 1.3rem;
             }
-            .btn-submit {
-                font-size: 0.85rem;
-            }
-            .info-item h4 {
-                font-size: 1rem;
-            }
-            .footer-bottom p {
-                font-size: 0.9rem;
+            .info-item {
+                padding-left: 30px;
             }
         }
     </style>
