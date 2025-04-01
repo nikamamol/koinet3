@@ -6,7 +6,7 @@
     <title>Koinet Media - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Koinet Media - Unlock Your Business Growth with Innovative Digital Solutions">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,343 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <style>
+         :root {
+            --text-dark: #333;
+        }
+        
+        .ag-courses-item_link {
+            background-color: #0101010d;
+            transition: background-color 0.3s ease-in-out !important;
+            display: block;
+            padding: 30px 20px;
+            position: relative;
+            overflow: hidden;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 30px;
+            /*/ for Mozila version less than 3.6  /*/
+            -moz-border-radius-topleft: 30px;
+            -moz-border-radius-topright: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            -moz-border-radius-bottomright: 30px;
+            /*Shadow */
+            box-shadow: 1px 1px 5px 0 rgba(69, 69, 69, 0.5);
+        }
+        
+        .ag-courses-item_link:hover {
+            background-color: var(--hover-bg);
+            color: #fff !important;
+        }
+        
+        .ag-courses-item_link:hover .ag-courses-item_bg {
+            transform: scale(10);
+        }
+        
+        .ag-courses-item_link:hover .btn-card-audience {
+            border: 2px solid #ffffff6b !important;
+        }
+        /*/ Underline Animation /*/
+        
+        .ag-courses-item_title {
+            position: relative;
+            display: inline-block;
+            color: var(--text-dark);
+            font-weight: bold;
+            font-size: 30px;
+            min-height: 1rem;
+            margin-bottom: 3rem;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .ag-courses-item_title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.3s ease-in-out;
+        }
+        
+        .ag-courses-item_title:hover::after {
+            width: 100%;
+        }
+        
+        .card-count,
+        .ag-courses-item_date-box,
+        sub,
+        p {
+            color: var(--text-dark);
+        }
+        
+        .ag-courses-item_date-box {
+            font-size: 18px;
+            position: relative;
+            z-index: 2;
+        }
+        /*/ Buttons /*/
+        
+        .btn-card-audience {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        
+        .btn-card-audience:hover {
+            color: #fff;
+        }
+        /*/ Background Circle /*/
+        
+        .ag-courses-item_bg {
+            height: 128px;
+            width: 128px;
+            background-color: #f9b234;
+            z-index: 1;
+            position: absolute;
+            top: -75px;
+            right: -75px;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+        /*/ Alternating background colors /*/
+        
+        .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+            background-color: #3ecd5e;
+        }
+        
+        .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+            background-color: #e44002;
+        }
+        
+        .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+            background-color: #952aff;
+        }
+        
+        .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+            background-color: #cd3e94;
+        }
+        
+        .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+            background-color: #4c49ea;
+        }
+        /*/ Responsive Styles /*/
+        
+        @media only screen and (max-width: 979px) {
+            .ag-courses_item {
+                flex-basis: calc(50% - 30px);
+            }
+            .ag-courses-item_title {
+                font-size: 24px;
+            }
+        }
+        
+        @media only screen and (max-width: 639px) {
+            .ag-courses_item {
+                flex-basis: 100%;
+            }
+            .ag-courses-item_title {
+                min-height: 72px;
+                font-size: 24px;
+            }
+            .ag-courses-item_link {
+                padding: 22px 40px;
+            }
+            .ag-courses-item_date-box {
+                font-size: 16px;
+            }
+        }
+        
+        .gradient-background {
+            height: 250px;
+            background: linear-gradient(62deg, #2e2cef, #713ce7, #23A6D5, #236dd5);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            color: white !important;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        @-webkit-keyframes gradient {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        /*/ General styles /*/
+        
+        .text-head {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-top: 190px;
+            color: #000000 !important;
+        }
+        
+        .text-header {
+            font-weight: 500;
+            font-size: 4rem;
+            line-height: 1.2;
+            margin-top: 25px;
+        }
+        
+        .text-description {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-top: 15px;
+            margin-bottom: 119px;
+            color: #000000 !important;
+        }
+        
+        .card-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.2;
+            text-align: center;
+        }
+        
+        .card-subtitle {
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.4;
+            letter-spacing: -2%;
+            text-align: center;
+            color: #000000;
+        }
+        
+        .card-count {
+            display: block;
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            letter-spacing: -2%;
+            text-align: center;
+            color: #1c7dc2;
+            ;
+        }
+        
+        .btn-card-audience {
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.4;
+            letter-spacing: -2%;
+            text-align: center;
+            background: #06367F;
+            color: #FFF;
+            border-radius: 20px;
+        }
+        
+        .card-border {
+            border: 1px solid #8A8A8A;
+            border-radius: 11px;
+        }
+        
+        .last-row {
+            margin-bottom: 102px;
+        }
+        
+        .audience-link {
+            text-decoration: none;
+            color: #FFF;
+        }
+        
+        .audience-link:hover {
+            color: #FFF
+        }
+        
+        @media (max-width: 768px) {
+            .marketing-card {
+                height: auto;
+                padding: 15px;
+            }
+            .marketing-card.col-lg-3 {
+                width: 80%;
+            }
+            .text-head {
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.4;
+                margin-top: 100px;
+            }
+            .text-header {
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 1.2;
+                margin-top: 25px;
+            }
+            .text-description {
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.5;
+                margin-top: 15px;
+                margin-bottom: 119px;
+                color: #000000 !important;
+            }
+            .card-title {
+                font-weight: 700;
+                font-size: 1.25rem;
+                line-height: 1.2;
+                text-align: center;
+            }
+            .card-subtitle {
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 1.4;
+                letter-spacing: -2%;
+                text-align: center;
+                color: #000000;
+            }
+            .card-count {
+                display: block;
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 1.2;
+                letter-spacing: -2%;
+                text-align: center;
+                color: #149CFE;
+                ;
+            }
+            .btn-card-audience {
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 1.4;
+                letter-spacing: -2%;
+                text-align: center;
+                background: #06367F;
+                color: #FFF;
+                border-radius: 3px;
+            }
+        }
+    </style>
 
 
 </head>
@@ -210,7 +547,7 @@
                 </h2> <br>
                 <div class="row">
                     <div class="col-md-6 text-start">
-                        <p>
+                        <p class="text-white">
                             Success isn’t just about being seen—it’s about making an impact. At
                             <strong class="text-warning">Koinet Media</strong>, we don’t just generate leads; we create meaningful connections. With precision-targeted content and a strategy designed for engagement, we turn interest into action and clicks
                             into conversions. Let’s redefine the way you grow.
@@ -418,6 +755,13 @@
 
     <!-- Why Choose KoiNet Media Section -->
     <section class="why-choose-section">
+        <div class="video-background">
+            <video autoplay muted loop>
+            <source src="path_to_your_video.mp4" type="video/mp4"> <!-- Add your video path here -->
+            Your browser does not support the video tag.
+        </video>
+        </div>
+
         <div class="container">
             <div class="row align-items-center">
                 <!-- Left Side - Text & Features -->
@@ -466,8 +810,25 @@
         .why-choose-section {
             position: relative;
             padding: 80px 0;
-            background: #f8f9fa;
             overflow: hidden;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            /* Behind the content */
+            overflow: hidden;
+        }
+        
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the video covers the entire section */
         }
         /* Section Title */
         
@@ -479,6 +840,9 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            z-index: 3;
+            /* Ensure text is above the video */
         }
         
         .section-title span {
@@ -491,6 +855,9 @@
             color: #666;
             margin-bottom: 30px;
             animation: fadeInUp 1s ease-in-out;
+            position: relative;
+            z-index: 3;
+            /* Ensure text is above the video */
         }
         /* Custom Link */
         
@@ -517,6 +884,8 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             cursor: pointer;
+            z-index: 3;
+            /* Ensure boxes are above the video */
         }
         
         .feature-box:hover {
@@ -567,6 +936,8 @@
             max-width: 550px;
             margin: auto;
             animation: fadeInUp 1.5s ease-in-out;
+            z-index: 3;
+            /* Ensure image is above the video */
         }
         
         .main-image {
@@ -586,7 +957,6 @@
             border-radius: 5px;
             border: 2px solid #007bff;
             color: #007bff;
-            font-display: white;
             transition: all 0.3s ease-in-out;
             animation: fadeInUp 1s ease-in-out;
         }
@@ -675,9 +1045,6 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
-
     <!-- Redesigned Services Section -->
     <section class="services-section py-5 bg-light">
         <div class="container">
@@ -1148,133 +1515,113 @@
 
 
     <!-- Own Your Funnel Section -->
-    <section class="py-5 text-center position-relative" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
-        <div class="container position-relative">
-            <h2 class="fw-bold animate__animated animate__fadeInUp text-uppercase text-responsive">
-                <span class="text-primary">MASTER YOUR FUNNEL</span> <span class="text-black">FOR MAXIMUM GROWTH</span>
-            </h2>
-            <p class="lead text-muted animate__animated animate__fadeInUp animate__delay-1s">
-                KoiNet Media demand strategists work with you using advanced tools to craft and optimize demand programs that deliver the audience, buyers, and account engagement to meet your goals.
-            </p>
 
-            <div class="row mt-4 g-4">
-                <!-- Data-Driven Demand Programs -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInLeft hover-effect">
-                        <div class="icon-box bg-gradient-teal mb-3">
-                            <i class="fas fa-database fa-3x text-white"></i>
+
+    <div class="container">
+        <div class="row mt-4 gap-4 justify-content-evenly ag-courses_box">
+
+            <template id="audienceCard">
+                <div class="col-lg-3 mb-2 p-0">
+                    <div class="ag-courses_item">
+                        <div class="card border-0 h-100">
+                            <div class="card-body ag-courses-item_link">
+                                <div class="ag-courses-item_bg"></div>
+                                <h5 class="card-title ag-courses-item_title"></h5>
+                                <div class="text-center ag-courses-item_date-box">
+                                    <span class="card-count"></span>
+                                    <sub>Global Audience</sub>
+                                </div>
+                                <div class="mt-1 text-center ag-courses-item_date-box">
+                                    <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 10px; margin-top: 18px;"></p>
+                                </div>
+                                <div class="w-100 mt-1 ag-courses-item_date-box">
+                                    <a class="audience-link">
+                                        <button class="btn btn-card-audience w-100">Audience Details</button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="fw-bold text-dark">Data-Driven Demand Programs</h4>
-                        <p class="text-muted">We analyze real-time data to create precision-targeted campaigns.</p>
                     </div>
                 </div>
-
-                <!-- Smart Engagement Strategies -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInUp animate__delay-1s hover-effect">
-                        <div class="icon-box bg-gradient-blue mb-3">
-                            <i class="fas fa-bullhorn fa-3x text-white"></i>
-                        </div>
-                        <h4 class="fw-bold text-dark">Smart Engagement Strategies</h4>
-                        <p class="text-muted">Advanced AI and automation for highly engaging interactions.</p>
-                    </div>
-                </div>
-
-                <!-- Performance Optimization Tools -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="floating-box bg-white text-center p-4 rounded-4 shadow-lg animate__animated animate__fadeInRight animate__delay-2s hover-effect">
-                        <div class="icon-box bg-gradient-purple mb-3">
-                            <i class="fas fa-tools fa-3x text-white"></i>
-                        </div>
-                        <h4 class="fw-bold text-dark">Performance Optimization Tools</h4>
-                        <p class="text-muted">Use cutting-edge tools to track and refine every campaign.</p>
-                    </div>
-                </div>
-            </div>
+            </template>
         </div>
-    </section>
+    </div>
 
-    <!-- Custom Styles -->
-    <style>
-        /* Gradient Backgrounds */
-        
-        .bg-gradient-teal {
-            background: linear-gradient(135deg, #26a69a, #009688);
-        }
-        
-        .bg-gradient-blue {
-            background: linear-gradient(135deg, #42a5f5, #1e88e5);
-        }
-        
-        .bg-gradient-purple {
-            background: linear-gradient(135deg, #ab47bc, #8e24aa);
-        }
-        /* Heading Styles */
-        
-        .text-responsive {
-            letter-spacing: 2px;
-            font-weight: 900;
-            font-size: 2.2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .text-responsive {
-                font-size: 1.8rem;
-            }
-        }
-        /* Floating Box Styling - Uniform Card Size */
-        
-        .floating-box {
-            position: relative;
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            min-height: 320px;
-            /* Ensures all cards have the same height */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .floating-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-        }
-        /* Icon Box Styling */
-        
-        .icon-box {
-            width: 80px;
-            height: 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 20px;
-            margin: 0 auto;
-            transition: transform 0.3s ease;
-        }
-        /* Hover Effect */
-        
-        .hover-effect:hover .icon-box {
-            transform: scale(1.1);
-        }
-        /* Responsive Adjustments */
-        
-        @media (max-width: 576px) {
-            .floating-box {
-                padding: 20px;
-            }
-            .icon-box {
-                width: 70px;
-                height: 70px;
-            }
-            .text-responsive {
-                font-size: 1.5rem;
-                letter-spacing: 1px;
-            }
-        }
-    </style>
+    <!-- Card Data -->
+    <script>
+        const audienceData = [{
+            title: "Marketing",
+            count: "28.73M",
+            topics: "Sales Operations,Social Selling,Collaboration,Reporting & Analytics,Pipeline Management,Outbound Strategy,Lead Generation,Sales Automation,Sales Personalization,Sales AI",
+            url: "marketing"
+        }, {
+            title: "Sales",
+            count: "29.41M",
+            topics: "Sales Operations,Social Selling,Collaboration,Reporting & Analytics,Pipeline Management,Outbound Strategy,Lead Generation,Sales Automation,Sales Personalization,Sales AI",
+            url: "sales"
+        }, {
+            title: "Human Resources",
+            count: "19.21M",
+            topics: "Employee Engagement,Employee Relations,Onboarding,HR Management System,Artificial Intelligence,Hybrid Work,Talent Management,Wellness,Job Analysis,Performance Management,Artificial Intelligence",
+            url: "human-resources"
+        }, {
+            title: "Information Technology",
+            count: "49.84M",
+            topics: "Data,Network,Remote Work,Malware,Zero Trust,Security,Software,Phishing,Cloud Services,Cyberattack",
+            url: "information-technology"
+        }, {
+            title: "Finance",
+            count: "13.261M",
+            topics: "Risk,Analytics,Automation,FP&A,Software,Remote Work,Reporting,Statistics,Tax Management",
+            url: "finance"
+        }, {
+            title: "Business Leaders",
+            count: "3.06M",
+            topics: "Risk,Mentoring,Telecommuting,Customer Loyalty,Diversity,Data,Leadership,Brand Awareness,Ethics,International",
+            url: "business-leaders"
+        }];
+    </script>
+    </div>
+    </div>
+
+    <!-- Consolidated JavaScript -->
+    <script>
+        // Dynamic Card Generation
+        const cardTemplate = document.getElementById('audienceCard');
+        const container = document.querySelector('.ag-courses_box');
+        audienceData.forEach((data, index) => {
+            const clone = cardTemplate.content.cloneNode(true);
+            clone.querySelector('.ag-courses-item_title').textContent = data.title;
+            clone.querySelector('.card-count').textContent = data.count;
+            clone.querySelector('p').textContent = data.topics + ' ...';
+            clone.querySelector('p').title = data.topics;
+            // clone.querySelector('a').href = `https://alltake.com/audience-demographics/details/${data.url}`;
+            container.appendChild(clone);
+
+            // Color Assignment
+            const colors = ['#f9b234', '#3ecd5e', '#e44002', '#952aff', '#cd3e94', '#4c49ea'];
+            const lightColors = ['#fcd785', '#a2e8b1', '#ff9a66', '#d9a8ff', '#f5a6cf', '#a2a0ff'];
+            const hoverColors = ['#e0a828', '#2da44e', '#c53702', '#7f1fb3', '#b22979', '#3a38c1'];
+            const colorIndex = index % 6;
+
+            const item = container.children[container.children.length - 1];
+            const bg = item.querySelector('.ag-courses-item_bg');
+            bg.style.backgroundColor = lightColors[colorIndex];
+            item.querySelector('.ag-courses-item_link').style.setProperty('--light-bg', lightColors[colorIndex]);
+            item.querySelector('.ag-courses-item_link').style.setProperty('--hover-bg', hoverColors[colorIndex]);
+
+            const btn = item.querySelector('.btn-card-audience');
+            btn.style.backgroundColor = colors[colorIndex];
+            btn.addEventListener('mouseover', () => {
+                btn.style.backgroundColor = hoverColors[colorIndex];
+                btn.style.color = '#ffffff';
+            });
+            btn.addEventListener('mouseout', () => {
+                btn.style.backgroundColor = colors[colorIndex];
+                btn.style.color = '';
+            });
+        });
+    </script>
 
 
     <!-- Our Insights Section -->
