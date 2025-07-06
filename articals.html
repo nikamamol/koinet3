@@ -395,8 +395,8 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand fw-bold text-uppercase" href="../index.html">
-                <img src="/images/KNM-LOGO resized.png" alt="Koinet Media" width="120">
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <img src="/images/KNM-LOGO resized.png" alt="B2BTechByte" width="200" height="70">
             </a>
 
             <!-- Mobile Toggle Button -->
@@ -492,17 +492,6 @@
             transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         /* Navbar Hover Effect */
-        
-        .navbar-custom:hover {
-            background-color: #30528D !important;
-            /* Light blue background on hover */
-        }
-        /* Navbar Links Text Color on Hover */
-        
-        .navbar-custom:hover .nav-link {
-            color: white !important;
-            /* White text color on hover */
-        }
         /* Ensure the logo is not affected */
         
         .navbar-custom:hover .navbar-brand {
@@ -566,14 +555,18 @@
 
 
     <!-- Hero Section -->
-    <div class="hero">
-        <h1 class="display-4 fw-bold  text-uppercase tracking-widest">Stay Ahead with the Latest Articles</h1>
-        <p class="lead">Explore the latest trends, news, and expert opinions</p>
+    <!-- Articles Hero Section with Black Background -->
+    <div class="container-fluid bg-dark text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-uppercase text-white">Stay Ahead with the Latest Articles</h1>
+            <p class="lead text-light mt-3">Explore the latest trends, news, and expert opinions</p>
+        </div>
     </div>
+
 
     <!-- Blog Container Section -->
     <div class="container mt-5 text-center">
-        <h2 class="mb-4">Latest Articles</h2>
+
 
         <!-- Search Bar -->
         <div class="search-bar mb-4">
@@ -624,7 +617,7 @@
                 blogElement.className = "insight-item";
                 blogElement.innerHTML = `
                     <div class="insight-image">
-                        <img src="${blog.imageUrl || 'https://media.istockphoto.com/id/1472933890/vector/no-image-vector-symbol-missing-available-icon-no-gallery-for-this-moment-placeholder.jpg?s=612x612&w=0&k=20&c=Rdn-lecwAj8ciQEccm0Ep2RX50FCuUJOaEM8qQjiLL0='}" alt="Blog Image">
+                        <img src="${blog.imageUrl || 'https://media.istockphoto.com/id/1472933890/vector/no-image-vector-symbol-missing-available-icon-no-gallery-for-this-moment-placeholder.jpg?s=612x612&w=0&k=20&c=Rdn-lecwAj8ciQEccm0Ep2RX50FCuUJOaEM8qQjiLL0='}" alt="Blog Image" class="rounded-0">
                     </div>
                     <div class="text-start">
                         <h5 class="fw-bold">${blog.title}</h5>
@@ -692,114 +685,19 @@
     </style>
 
     <!-- Newsletter Subscription -->
-    <div class="container mt-5">
-        <div class="newsletter">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Get the latest articles straight to your inbox</p>
-            <input type="email" id="email" class="form-control mb-3" placeholder="Enter your email">
-            <button class="btn btn-primary fw-bold" onclick="subscribe()">Subscribe</button>
+    <div class="container my-5">
+        <div class="bg-light p-5 rounded shadow text-center">
+            <h2 class="mb-3 fw-bold">Subscribe to Our Newsletter</h2>
+            <p class="mb-4 text-muted">Get the latest blogs straight to your inbox</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <input type="email" id="email" class="form-control mb-3" placeholder="Enter your email">
+                    <button class="btn btn-primary w-100 fw-bold" onclick="subscribe()">Subscribe</button>
+                </div>
+            </div>
         </div>
     </div>
 
-
-
-
-    <style>
-        /* Newsletter Section Styling */
-        
-        .newsletter {
-            background-color: #e6f2ff;
-            /* Soft light blue background */
-            padding: 30px;
-            border-radius: 12px;
-            /* Rounded corners */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            /* Soft shadow for depth */
-            text-align: center;
-            /* Centered text alignment */
-            transition: transform 0.3s;
-            /* Smooth hover effect */
-        }
-        
-        .newsletter:hover {
-            transform: scale(1.02);
-            /* Slightly scale up on hover */
-        }
-        
-        .newsletter h2 {
-            font-size: 2rem;
-            /* Increase heading size */
-            color: #0056b3;
-            /* Dark blue for heading */
-            margin-bottom: 15px;
-        }
-        
-        .newsletter p {
-            font-size: 1.2rem;
-            /* Slightly larger text */
-            color: #333;
-            /* Dark gray for paragraph */
-            margin-bottom: 20px;
-        }
-        
-        .form-control {
-            border-radius: 5px;
-            /* Rounded corners for input */
-            border: 1px solid #0056b3;
-            /* Blue border */
-            padding: 10px;
-            /* Padding for input */
-            transition: border-color 0.3s;
-            /* Smooth transition */
-        }
-        
-        .form-control::placeholder {
-            color: #aaa;
-            /* Placeholder color */
-        }
-        
-        .form-control:focus {
-            border-color: #004085;
-            /* Darker blue on focus */
-            box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
-            /* Shadow effect on focus */
-        }
-        
-        .btn-primary {
-            background-color: #007bff;
-            /* Bright blue button color */
-            border: none;
-            /* Remove border */
-            color: white;
-            /* White text color */
-            padding: 10px 20px;
-            font-size: 1rem;
-            /* Button font size */
-            transition: background-color 0.3s, transform 0.2s;
-            /* Transition effects */
-            border-radius: 5px;
-            /* Rounded corners for button */
-        }
-        
-        .btn-primary:hover {
-            background-color: #0056b3;
-            /* Darker blue on hover */
-            transform: scale(1.05);
-            /* Slight scale effect on hover */
-        }
-        /* Responsive Styles */
-        
-        @media (max-width: 576px) {
-            .form-control {
-                width: 100%;
-                /* Full width for mobile */
-            }
-            .btn-primary {
-                width: 100%;
-                /* Full width for the button on small devices */
-            }
-        }
-    </style>
 
     <script>
         function subscribe() {
@@ -813,147 +711,54 @@
         }
     </script>
 
-
     <!-- Footer Section -->
-    <footer class="footer ">
-        <div class="footer-top ">
-            <div class="container ">
-                <div class="row text-center ">
-                    <!-- Contact via Email -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Contact Us via Email</h4>
-                        <p><a href="mailto:info@koinetmedia.com" class="contact-link">info@koinetmedia.com</a></p>
-                    </div>
+    <footer class="bg-light text-dark pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4 pb-4 border-bottom">
+                <!-- Brand & Description -->
+                <div class="col-md-4">
+                    <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                        <img src="/images/KNM-LOGO resized.png" alt="B2BTechByte" width="200" height="70">
+                    </a>
+                    <p class="small text-secondary">
+                        Empowering businesses through smarter lead generation and multichannel growth strategies.
+                    </p>
+                </div>
 
-                    <!-- Office Address -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Our Office</h4>
-                        <p><a href="https://www.google.com/maps/place/Pune,+Maharashtra,+India+411014" target="_blank" class="contact-link">
-        Pune, Maharashtra, India 411014</a></p>
-                    </div>
+                <!-- Footer Navigation -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-semibold text-dark">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="footerpages/Privacy-policy.html" class="text-decoration-none text-secondary d-block mb-2">Privacy Policy</a></li>
+                        <li><a href="footerpages/GDPR.html" class="text-decoration-none text-secondary d-block mb-2">GDPR</a></li>
+                        <li><a href="footerpages/Terms-Condition.html" class="text-decoration-none text-secondary d-block mb-2">Terms & Conditions</a></li>
+                        <li><a href="footerpages/CaseStudies.html" class="text-decoration-none text-secondary d-block mb-2">Case Studies</a></li>
+                        <li><a href="footerpages/Media_Kit.html" class="text-decoration-none text-secondary d-block">Media Kit</a></li>
+                    </ul>
+                </div>
 
-                    <!-- Contact Number -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h4>Contact Us</h4>
-                        <p><a href="tel:+919021568448" class="contact-link">+91 90215 68448</a></p>
-                    </div>
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-semibold text-dark">Contact</h5>
+                    <p class="mb-2"><i class="fas fa-envelope text-primary me-2"></i> <a href="mailto:info@b2btechbyte.com" class="text-decoration-none text-primary">info@b2btechbyte.com</a></p>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Pune, Maharashtra, India 411014</p>
+                    <p><i class="fas fa-phone text-primary me-2"></i> <a href="tel:+919021568448" class="text-decoration-none text-primary">+91 90215 68448</a></p>
                 </div>
             </div>
-        </div>
 
-        <!-- Footer Bottom -->
-        <div class="footer-bottom ">
-            <div class="container text-center ">
-                <ul class="footer-links ">
-                    <li><a href="footerpages/Privacy-policy.html ">Privacy Policy</a></li>
-                    <li><a href="footerpages/CaseStudies.html ">Case Studies</a></li>
-                    <li><a href="footerpages/GDPR.html ">GDPR</a></li>
-                    <!-- <li><a href="footerpages/CCPA.html ">CCPA</a></li> -->
-                    <li><a href="footerpages/Terms-Condition.html ">Terms & Conditions</a></li>
-                    <li><a href="footerpages/Media_Kit.html ">Media Kit</a></li>
-
-                </ul>
-
-                <!-- Copyright & Social Icons -->
-                <p>&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
-                <div class="social-icons ">
-                    <a target="_blank" href="https://x.com/KoinetMedia "><i class="fab fa-twitter "></i></a>
-                    <a target="_blank" href="https://www.facebook.com/KoiNetMedia/"><i class="fab fa-facebook "></i></a>
-                    <a target="_blank" href="https://www.instagram.com/koinetmedia1/ "><i class="fab fa-instagram "></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/koinet-media/posts/ "><i class="fab fa-linkedin "></i></a>
-
+            <!-- Bottom Bar -->
+            <div class="text-center pt-3">
+                <p class="small text-secondary mb-2">&copy; 2025 <strong>B2BTechByte</strong>. All rights reserved.</p>
+                <div>
+                    <a href="https://x.com/b2btechbyte" class="text-primary me-3" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/b2btechbyte/" class="text-primary me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/b2btechbyte/" class="text-primary me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/b2btechbyte/posts/" class="text-primary" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- CSS -->
-    <style>
-        /* Footer Styling */
-        
-        .footer {
-            background: #1e1e1e;
-            color: #ffffff;
-            padding-top: 50px;
-        }
-        /* Top Section */
-        
-        .footer-top {
-            background: #ffffff;
-            padding: 40px 0;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-        }
-        
-        .footer-top h4 {
-            margin-top: 10px;
-            font-weight: 600;
-            color: #222;
-        }
-        
-        .footer-top p {
-            color: #555;
-        }
-        
-        .footer-icon {
-            width: 60px;
-            height: 60px;
-            background: #1A8AE6;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin: 0 auto 15px;
-        }
-        /* Bottom Section */
-        
-        .footer-bottom {
-            padding: 30px 0;
-        }
-        
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 15px;
-        }
-        
-        .footer-links li {
-            display: inline;
-            margin: 0 10px;
-        }
-        
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            color: #007bff;
-        }
-        
-        .social-icons a {
-            display: inline-block;
-            margin: 0 8px;
-            color: white;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-        
-        .social-icons a:hover {
-            color: #007bff;
-        }
-    </style>
 
     <!-- Font Awesome for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous "></script>

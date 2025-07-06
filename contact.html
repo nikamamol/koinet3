@@ -13,414 +13,355 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <style>
          :root {
-            --primary-color: #007bff;
-            --primary-light: #e6f0ff;
-            --secondary-color: #6c757d;
-            --dark-color: #343a40;
-            --light-color: #f8f9fa;
+            --primary-color: #2563eb;
+            --primary-light: #dbeafe;
+            --secondary-color: #4b5563;
+            --dark-color: #1f2937;
+            --light-color: #f9fafb;
             --white: #ffffff;
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--light-color);
             color: var(--dark-color);
-            line-height: 1.7;
+            line-height: 1.6;
         }
         
         .contact-hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
             color: var(--white);
-            padding: 100px 0 80px;
+            padding: 80px 0;
             text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-            opacity: 0.1;
         }
         
         .contact-hero h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            position: relative;
+            margin-bottom: 1rem;
         }
         
         .contact-hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            position: relative;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
             opacity: 0.9;
         }
         
         .contact-container {
-            max-width: 1200px;
-            margin: -50px auto 0;
-            padding: 0 20px 60px;
-            position: relative;
-            z-index: 2;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 15px;
         }
         
         .contact-card {
-            border-radius: 12px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            background: var(--white);
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
         }
         
         .contact-form {
-            background: var(--white);
-            padding: 50px;
-            height: 100%;
+            padding: 40px;
         }
         
         .contact-form h2 {
             color: var(--dark-color);
-            margin-bottom: 30px;
-            font-weight: 700;
-            position: relative;
-            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+        /* Multi-step form styles */
+        
+        .form-step {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
-        .contact-form h2::after {
+        .form-step.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        .progress-bar-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .progress-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        
+        .progress-step::before {
             content: '';
             position: absolute;
+            top: 12px;
             left: 0;
-            bottom: 0;
-            width: 60px;
+            right: 0;
             height: 4px;
+            background: #e5e7eb;
+            z-index: 1;
+        }
+        
+        .progress-step.active::before,
+        .progress-step.completed::before {
             background: var(--primary-color);
-            border-radius: 2px;
+        }
+        
+        .progress-step:last-child::before {
+            display: none;
+        }
+        
+        .progress-circle {
+            width: 30px;
+            height: 30px;
+            background: #e5e7eb;
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+            position: relative;
+            z-index: 2;
+            font-size: 0.9rem;
+        }
+        
+        .progress-step.active .progress-circle,
+        .progress-step.completed .progress-circle {
+            background: var(--primary-color);
         }
         
         .form-control {
-            height: 50px;
             border-radius: 8px;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #d1d5db;
+            padding: 12px 16px;
             margin-bottom: 20px;
-            padding-left: 20px;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
+            position: relative;
         }
         
         .form-control:focus {
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .form-group label {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            color: var(--secondary-color);
+            transition: all 0.2s ease;
+            pointer-events: none;
+            font-size: 0.9rem;
+        }
+        
+        .form-group input:focus+label,
+        .form-group input:not(:placeholder-shown)+label,
+        .form-group textarea:focus+label,
+        .form-group textarea:not(:placeholder-shown)+label {
+            top: -10px;
+            left: 12px;
+            font-size: 0.75rem;
+            background: var(--white);
+            padding: 0 4px;
+            color: var(--primary-color);
         }
         
         textarea.form-control {
-            height: auto;
-            min-height: 150px;
-            padding-top: 15px;
+            min-height: 120px;
+            padding-top: 12px;
         }
         
-        .btn-submit {
+        .btn-submit,
+        .btn-next,
+        .btn-prev {
             background-color: var(--primary-color);
             color: var(--white);
-            border: none;
-            padding: 14px 30px;
-            font-size: 1rem;
-            font-weight: 600;
+            padding: 12px 24px;
+            font-weight: 500;
             border-radius: 8px;
-            transition: all 0.3s ease;
-            width: 100%;
-            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            border: none;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
-        .btn-submit:hover {
-            background-color: #0069d9;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        .btn-prev {
+            background-color: #6b7280;
+        }
+        
+        .btn-submit:hover,
+        .btn-next:hover,
+        .btn-prev:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-prev:hover {
+            background-color: #4b5563;
         }
         
         .contact-info {
             background: var(--primary-light);
-            padding: 50px;
-            height: 100%;
-            position: relative;
+            padding: 40px;
+            border-radius: 16px;
         }
         
         .contact-info h3 {
-            color: var(--dark-color);
-            font-weight: 700;
-            margin-bottom: 30px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .contact-info h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--primary-color);
-            border-radius: 2px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            font-size: 1.6rem;
         }
         
         .info-item {
-            margin-bottom: 30px;
-            position: relative;
-            padding-left: 40px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
         
         .info-item i {
-            position: absolute;
-            left: 0;
-            top: 5px;
             color: var(--primary-color);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            margin-right: 15px;
         }
         
         .info-item h4 {
-            font-weight: 600;
-            color: var(--dark-color);
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .info-item p {
-            color: var(--secondary-color);
-            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 1rem;
+            margin: 0;
         }
         
         .contact-action-btn {
             background: var(--primary-color);
             color: var(--white);
-            border: none;
-            padding: 12px 25px;
-            font-size: 0.95rem;
-            font-weight: 500;
+            padding: 10px 20px;
             border-radius: 8px;
-            transition: all 0.3s ease;
-            display: inline-flex;
+            text-decoration: none;
+            display: flex;
             align-items: center;
-            justify-content: center;
             width: 100%;
             margin-bottom: 15px;
-            text-decoration: none;
+            transition: all 0.2s ease;
         }
         
         .contact-action-btn:hover {
-            background: #0069d9;
+            background: #1d4ed8;
             color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
         }
         
         .contact-action-btn i {
-            margin-right: 10px;
-            font-size: 1.1rem;
+            margin-right: 8px;
         }
-        
-        .map-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            margin-top: 60px;
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
-        }
-        
-        .floating-shapes {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            z-index: 0;
-        }
-        
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .shape-1 {
-            width: 300px;
-            height: 300px;
-            top: -100px;
-            right: -100px;
-        }
-        
-        .shape-2 {
-            width: 200px;
-            height: 200px;
-            bottom: -50px;
-            left: -50px;
-        }
-        /* Navbar Styling */
         
         .navbar-custom {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        
-        .navbar-custom:hover {
-            background-color: #30528D !important;
-        }
-        
-        .navbar-custom:hover .nav-link {
-            color: white !important;
-        }
-        
-        .navbar-custom:hover .navbar-brand {
-            background-color: transparent !important;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
         
         .navbar-custom .nav-link {
-            color: #000;
-            font-weight: 600;
-            transition: color 0.3s ease-in-out;
+            color: var(--dark-color);
+            font-weight: 500;
+            padding: 10px 15px;
         }
         
         .navbar-custom .dropdown-menu {
-            background: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
             border: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        
-        .animate-dropdown {
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .custom-toggler {
-            border: none;
-            background: none;
-        }
-        
-        .custom-toggler:focus {
-            box-shadow: none;
-        }
-        /* Footer Styling */
         
         .footer {
-            background: #1e1e1e;
-            color: #ffffff;
-            padding-top: 50px;
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 40px 0;
         }
         
         .footer-top {
-            background: #ffffff;
-            padding: 40px 0;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
+            background: var(--white);
+            padding: 30px 0;
+            border-radius: 24px 24px 0 0;
         }
         
         .footer-top h4 {
-            margin-top: 10px;
             font-weight: 600;
-            color: #222;
+            color: var(--dark-color);
+            font-size: 1.2rem;
         }
         
         .footer-top p {
-            color: #555;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
         }
         
         .footer-icon {
-            width: 60px;
-            height: 60px;
-            background: #1A8AE6;
-            color: white;
+            width: 48px;
+            height: 48px;
+            background: var(--primary-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            margin: 0 auto 15px;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
         
         .footer-bottom {
-            padding: 30px 0;
-        }
-        
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 15px;
+            padding: 20px 0;
+            font-size: 0.9rem;
         }
         
         .footer-links li {
             display: inline;
-            margin: 0 10px;
+            margin: 0 12px;
         }
         
         .footer-links a {
-            color: #ddd;
+            color: #d1d5db;
             text-decoration: none;
         }
         
         .footer-links a:hover {
-            color: #007bff;
+            color: var(--primary-color);
         }
         
         .social-icons a {
-            display: inline-block;
-            margin: 0 8px;
-            color: white;
-            font-size: 18px;
-            transition: 0.3s;
+            color: #d1d5db;
+            font-size: 16px;
+            margin: 0 10px;
         }
         
         .social-icons a:hover {
-            color: #007bff;
+            color: var(--primary-color);
         }
         
         .contact-link {
+            color: var(--primary-color);
             text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
         }
         
         .contact-link:hover {
             text-decoration: underline;
-            color: #0056b3;
         }
-        /* Media Queries for Responsiveness */
         
         @media (max-width: 991px) {
-            .navbar-custom {
-                background: rgba(255, 255, 255, 0.95);
+            .contact-hero {
+                padding: 60px 0;
             }
-            .contact-container {
-                margin-top: -30px;
+            .contact-hero h1 {
+                font-size: 2.5rem;
             }
             .contact-form,
             .contact-info {
@@ -429,20 +370,18 @@
         }
         
         @media (max-width: 768px) {
-            .contact-hero {
-                padding: 80px 0 60px;
-            }
             .contact-hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             .contact-hero p {
                 font-size: 1rem;
             }
-            .contact-card {
-                margin-bottom: 20px;
+            .progress-bar-container {
+                flex-wrap: wrap;
             }
-            .map-container iframe {
-                height: 300px;
+            .progress-step {
+                flex: 0 0 33.33%;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -450,10 +389,10 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white">
         <div class="container">
             <a class="navbar-brand fw-bold text-uppercase" href="index.html">
-                <img src="/images/KNM-LOGO resized.png" alt="Koinet Media" width="120">
+                <img src="/images/KNM-LOGO resized.png" alt="B2BTechByte" width="200" height="70">
             </a>
             <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -505,14 +444,10 @@
     </nav>
 
     <!-- Contact Hero Section -->
-    <section class="contact-hero">
-        <div class="floating-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-        </div>
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">Contact Us</h1>
-            <p class="animate__animated animate__fadeInUp">Any questions or remarks? Just write us a message!</p>
+    <section class="contact-hero ">
+        <div class="container py-5">
+            <h1 class="animate__animated animate__fadeInDown">Get in Touch</h1>
+            <p class="animate__animated animate__fadeInUp">Have a question or need assistance? Reach out to our team today!</p>
         </div>
     </section>
 
@@ -523,44 +458,72 @@
             <div class="col-lg-7">
                 <div class="contact-card animate__animated animate__fadeInLeft">
                     <div class="contact-form">
-                        <h2>Send us a message</h2>
+                        <h2>Send a Message</h2>
                         <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter a valid email address" required>
+                            <div class="progress-bar-container">
+                                <div class="progress-step active">
+                                    <div class="progress-circle">1</div>
+                                    <span>Personal Info</span>
+                                </div>
+                                <div class="progress-step">
+                                    <div class="progress-circle">2</div>
+                                    <span>Contact Details</span>
+                                </div>
+                                <div class="progress-step">
+                                    <div class="progress-circle">3</div>
+                                    <span>Message</span>
+                                </div>
+                            </div>
+
+                            <!-- Step 1: Personal Info -->
+                            <div class="form-step active">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name " required>
+                                    <!-- <label for="name">Name</label> -->
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email " required>
+                                    <!-- <label for="email">Email</label> -->
+                                </div>
+                                <button type="button" class="btn-next mt-3 w-100">Next</button>
+                            </div>
+
+                            <!-- Step 2: Contact Details -->
+                            <div class="form-step">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <select class="form-control border-1 text-dark" id="countryCode" style="max-width: 120px;" required>
+                                            <option selected value="+91">India (+91)</option>
+                                            <option value="+1">USA (+1)</option>
+                                            <option value="+44">UK (+44)</option>
+                                            <option value="+93">Afghanistan (+93)</option>
+                                            <option value="+355">Albania (+355)</option>
+                                        </select>
+                                        <input type="tel" class="form-control" id="phone" placeholder=" Phone Number" required>
+                                        <!-- <label for="phone">Phone Number</label> -->
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter your Name" required>
-                                    </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="companyName" placeholder="Enter Your Company Name " required>
+                                    <!-- <label for="companyName">Company Name</label> -->
+                                </div>
+                                <div class="d-flex gap-2 mt-3">
+                                    <button type="button" class="btn-prev flex-fill">Previous</button>
+                                    <button type="button" class="btn-next flex-fill">Next</button>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <div class="input-group">
-                                    <select class="form-control border-1 text-dark" id="countryCode" style="max-width: 120px;" required>
-                                        <option value="+91">India (+91)</option>
-                                        <option value="+1">USA (+1)</option>
-                                        <option value="+44">UK (+44)</option>
-                                        <option value="+93">Afghanistan (+93)</option>
-                                        <option value="+355">Albania (+355)</option>
-                                    </select>
-                                    <input type="tel" class="form-control" id="phone" required>
+
+                            <!-- Step 3: Message -->
+                            <div class="form-step">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Message " required></textarea>
+                                    <!-- <label for="message">Message</label> -->
+                                </div>
+                                <div class="d-flex gap-2 mt-3">
+                                    <button type="button" class="btn-prev flex-fill">Previous</button>
+                                    <button type="submit" class="btn-submit flex-fill">SUBMIT</button>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="companyName" class="form-label">Company Name</label>
-                                <input type="text" class="form-control" id="companyName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Your message here..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-submit mt-3">SUBMIT</button>
                         </form>
                     </div>
                 </div>
@@ -571,21 +534,22 @@
                 <div class="contact-card animate__animated animate__fadeInRight">
                     <div class="contact-info">
                         <h3>Contact Information</h3>
-
                         <div class="info-item">
                             <i class="fas fa-phone-alt"></i>
-                            <h4>PHONE</h4>
-                            <p>+91 9021568448</p>
-
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 9021568448</p>
+                            </div>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <h4>OUR OFFICE LOCATION</h4>
-                            <p>Pune, Maharashtra </p>
-                            <p>India 411014</p>
+                            <div>
+                                <h4>Office Location</h4>
+                                <p>Pune, Maharashtra, India 411014</p>
+                            </div>
                         </div>
                         <a href="mailto:info@koinetmedia.com" class="contact-action-btn">
-                            <i class="fas fa-envelope"></i> Send Email
+                            <i class="fas fa-envelope"></i> Email Us
                         </a>
                         <a href="tel:+919021568448" class="contact-action-btn">
                             <i class="fas fa-phone"></i> Call Now
@@ -594,58 +558,51 @@
                 </div>
             </div>
         </div>
-
-        <!-- Map Section -->
-        <!-- <div class="map-container animate__animated animate__fadeInUp">
-            <iframe src="https://maps.google.com/maps?q=City+Vista,Kharadi,Pune,Maharashtra,India&output=embed"></iframe>
-        </div> -->
     </div>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Contact Us via Email</h4>
-                        <p><a href="mailto:info@koinetmedia.com" class="contact-link">info@koinetmedia.com</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Our Office</h4>
-                        <p><a href="https://www.google.com/maps/place/Pune,+Maharashtra,+India+411014" target="_blank" class="contact-link">Pune, Maharashtra, India 411014</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h4>Contact Us</h4>
-                        <p><a href="tel:+919021568448" class="contact-link">+91 90215 68448</a></p>
-                    </div>
+    <footer class="bg-light text-dark pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4 pb-4 border-bottom">
+                <!-- Brand & Description -->
+                <div class="col-md-4">
+                    <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                        <img src="/images/KNM-LOGO resized.png" alt="B2BTechByte" width="200" height="70">
+                    </a>
+                    <p class="small text-secondary">
+                        Empowering businesses through smarter lead generation and multichannel growth strategies.
+                    </p>
+                </div>
+
+                <!-- Footer Navigation -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-semibold text-dark">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="footerpages/Privacy-policy.html" class="text-decoration-none text-secondary d-block mb-2">Privacy Policy</a></li>
+                        <li><a href="footerpages/GDPR.html" class="text-decoration-none text-secondary d-block mb-2">GDPR</a></li>
+                        <li><a href="footerpages/Terms-Condition.html" class="text-decoration-none text-secondary d-block mb-2">Terms & Conditions</a></li>
+                        <li><a href="footerpages/CaseStudies.html" class="text-decoration-none text-secondary d-block mb-2">Case Studies</a></li>
+                        <li><a href="footerpages/Media_Kit.html" class="text-decoration-none text-secondary d-block">Media Kit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-semibold text-dark">Contact</h5>
+                    <p class="mb-2"><i class="fas fa-envelope text-primary me-2"></i> <a href="mailto:info@b2btechbyte.com" class="text-decoration-none text-primary">info@b2btechbyte.com</a></p>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Pune, Maharashtra, India 411014</p>
+                    <p><i class="fas fa-phone text-primary me-2"></i> <a href="tel:+919021568448" class="text-decoration-none text-primary">+91 90215 68448</a></p>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container text-center">
-                <ul class="footer-links">
-                    <li><a href="footerpages/Privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="footerpages/CaseStudies.html">Case Studies</a></li>
-                    <li><a href="footerpages/GDPR.html">GDPR</a></li>
-                    <!-- <li><a href="footerpages/CCPA.html">CCPA</a></li> -->
-                    <li><a href="footerpages/Terms-Condition.html">Terms & Conditions</a></li>
-                    <li><a href="footerpages/Media_Kit.html">Media Kit</a></li>
-                </ul>
-                <p>© 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
-                <div class="social-icons">
-                    <a target="_blank" href="https://x.com/KoinetMedia"><i class="fab fa-twitter"></i></a>
-                    <a target="_blank" href="https://www.facebook.com/KoiNetMedia/"><i class="fab fa-facebook"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/koinetmedia1/"><i class="fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/koinet-media/posts/"><i class="fab fa-linkedin"></i></a>
+
+            <!-- Bottom Bar -->
+            <div class="text-center pt-3">
+                <p class="small text-secondary mb-2">&copy; 2025 <strong>B2BTechByte</strong>. All rights reserved.</p>
+                <div>
+                    <a href="https://x.com/b2btechbyte" class="text-primary me-3" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/b2btechbyte/" class="text-primary me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/b2btechbyte/" class="text-primary me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/b2btechbyte/posts/" class="text-primary" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -657,7 +614,7 @@
     <!-- Navbar Scroll Effect -->
     <script>
         document.addEventListener("scroll", function() {
-            let navbar = document.querySelector(".navbar-custom");
+            let navbar = document.querySelector(".navbar");
             if (window.scrollY > 50) {
                 navbar.classList.add("shadow-sm");
             } else {
@@ -666,13 +623,59 @@
         });
     </script>
 
-    <!-- Form Submission Script -->
+    <!-- Form Multi-Step Logic -->
     <script>
-        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+        const form = document.getElementById('contactForm');
+        const steps = document.querySelectorAll('.form-step');
+        const progressSteps = document.querySelectorAll('.progress-step');
+        let currentStep = 1;
+
+        function showStep(stepNumber) {
+            steps.forEach((step, index) => {
+                step.classList.toggle('active', index + 1 === stepNumber);
+            });
+            progressSteps.forEach((step, index) => {
+                step.classList.toggle('active', index + 1 === stepNumber);
+                step.classList.toggle('completed', index + 1 < stepNumber);
+            });
+        }
+
+        document.querySelectorAll('.btn-next').forEach(button => {
+            button.addEventListener('click', () => {
+                if (validateStep(currentStep)) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn-prev').forEach(button => {
+            button.addEventListener('click', () => {
+                currentStep--;
+                showStep(currentStep);
+            });
+        });
+
+        function validateStep(step) {
+            let valid = true;
+            const inputs = steps[step - 1].querySelectorAll('input, select');
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    input.reportValidity();
+                    valid = false;
+                }
+            });
+            return valid;
+        }
+
+        form.addEventListener('submit', async function(event) {
             event.preventDefault();
-            const submitButton = document.querySelector("#contactForm button");
+            if (!validateStep(currentStep)) return;
+
+            const submitButton = document.querySelector(".btn-submit");
             submitButton.disabled = true;
             submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
+
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
@@ -681,6 +684,7 @@
                 message: document.getElementById('message').value,
                 countryCode: document.getElementById('countryCode').value
             };
+
             try {
                 const response = await fetch('https://koinetwebbackend.onrender.com/api/postContact', {
                     method: 'POST',
@@ -691,7 +695,9 @@
                 });
                 if (response.ok) {
                     alert("Your message has been sent successfully!");
-                    document.getElementById('contactForm').reset();
+                    form.reset();
+                    currentStep = 1;
+                    showStep(currentStep);
                 } else {
                     const errorData = await response.json();
                     alert("Error: " + errorData.error);

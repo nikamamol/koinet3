@@ -3,15 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Koinet Media - Home</title>
+    <title>B2BTechByte - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Koinet Media - Unlock Your Business Growth with Innovative Digital Solutions">
+    <meta name="description" content="B2BTechByte - Unlock Your Business Growth with Innovative Digital Solutions">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -368,7 +369,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand fw-bold text-uppercase" href="index.html">
-                <img src="/images/KNM-LOGO resized.png" alt="Koinet Media" width="120">
+                <img src="/images/KNM-LOGO resized.png" alt="B2BTechByte" width="200" height="70">
             </a>
 
             <!-- Mobile Toggle Button -->
@@ -464,18 +465,6 @@
         }
         /* Navbar Hover Effect */
         
-        .navbar-custom:hover {
-            background-color: #30528D !important;
-            /* Light blue background on hover */
-        }
-        /* Navbar Links Text Color on Hover */
-        
-        .navbar-custom:hover .nav-link {
-            color: white !important;
-            /* White text color on hover */
-        }
-        /* Ensure the logo is not affected */
-        
         .navbar-custom:hover .navbar-brand {
             background-color: transparent !important;
             /* Logo remains unaffected */
@@ -536,162 +525,95 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
-    <div class="container-fluid hero-section">
-        <div class="row text-center justify-content-center ">
-            <div class="col-md-8 overlay">
-                <h1 class="d-none d-md-block fw-bold text-uppercase tracking-widest text-white">
-                    Unleash Your <br><span id="changingWord" class="text-warning">Business</span> Potential
-                </h1>
-                <h2 class="d-block d-md-none mb-3 text-white fw-bold text-uppercase tracking-widest">
-                    Unleash Your <br><span id="changingWord" class="text-warning">Business</span> Potential
-                </h2> <br>
-                <div class="row">
-                    <div class="col-md-6 text-start">
-                        <p class="text-white">
-                            Success isn’t just about being seen—it’s about making an impact. At
-                            <strong class="text-warning">Koinet Media</strong>, we don’t just generate leads; we create meaningful connections. With precision-targeted content and a strategy designed for engagement, we turn interest into action and clicks
-                            into conversions. Let’s redefine the way you grow.
-                        </p>
-                        <a class="cta-button" href="contact.html">Get Started</a>
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-
-                                <div class="carousel-item active " data-bs-interval="2000">
-                                    <div class="carousel-overlay"></div>
-                                    <img src="images/cr1.jpg" class="d-block w-100" alt="Slide 1">
-                                </div>
-
-                                <div class="carousel-item" data-bs-interval="2000">
-                                    <div class="carousel-overlay"></div>
-                                    <img src="images/male-female-office-workers.jpg" class="d-block w-100" alt="Slide 2">
-                                </div>
-
-                                <div class="carousel-item" data-bs-interval="2000">
-                                    <div class="carousel-overlay"></div>
-                                    <img src="images/cr2.jpg" class="d-block w-100" alt="Slide 3">
-                                </div>
-
-                            </div>
-
-
-
+    <div class="container-fluid hero-section-alt mt-5 vh-100 d-flex align-items-center justify-content-center">
+        <div class="row align-items-center">
+            <!-- Left Side - Image Carousel -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="images/cr1.jpg" class="d-block w-100 rounded" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="images/male-female-office-workers.jpg" class="d-block w-100 rounded" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="images/cr2.jpg" class="d-block w-100 rounded" alt="Slide 3">
                         </div>
                     </div>
-
                 </div>
+            </div>
+
+            <!-- Right Side - Text Content -->
+            <div class="col-md-6 text-white text-center text-md-start">
+                <h2 class="fw-bold text-uppercase">
+                    Unleash Your <br>
+                    <span id="changingWord" class="text-danger">Business</span> Potential
+                </h2>
+                <p class="mt-3 text-light">
+                    At <strong class="text-danger">B2BTechByte</strong>, we do more than generate leads — we build real connections. Precision-targeted strategies turn interest into conversions.
+                </p>
+                <a href="contact.html" class="cta-button-alt mt-3 d-inline-block">Get Started</a>
             </div>
         </div>
     </div>
+
+    <!-- Word Change Script -->
     <script>
         const words = ["Business", "Enterprise", "Venture", "Startup", "Brand"];
         let index = 0;
 
         function changeWord() {
             index = (index + 1) % words.length;
-            document.getElementById("changingWord").textContent = words[index]; // Removed extra space
+            document.getElementById("changingWord").textContent = words[index];
         }
 
-        setInterval(changeWord, 2000); // Change word every 2 seconds
+        setInterval(changeWord, 2000);
     </script>
+
+    <!-- Styles -->
     <style>
-        /* Background Image for Hero Section */
-        /* Responsive Hero Section */
-        
-        .hero-section {
-            background: url('images/9057765.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            /* padding: 100px 0; */
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-        /* Overlay for Better Readability */
-        
-        .overlay {
-            background: rgba(123, 123, 197, 0.75);
-            padding: 50px;
-            border-radius: 10px;
-        }
-        /* CTA Button */
-        
-        .cta-button {
-            background: #ff9800;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 20px;
-            display: inline-block;
-            transition: background 0.3s ease;
-            text-decoration: none;
+        .hero-section-alt {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 60px 20px;
+            border-radius: 12px;
         }
         
-        .cta-button:hover {
-            background: #e68900;
-        }
-        /* Carousel Image Responsiveness */
-        
-        .carousel-item img {
+        .hero-section-alt img {
             max-height: 400px;
             object-fit: cover;
-            width: 100%;
+            border-radius: 10px;
         }
-        /* Mobile and Tablet Responsiveness */
         
-        @media (max-width: 991px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            p {
-                font-size: 1.1rem;
-            }
-            .overlay {
-                padding: 30px;
-            }
-            .cta-button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
+        .cta-button-alt {
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s ease;
         }
+        
+        .cta-button-alt:hover {
+            background-color: #e68900;
+        }
+        /* Responsive Adjustments */
         
         @media (max-width: 768px) {
-            .hero-section {
-                padding: 60px 20px;
-                text-align: center;
-            }
-            h1 {
+            .hero-section-alt h1 {
                 font-size: 2rem;
             }
-            .carousel-item img {
-                max-height: 250px;
-            }
-            .cta-button {
-                width: 100%;
-                max-width: 250px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            p {
+            .hero-section-alt p {
                 font-size: 1rem;
             }
-            .cta-button {
-                font-size: 14px;
-                padding: 8px 15px;
+            .cta-button-alt {
+                width: 100%;
+                max-width: 240px;
             }
         }
     </style>
+
 
     <!-- CSS -->
     <style>
@@ -753,278 +675,129 @@
         }
     </style>
 
-    <!-- Why Choose KoiNet Media Section -->
-    <section class="why-choose-section">
-        <div class="video-background">
-            <video autoplay muted loop>
-            <source src="path_to_your_video.mp4" type="video/mp4"> <!-- Add your video path here -->
-            Your browser does not support the video tag.
-        </video>
-        </div>
-
+    <!-- Redesigned Why Choose Section -->
+    <section class="why-choose-modern py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <!-- Left Side - Text & Features -->
-                <div class="col-lg-6 col-md-12 mt-5" data-aos="fade-right">
-                    <h2 class="section-title">
-                        Why Choose <span>KoiNet Media?</span>
-                    </h2>
-                    <p class="section-desc">
-                        We are an innovative <a href="/what_we_provide/demadgeneration.html" class="custom-link">demand generation</a> agency, providing businesses with data-driven solutions to enhance their sales pipelines and drive revenue.
-                    </p>
+            <div class="text-center mb-5">
+                <h2 class="section-heading">Why Choose <span>B2BTechByte?</span></h2>
+                <p class="section-subtitle">
+                    An innovative <a href="/what_we_provide/demadgeneration.html" class="highlight-link">demand generation</a> agency empowering businesses with data-driven, secure, and personalized tech solutions.
+                </p>
+            </div>
 
-                    <!-- Feature Boxes -->
-                    <div class="feature-box" data-aos="zoom-in">
-                        <div class="feature-icon bg-primary"><i class="bi bi-database"></i></div>
-                        <div class="feature-text">Advanced Data Management Solutions</div>
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="feature-card shadow-sm h-100 text-center">
+                        <div class="feature-icon bg-primary text-white"><i class="bi bi-database"></i></div>
+                        <h5 class="feature-title">Advanced Data Management</h5>
+                        <p class="feature-text">Empower your business with scalable and intelligent data handling tools.</p>
                     </div>
-                    <div class="feature-box" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="feature-icon bg-success"><i class="bi bi-shield-lock"></i></div>
-                        <div class="feature-text">Cyber Security & Unified Communications</div>
-                    </div>
-                    <div class="feature-box" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="feature-icon bg-warning"><i class="bi bi-rocket-takeoff"></i></div>
-                        <div class="feature-text">Personalized Technology Recommendations</div>
-                    </div>
-
-                    <!-- Learn More Button -->
-                    <a href="/aboutus/overview.html" class="btn btn-primary mt-4 text-white" data-aos="fade-up">
-                    Learn More <i class="bi bi-arrow-right"></i>
-                </a>
                 </div>
 
-                <!-- Right Side - Image -->
-                <div class="col-lg-6 col-md-12 text-center">
-                    <div class="image-wrapper" data-aos="fade-left">
-                        <img src="images/whtchooseus.png" alt="About KoiNet Media" class="main-image">
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="feature-card shadow-sm h-100 text-center">
+                        <div class="feature-icon bg-success text-white"><i class="bi bi-shield-lock"></i></div>
+                        <h5 class="feature-title">Cyber Security</h5>
+                        <p class="feature-text">Protect your infrastructure with industry-leading security protocols and tools.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-md-4">
+                    <div class="feature-card shadow-sm h-100 text-center">
+                        <div class="feature-icon bg-warning text-white"><i class="bi bi-rocket-takeoff"></i></div>
+                        <h5 class="feature-title">Tech Recommendations</h5>
+                        <p class="feature-text">Tailored technology advice aligned with your unique business goals.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="text-center mt-5">
+                <a href="/aboutus/overview.html" class="btn btn-outline-primary btn-lg">
+        Learn More <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+            </div>
         </div>
     </section>
-
-    <!-- CSS Styles -->
     <style>
-        /* Why Choose Section */
-        
-        .why-choose-section {
-            position: relative;
-            padding: 80px 0;
-            overflow: hidden;
+        .why-choose-modern {
+            background-color: #f4f6f9;
         }
         
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            /* Behind the content */
-            overflow: hidden;
-        }
-        
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Ensures the video covers the entire section */
-        }
-        /* Section Title */
-        
-        .section-title {
-            font-size: 36px;
+        .section-heading {
+            font-size: 34px;
             font-weight: 700;
-            color: black;
-            margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            animation: fadeIn 1.5s ease-in-out;
-            position: relative;
-            z-index: 3;
-            /* Ensure text is above the video */
+            color: #111;
         }
         
-        .section-title span {
+        .section-heading span {
             color: #007bff;
         }
-        /* Section Description */
         
-        .section-desc {
+        .section-subtitle {
             font-size: 16px;
             color: #666;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease-in-out;
-            position: relative;
-            z-index: 3;
-            /* Ensure text is above the video */
-        }
-        /* Custom Link */
-        
-        .custom-link {
-            text-decoration: none;
-            color: black;
-            position: relative;
-            transition: color 0.3s ease;
+            max-width: 700px;
+            margin: 0 auto;
         }
         
-        .custom-link:hover {
+        .highlight-link {
             color: #007bff;
+            font-weight: 500;
+            text-decoration: underline;
         }
-        /* Feature Boxes */
         
-        .feature-box {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 15px 20px;
+        .feature-card {
+            background-color: #ffffff;
+            padding: 25px 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            cursor: pointer;
-            z-index: 3;
-            /* Ensure boxes are above the video */
+            transition: all 0.3s ease;
         }
         
-        .feature-box:hover {
+        .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
         
         .feature-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
+            font-size: 26px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 24px;
-            color: white;
+            justify-content: center;
             border-radius: 50%;
-            margin-right: 15px;
-            transition: transform 0.3s ease;
+            margin: 0 auto 15px;
         }
         
-        .feature-box:hover .feature-icon {
-            transform: rotate(15deg) scale(1.1);
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
         }
         
         .feature-text {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .btn-outline-primary {
+            padding: 12px 28px;
             font-size: 16px;
+            border-radius: 6px;
             font-weight: 500;
-            color: #333;
-        }
-        /* Icon Colors */
-        
-        .bg-primary {
-            background: #007bff;
-        }
-        
-        .bg-success {
-            background: #28a745;
-        }
-        
-        .bg-warning {
-            background: #ffc107;
-        }
-        /* Image */
-        
-        .image-wrapper {
-            text-align: center;
-            width: 100%;
-            max-width: 550px;
-            margin: auto;
-            animation: fadeInUp 1.5s ease-in-out;
-            z-index: 3;
-            /* Ensure image is above the video */
-        }
-        
-        .main-image {
-            width: 100%;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .main-image:hover {
-            transform: scale(1.05);
-        }
-        /* Button */
-        
-        .btn-primary {
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 2px solid #007bff;
-            color: #007bff;
-            transition: all 0.3s ease-in-out;
-            animation: fadeInUp 1s ease-in-out;
-        }
-        
-        .btn-primary:hover {
-            background: #007bff;
-            color: white;
-        }
-        /* Animations */
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        /* Responsive Design */
-        
-        @media (max-width: 992px) {
-            .section-title {
-                font-size: 32px;
-            }
-            .feature-box {
-                padding: 12px 15px;
-            }
-            .feature-text {
-                font-size: 15px;
-            }
         }
         
         @media (max-width: 768px) {
-            .why-choose-section {
-                padding: 60px 0;
-            }
-            .section-title {
+            .section-heading {
                 font-size: 28px;
-                text-align: center;
             }
-            .image-wrapper {
-                max-width: 450px;
-                margin-top: 20px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .row {
-                flex-direction: column-reverse;
-            }
-            .section-title {
-                font-size: 24px;
-            }
-            .feature-box {
-                padding: 8px 10px;
+            .feature-title {
+                font-size: 16px;
             }
             .feature-text {
                 font-size: 13px;
@@ -1032,365 +805,233 @@
         }
     </style>
 
-    <!-- AOS Library for Scroll Animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000, // Animation duration
-            offset: 100, // Start animation after scrolling down
-            once: true // Animation runs only once
-        });
-    </script>
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <!-- Redesigned Services Section -->
-    <section class="services-section py-5 bg-light">
+    <section class="modern-services py-5">
         <div class="container">
             <!-- Section Heading -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold text-primary animate__animated animate__fadeInUp">Our Services</h2>
-                <p class="text-muted">Helping your business grow with expert digital solutions.</p>
+                <h2 class="section-title text-white">Our Services</h2>
+                <p class="section-subtitle text-light">Helping your business grow with expert digital solutions.</p>
             </div>
 
-            <!-- Why Choose Our Services -->
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 text-center">
-                    <img src="images/Serve1-remove-bg-io.png" alt="Why Choose Us" class="img-fluid service-img rounded shadow">
-                </div>
-                <div class="col-lg-6">
-                    <div class="service-box p-4 shadow rounded bg-white">
-                        <h3 class="fw-bold text-primary">Why Do You Need Our Services?</h3>
+            <!-- Services Grid -->
+            <div class="row g-4">
+                <!-- Why You Need Our Services -->
+                <div class="col-md-6">
+                    <div class="service-card h-100">
+                        <div class="icon-box bg-primary text-white mb-3"><i class="bi bi-question-circle-fill"></i></div>
+                        <h4 class="text-dark fw-bold">Why Do You Need Our Services?</h4>
                         <p class="text-muted">
                             The modern marketing landscape is <strong>crowded and competitive</strong>. Traditional strategies often fall short, leaving businesses with a sea of
-                            <strong>unqualified leads</strong> and dwindling ROI. The challenge is clear - how do you cut through the noise and connect with decision-makers? The answer lies in a strategic approach to <a href="/what_we_provide/demadgeneration.html"
-                                class="text-decoration-none text-dark fw-semibold">demand generation</a>.
+                            <strong>unqualified leads</strong> and low ROI. The answer lies in a strategic approach to <a href="/what_we_provide/demadgeneration.html" class="text-decoration-none text-primary fw-semibold">demand generation</a>.
                         </p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Solution We Offer -->
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2 text-center">
-                    <img src="images/Serve2-remove-bg-io.png" alt="Solution We Offer" class="img-fluid service-img rounded shadow">
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="service-box p-4 shadow rounded bg-white">
-                        <h3 class="fw-bold text-primary">Solution We Can Offer You</h3>
+                <!-- Solution We Can Offer -->
+                <div class="col-md-6">
+                    <div class="service-card h-100">
+                        <div class="icon-box bg-success text-white mb-3"><i class="bi bi-lightbulb-fill"></i></div>
+                        <h4 class="text-dark fw-bold">Solution We Can Offer You</h4>
                         <p class="text-muted">
-                            Koinet Media provides a solution to this challenge. Our <a href="/what_we_provide/demadgeneration.html" class="text-decoration-none text-dark fw-semibold">demand generation</a> services are built around three core pillars:
-                            <a href="/what_we_provide/multi-channel-lead.html" class="text-decoration-none text-dark fw-semibold"> Content Syndication</a>, <a href="/what_we_provide/multi-channel-lead.html" class="text-decoration-none text-dark fw-semibold">Lead Nurturing</a>,
-                            and Qualification. We help businesses build strong sales pipelines and operate on a performance-based model.
+                            B2BTechByte solves this with a performance-based model through:
+                            <a href="/what_we_provide/multi-channel-lead.html" class="text-decoration-none text-success fw-semibold">Content Syndication</a>,
+                            <a href="/what_we_provide/multi-channel-lead.html" class="text-decoration-none text-success fw-semibold">Lead Nurturing</a>, and Qualification.
                         </p>
+                    </div>
+                </div>
+
+                <!-- Service Offering 1 -->
+                <div class="col-md-4">
+                    <div class="service-card h-100 text-center">
+                        <div class="icon-box bg-warning text-white mb-3"><i class="bi bi-share-fill"></i></div>
+                        <h5 class="fw-bold">Content Syndication</h5>
+                        <p class="text-muted">Ensure your content reaches the right audience at the right time using targeted platforms.</p>
+                    </div>
+                </div>
+
+                <!-- Service Offering 2 -->
+                <div class="col-md-4">
+                    <div class="service-card h-100 text-center">
+                        <div class="icon-box bg-info text-white mb-3"><i class="bi bi-person-lines-fill"></i></div>
+                        <h5 class="fw-bold">Lead Nurturing & Qualification</h5>
+                        <p class="text-muted">Customized lead nurturing that informs, interests, and converts.</p>
+                    </div>
+                </div>
+
+                <!-- Service Offering 3 -->
+                <div class="col-md-4">
+                    <div class="service-card h-100 text-center">
+                        <div class="icon-box bg-danger text-white mb-3"><i class="bi bi-bar-chart-steps"></i></div>
+                        <h5 class="fw-bold">Multi-Channel Approach</h5>
+                        <p class="text-muted">We utilize a <a href="/what_we_provide/multi-channel-lead.html" class="text-decoration-none text-danger fw-semibold">multi-channel strategy</a> to maximize outreach and ROI.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Services Overview -->
-            <div class="row align-items-center py-5">
-                <div class="col-lg-6 text-center">
-                    <img src="images/serove1.png" alt="Services Illustration" class="img-fluid service-img rounded shadow">
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="fw-bold text-primary">Our Service Offerings</h3>
-                    <ul class="list-unstyled mt-4">
-                        <li class="mb-4">
-                            <h4 class="text-dark fw-bold d-flex align-items-center"><i class="bi bi-cursor-fill text-primary me-2"></i> Content Syndication</h4>
-                            <p class="text-muted">We ensure your content reaches the right audience at the right time. Our network spans multiple platforms, targeting IT decision-makers with precision.</p>
-                        </li>
-                        <li class="mb-4">
-                            <h4 class="text-dark fw-bold d-flex align-items-center"><i class="bi bi-cursor-fill text-primary me-2"></i> Lead Nurturing & Qualification</h4>
-                            <p class="text-muted">Our lead nurturing process is tailored to each prospect’s journey. We engage leads with personalized content to inform, interest, and convert them.</p>
-                        </li>
-                        <li>
-                            <h4 class="text-dark fw-bold d-flex align-items-center"><i class="bi bi-cursor-fill text-primary me-2"></i> Multi-Channel Approach</h4>
-                            <p class="text-muted">We use a <a href="/what_we_provide/multi-channel-lead.html" class="text-decoration-none text-dark fw-semibold">multi-channel strategy</a> including social media, email campaigns, and more to ensure maximum reach and engagement.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Call to Action -->
+            <!-- CTA -->
             <div class="text-center mt-5">
-                <h4 class="fw-bold">Get in touch now to explore our services!</h4>
-                <a href="contact.html" class="btn btn-primary mt-3 text-white px-4 py-2 shadow">Contact Us</a>
+                <h4 class="text-white fw-bold">Ready to Scale Your Marketing?</h4>
+                <a href="contact.html" class="btn btn-light mt-3 px-4 py-2 shadow">Contact Us</a>
             </div>
         </div>
     </section>
-
-    <!-- CSS -->
     <style>
-        .services-section {
+        .modern-services {
+            background: linear-gradient(135deg, #1f3c88, #5d8aa8);
             padding: 80px 0;
+            color: #fff;
         }
         
-        .service-box {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            border-left: 5px solid #007bff;
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
         }
         
-        .service-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        .section-subtitle {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
-        .list-unstyled h4 {
-            font-size: 1.3rem;
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
         }
         
-        .service-img {
-            animation: fadeInUp 1s ease-in-out;
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .icon-box {
+            font-size: 28px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        a.text-decoration-none:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
-            .service-img {
-                max-width: 80%;
+            .section-title {
+                font-size: 28px;
             }
-            .service-box {
-                padding: 30px;
-            }
-            .list-unstyled h4 {
-                font-size: 1.2rem;
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .icon-box {
+                width: 50px;
+                height: 50px;
+                font-size: 22px;
             }
         }
     </style>
+    <!-- Bootstrap -->
 
 
-    <!-- Testimonials Section -->
-    <section class="py-5 text-center position-relative testimonials-bg ">
-        <!-- Animated Shapes -->
-        <div class="circle circle-1 "></div>
-        <div class="circle circle-2 "></div>
-        <div class="triangle triangle-1 "></div>
-        <div class="triangle triangle-2 "></div>
-        <div class="triangle triangle-3 "></div>
 
-        <div class="container position-relative ">
-            <h2 class="fw-bold animate__animated animate__fadeInUp ">
-                <span class="text-primary ">Our Clients</span> Love Us
-            </h2>
-            <p class="mb-4 text-secondary animate__animated animate__fadeInUp animate__delay-1s ">
-                See what our satisfied clients have to say about us.
-            </p>
+    <!-- Redesigned Testimonials Section -->
+    <!-- Clean Testimonial Section -->
+    <section class="testimonial-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">Hear from Our <span class="text-highlight">Happy Clients</span></h2>
+                <p class="text-muted">Real stories from real people we’ve helped grow their business.</p>
+            </div>
 
-            <!-- Testimonials Carousel -->
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="testimonial-box">
-                            <p class="testimonial-text">
-                                "Koinet Media helped us scale our outreach and boost lead quality significantly. A fantastic experience!"
-                            </p>
-                            <h5 class="testimonial-author">- Mark Thompson</h5>
+            <div class="row g-4">
+                <!-- Testimonial Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card p-4 shadow-sm bg-white rounded text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-chat-quote-fill fs-1 text-highlight"></i>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial-box">
-                            <p class="testimonial-text">
-                                "Their data-driven marketing approach increased our customer engagement by 45%. Highly recommend!"
-                            </p>
-                            <h5 class="testimonial-author">- Lisa Carter</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial-box">
-                            <p class="testimonial-text">
-                                "Exceptional service! Koinet Media played a key role in expanding our B2B network with qualified leads."
-                            </p>
-                            <h5 class="testimonial-author">- David Ramirez</h5>
-                        </div>
+                        <p class="text-muted">“B2BTechByte delivered exactly what we needed — high-quality leads and measurable results.”</p>
+                        <h6 class="fw-semibold mt-3 mb-0">Mark Thompson</h6>
+                        <!-- <small class="text-secondary">Growth Manager, NovaCorp</small> -->
                     </div>
                 </div>
 
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <!-- Testimonial Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card p-4 shadow-sm bg-white rounded text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-chat-quote-fill fs-1 text-highlight"></i>
+                        </div>
+                        <p class="text-muted">“Their multi-channel strategy helped us scale our campaigns efficiently. Great team!”</p>
+                        <h6 class="fw-semibold mt-3 mb-0">Lisa Carter</h6>
+                        <!-- <small class="text-secondary">Head of Marketing, SoftWave</small> -->
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card p-4 shadow-sm bg-white rounded text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-chat-quote-fill fs-1 text-highlight"></i>
+                        </div>
+                        <p class="text-muted">“Reliable, performance-driven, and creative. They’ve become an extension of our team.”</p>
+                        <h6 class="fw-semibold mt-3 mb-0">David Ramirez</h6>
+                        <!-- <small class="text-secondary">Co-Founder, B2BLens</small> -->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CSS -->
     <style>
-        /* Testimonials Background */
-        
-        .testimonials-bg {
-            background: linear-gradient(135deg, #E2F3FF, #D6FFE9);
-            /* Same as previous */
-            padding: 80px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        .testimonial-section {
+            background-color: #f9fafc;
         }
-        /* Heading Styling */
         
-        h2 {
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .text-highlight {
+            color: #4b8df8;
         }
-        /* Testimonial Box */
         
-        .testimonial-box {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        .testimonial-card {
+            transition: all 0.3s ease-in-out;
         }
-        /* Testimonial Text */
         
-        .testimonial-text {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: #555;
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
-        /* Author Name */
         
-        .testimonial-author {
-            font-size: 1.1rem;
+        .testimonial-card i {
+            color: #4b8df8;
+        }
+        
+        h2 span.text-highlight {
             font-weight: bold;
-            color: #333;
-            margin-top: 15px;
         }
-        /* Floating Shapes */
-        
-        .circle,
-        .triangle {
-            position: absolute;
-            opacity: 0;
-            transform: scale(0);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .circle {
-            border-radius: 50%;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            opacity: 0.7;
-        }
-        
-        .circle-1 {
-            width: 120px;
-            height: 120px;
-            top: 20%;
-            left: 15%;
-        }
-        
-        .circle-2 {
-            width: 80px;
-            height: 80px;
-            bottom: 15%;
-            right: 20%;
-        }
-        
-        .triangle {
-            width: 100px;
-            height: 100px;
-            background: transparent;
-            border-left: 40px solid transparent;
-            border-right: 40px solid transparent;
-            border-bottom: 70px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        .triangle-1 {
-            top: 10%;
-            left: 20%;
-        }
-        
-        .triangle-2 {
-            top: 50%;
-            right: 30%;
-        }
-        
-        .triangle-3 {
-            bottom: 15%;
-            left: 50%;
-        }
-        /* Scroll Animation */
-        
-        .show-shapes .circle,
-        .show-shapes .triangle {
-            opacity: 1;
-            transform: scale(1);
-        }
-        /* Responsive Styling */
         
         @media (max-width: 768px) {
-            h2 {
-                font-size: 2rem;
-            }
-            .testimonial-box {
+            .testimonial-card {
                 padding: 20px;
             }
-            .testimonial-text {
-                font-size: 1rem;
-            }
-            .testimonial-author {
-                font-size: 1rem;
-            }
-            .circle-1,
-            .circle-2 {
-                width: 60px;
-                height: 60px;
-            }
-            .triangle {
-                width: 60px;
-                height: 60px;
-            }
         }
     </style>
 
 
-    <!-- JavaScript for Scroll Animation -->
-    <script>
-        document.addEventListener("DOMContentLoaded ", function() {
-            const section = document.querySelector(".testimonials-bg ");
 
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    if (entries[0].isIntersecting) {
-                        section.classList.add("show-shapes ");
-                    }
-                }, {
-                    threshold: 0.5
-                }
-            );
 
-            observer.observe(section);
-        });
-    </script>
-
-    <!-- Why Partner with Koinet Media Section -->
+    <!-- Why Partner with B2BTechByte Section -->
     <section class="why-partner-section ">
         <div class="container ">
             <h2 class="fw-bold animate__animated animate__fadeInUp ">
 
-                WHY PARTNER WITH <span class="text-primary ">KOINET MEDIA?</span>
+                WHY PARTNER WITH <span class="text-primary ">B2BTechByte?</span>
             </h2>
             <p class="section-description ">
-                Work with Koinet Media and get more than just leads – get real conversions. Our smart data-driven approach ensures every marketing dollar is well spent.
+                Work with B2BTechByte and get more than just leads – get real conversions. Our smart data-driven approach ensures every marketing dollar is well spent.
             </p>
 
             <!-- Features Grid -->
@@ -1633,7 +1274,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="infographics.html" class="btn btn-primary text-white btn-lg mt-5">More Infographics →</a>
+            <a href="infographics.html" class="btn btn-danger text-white btn-sm mt-5">More Infographics →</a>
         </div>
     </section>
 
@@ -1753,13 +1394,13 @@
                 container.innerHTML += `
                     <div class="insight-item">
                         <div class="insight-image">
-                            <img src="${infographic.imageUrl || 'https://via.placeholder.com/200'}" alt="Infographic Image">
+                            <img src="${infographic.imageUrl || 'https://via.placeholder.com/200'}" alt="Infographic Image" class="rounded-0">
                         </div>
                         <div class="text-start">
                             <h5 class="fw-bold">${infographic.title}</h5>
                               <small class="text-muted d-block mb-2">Published on: ${new Date(infographic.date).toLocaleDateString()}</small>
                                 <p class=" d-block mb-2"> ${infographic.category}</p>
-                            <a href="viewinfographics.html?id=${infographic._id}" class="btn btn-outline-primary fw-bold mt-2">View Infographic →</a>
+                            <a href="viewinfographics.html?id=${infographic._id}" class="btn btn-sm btn-outline-danger fw-bold mt-2">View Infographic →</a>
                         </div>
                     </div>`;
             });
@@ -1927,53 +1568,122 @@
             observer.observe(counterSection);
         });
     </script>
+
+
     <!-- PILLARS OF MULTI-CHANNEL LEAD -->
-    <div class="pillars-section ">
-        <div class="py-5 text-center my-5 ">
-            <h2 class="section-heading ">
-                <span class="highlight ">3 CORE PILLARS</span> OF <span class="black-text ">MULTI CHANNEL GROWTH</span> WITH KOI<span class=" ">NET MEDIA</span>
-            </h2>
-            <p class="sub-heading ">To build a high-impact lead generation strategy, businesses must focus on:</p>
+    <div class="pillars-modern-wrapper">
+        <div class="text-center mb-5">
+            <h4 class="section-heading-1 fw-bold">
+                3 CORE PILLARS OF <span class="text-danger">MULTI CHANNEL GROWTH</span> WITH B2BTechByte
+            </h4>
+            <p class="sub-heading">To build a high-impact lead generation strategy, businesses must focus on:</p>
         </div>
 
-        <div class="pillars-container ">
-            <!-- Pillar 1 - Content Syndication -->
-            <div class="pillar-card " style="background-color: #EDFCFF; ">
-                <img src="images/ser1.png " alt="Content Syndication " class="pillar-img "> <br>
-                <h3 class="pillar-title ">Content Syndication</h3>
-                <div class="pillar-line pillar-blue "></div> <br>
-                <ul class="text-start ">
-                    <li>We distribute your content across multiple platforms to maximize reach.</li> <br>
-                    <li>Increase visibility, engagement, and brand awareness.</li>
-                </ul>
+        <div class="pillars-modern">
+            <!-- Card 1 -->
+            <div class="pillar-card-modern pillar-blue-border">
+                <div class="pillar-badge bg-blue">1</div>
+                <h3>Content Syndication</h3>
+                <p>We distribute your content across multiple platforms to maximize reach and boost visibility, engagement, and brand awareness.</p>
             </div>
 
-            <!-- Pillar 2 - Cross-Platform Nurturing -->
-            <div class="pillar-card " style="background-color: #FDF6E9; ">
-                <img src="images/ser2.png " alt="Cross-Platform Nurturing " class="pillar-img "> <br>
-                <h3 class="pillar-title ">Cross-Platform Nurturing</h3>
-                <div class="pillar-line pillar-orange "></div> <br>
-                <ul class="text-start ">
-                    <li>Our AI-driven approach keeps prospects engaged with dynamic experiences.</li> <br>
-                    <li>Personalized nurturing across email, social media, and digital ads.</li>
-                </ul>
+            <!-- Card 2 -->
+            <div class="pillar-card-modern pillar-orange-border">
+                <div class="pillar-badge bg-orange">2</div>
+                <h3>Cross-Platform Nurturing</h3>
+                <p>AI-driven personalized nurturing across email, social media, and digital ads to keep your prospects engaged at every touchpoint.</p>
             </div>
 
-            <!-- Pillar 3 - Data Compliance & Transparency -->
-            <div class="pillar-card " style="background-color: #E8FFEF; ">
-                <img src="images/ser3.png " alt="Data Compliance & Transparency " class="pillar-img "> <br>
-                <h3 class="pillar-title ">Data Compliance & Transparency</h3>
-                <div class="pillar-line pillar-green "></div> <br>
-                <ul class="text-start ">
-                    <li>We ensure an ethical and GDPR-compliant lead generation process.</li> <br>
-                    <li>Providing full transparency to build trust with your audience.</li>
-                </ul>
+            <!-- Card 3 -->
+            <div class="pillar-card-modern pillar-green-border">
+                <div class="pillar-badge bg-green">3</div>
+                <h3>Data Compliance & Transparency</h3>
+                <p>Ethical, transparent, and GDPR-compliant processes that build trust and credibility with your audience while ensuring data safety.</p>
             </div>
         </div>
     </div>
 
+
     <style>
         /* Heading Styles */
+        
+        .pillars-modern-wrapper {
+            padding: 60px 20px;
+        }
+        
+        .pillars-modern {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .pillar-card-modern {
+            background: #fff;
+            border-radius: 18px;
+            padding: 40px 25px 30px;
+            text-align: center;
+            position: relative;
+            width: 320px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease-in-out;
+            border-top: 5px solid transparent;
+        }
+        
+        .pillar-card-modern:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .pillar-badge {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 60px;
+            margin: 0 auto 20px;
+        }
+        
+        .bg-blue {
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+        }
+        
+        .bg-orange {
+            background: linear-gradient(135deg, #ff9800, #ffc107);
+        }
+        
+        .bg-green {
+            background: linear-gradient(135deg, #4caf50, #81c784);
+        }
+        
+        .pillar-card-modern h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 15px;
+        }
+        
+        .pillar-card-modern p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        /* Border top accent colors */
+        
+        .pillar-blue-border {
+            border-top: 5px solid #007bff;
+        }
+        
+        .pillar-orange-border {
+            border-top: 5px solid #ff9800;
+        }
+        
+        .pillar-green-border {
+            border-top: 5px solid #4caf50;
+        }
+        /* Typography */
         
         .section-heading {
             font-size: 2.4rem;
@@ -1994,112 +1704,21 @@
             font-size: 18px;
             color: #555;
         }
-        /* Card Container */
-        
-        .pillars-container {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            /* Increased gap */
-            flex-wrap: wrap;
-        }
-        /* Individual Card */
-        
-        .pillar-card {
-            background: #f9f9f9;
-            border-radius: 25px;
-            width: 380px;
-            min-height: 420px;
-            padding: 80px 30px 30px;
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            position: relative;
-            overflow: visible;
-        }
-        /* Image */
-        
-        .pillar-img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            position: absolute;
-            top: -60px;
-            left: 0;
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
-        }
-        /* Pillar Titles */
-        
-        .pillar-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #222;
-            margin-top: 20px;
-        }
-        /* Pillar Divider Line */
-        
-        .pillar-line {
-            width: 60%;
-            height: 5px;
-            margin: 12px auto;
-            border-radius: 5px;
-        }
-        /* Line Colors */
-        
-        .pillar-blue {
-            background: #007bff;
-        }
-        
-        .pillar-orange {
-            background: #ff9800;
-        }
-        
-        .pillar-green {
-            background: #4caf50;
-        }
-        /* Pillar List */
-        
-        .pillar-list {
-            text-align: left;
-            padding-left: 25px;
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-        }
-        
-        .pillar-list li {
-            margin-bottom: 10px;
-            list-style: none;
-            position: relative;
-        }
-        /* Checkmark Icon */
-        
-        .pillar-list li::before {
-            /* content: "✅ "; */
-            color: #007bff;
-            font-weight: bold;
-            margin-right: 10px;
-            font-size: 18px;
-        }
-        /* Responsive Design */
+        /* Responsive */
         
         @media (max-width: 768px) {
+            .pillars-modern {
+                flex-direction: column;
+                align-items: center;
+            }
+            .pillar-card-modern {
+                width: 90%;
+            }
             .section-heading {
-                font-size: 26px;
-                letter-spacing: 1px;
+                font-size: 20px;
             }
             .sub-heading {
                 font-size: 16px;
-            }
-            .pillars-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 25px;
-                /* Adjusted gap for smaller screens */
-            }
-            .pillar-card {
-                width: 90%;
-                min-height: auto;
             }
         }
     </style>
@@ -2109,7 +1728,7 @@
     <section class="py-5 bg-white position-relative insights-section">
         <div class="container position-relative text-center">
             <h2 class="insights-heading">
-                <span class="highlight">OUR</span> <span class="dark-text">Blogs</span>
+                <span class="text-danger">OUR</span> <span class="dark-text">Blogs</span>
             </h2>
             <br>
             <div id="blogs-container" class="insights-wrapper"></div>
@@ -2120,7 +1739,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="blog.html" class="btn btn-primary text-white btn-lg mt-5">More Blogs →</a>
+            <a href="blog.html" class="btn btn-danger text-white btn-sm mt-5">More Blogs →</a>
         </div>
     </section>
 
@@ -2292,7 +1911,7 @@
                         <h5 class="fw-bold">${blog.title}</h5>
                           <small class="text-muted d-block mb-2">Published on: ${new Date(blog.date).toLocaleDateString()}</small>
                             <p class=" d-block mb-2"> ${blog.category}</p>
-                        <a href="viewblog.html?id=${blog._id}" class="btn btn-outline-primary fw-bold mt-2">View Blog →</a>
+                        <a href="viewblog.html?id=${blog._id}" class="btn btn-outline-danger btn-sm fw-bold mt-2">View Blog →</a>
                     </div>
                 </div>`;
             });
@@ -2530,156 +2149,57 @@
 
 
     <!-- Footer Section -->
-    <footer class="footer ">
-        <div class="footer-top ">
-            <div class="container ">
-                <div class="row text-center ">
-                    <!-- Contact via Email -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Contact Us via Email</h4>
-                        <p><a href="mailto:info@koinetmedia.com" class="contact-link">info@koinetmedia.com</a></p>
-                    </div>
+    <!-- Footer Section -->
+    <footer class="bg-light text-dark pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4 pb-4 border-bottom">
+                <!-- Brand & Description -->
+                <div class="col-md-4">
 
-                    <!-- Office Address -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Our Office</h4>
-                        <p><a href="https://www.google.com/maps/place/Pune,+Maharashtra,+India+411014" target="_blank" class="contact-link">
-                       Pune, Maharashtra, India 411014</a></p>
-                    </div>
 
-                    <!-- Contact Number -->
-                    <div class="col-md-4">
-                        <div class="footer-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h4>Contact Us</h4>
-                        <p><a href="tel:+919021568448" class="contact-link">+91 90215 68448</a></p>
-                    </div>
+                    <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                        <img src="/images/KNM-LOGO resized.png" alt="B2BTechByte" width="200" height="70">
+                    </a>
+
+                    <p class="small text-secondary">
+                        Empowering businesses through smarter lead generation and multichannel growth strategies.
+                    </p>
+                </div>
+
+                <!-- Footer Navigation -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-semibold text-dark">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="footerpages/Privacy-policy.html" class="text-decoration-none text-secondary d-block mb-2">Privacy Policy</a></li>
+                        <li><a href="footerpages/GDPR.html" class="text-decoration-none text-secondary d-block mb-2">GDPR</a></li>
+                        <li><a href="footerpages/Terms-Condition.html" class="text-decoration-none text-secondary d-block mb-2">Terms & Conditions</a></li>
+                        <li><a href="footerpages/CaseStudies.html" class="text-decoration-none text-secondary d-block mb-2">Case Studies</a></li>
+                        <li><a href="footerpages/Media_Kit.html" class="text-decoration-none text-secondary d-block">Media Kit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-semibold text-dark">Contact</h5>
+                    <p class="mb-2"><i class="fas fa-envelope text-primary me-2"></i> <a href="mailto:info@b2btechbyte.com" class="text-decoration-none text-primary">info@b2btechbyte.com</a></p>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Pune, Maharashtra, India 411014</p>
+                    <p><i class="fas fa-phone text-primary me-2"></i> <a href="tel:+919021568448" class="text-decoration-none text-primary">+91 90215 68448</a></p>
                 </div>
             </div>
-        </div>
 
-        <!-- Footer Bottom -->
-        <div class="footer-bottom ">
-            <div class="container text-center ">
-                <ul class="footer-links ">
-                    <li><a href="footerpages/Privacy-policy.html ">Privacy Policy</a></li>
-                    <li><a href="footerpages/CaseStudies.html ">Case Studies</a></li>
-                    <li><a href="footerpages/GDPR.html ">GDPR</a></li>
-                    <!-- <li><a href="footerpages/CCPA.html ">CCPA</a></li> -->
-                    <li><a href="footerpages/Terms-Condition.html ">Terms & Conditions</a></li>
-                    <li><a href="footerpages/Media_Kit.html ">Media Kit</a></li>
-
-                </ul>
-
-                <!-- Copyright & Social Icons -->
-                <p class="text-white">&copy; 2025 <strong>Koinet Media</strong>. All rights reserved.</p>
-                <div class="social-icons ">
-                    <a target="_blank" href="https://x.com/KoinetMedia "><i class="fab fa-twitter "></i></a>
-                    <a target="_blank" href="https://www.facebook.com/KoiNetMedia/"><i class="fab fa-facebook "></i></a>
-                    <a target="_blank" href="https://www.instagram.com/koinetmedia1/ "><i class="fab fa-instagram "></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/koinet-media/posts/ "><i class="fab fa-linkedin "></i></a>
-
+            <!-- Bottom Bar -->
+            <div class="text-center pt-3">
+                <p class="small text-secondary mb-2">&copy; 2025 <strong>B2BTechByte</strong>. All rights reserved.</p>
+                <div>
+                    <a href="https://x.com/b2btechbyte" class="text-primary me-3" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/b2btechbyte/" class="text-primary me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/b2btechbyte/" class="text-primary me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/b2btechbyte/posts/" class="text-primary" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- CSS -->
-    <style>
-        /* Footer Styling */
-        
-        .footer {
-            background: #1e1e1e;
-            color: #ffffff;
-            padding-top: 50px;
-        }
-        /* Top Section */
-        
-        .footer-top {
-            background: #ffffff;
-            padding: 40px 0;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-        }
-        
-        .footer-top h4 {
-            margin-top: 10px;
-            font-weight: 600;
-            color: #222;
-        }
-        
-        .footer-top p {
-            color: #555;
-        }
-        
-        .footer-icon {
-            width: 60px;
-            height: 60px;
-            background: #1A8AE6;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin: 0 auto 15px;
-        }
-        /* Bottom Section */
-        
-        .footer-bottom {
-            padding: 30px 0;
-        }
-        
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 15px;
-        }
-        
-        .footer-links li {
-            display: inline;
-            margin: 0 10px;
-        }
-        
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            color: #007bff;
-        }
-        
-        .social-icons a {
-            display: inline-block;
-            margin: 0 8px;
-            color: white;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-        
-        .social-icons a:hover {
-            color: #007bff;
-        }
-        
-        .contact-link {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-        
-        .contact-link:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-    </style>
 
     <!-- Font Awesome for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous "></script>
@@ -2692,3 +2212,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
+<sript src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </sr>
+
+    </html>
